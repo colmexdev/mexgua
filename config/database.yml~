@@ -80,6 +80,6 @@ test:
 #
 production:
   <<: *default
-  database: mexgua
-  username: <%= ENV['MEXGUA_DB_USR'] %>
-  password: <%= ENV['MEXGUA_DB_PWD'] %>
+  database: mexgua_production
+  username: mexgua
+  password: <%= ENV['MEXGUA_DATABASE_PASSWORD'] %>

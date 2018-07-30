@@ -16,12 +16,9 @@ Rails.application.routes.draw do
   delete 'panel/:id' => 'panel#eliminar', :as => :panel_eliminar
   put 'panel/editar' => 'panel#actualizar'
   patch 'panel/editar' => 'panel#actualizar'
-
-  get '/' => 'inicio#inicio', :as => :inicio
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
-  root to: 'inicio#inicio'
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
 

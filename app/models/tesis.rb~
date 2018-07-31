@@ -1,0 +1,2 @@
+class Tesis < ActiveRecord::Base
+end

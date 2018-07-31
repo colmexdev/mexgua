@@ -1,0 +1,2 @@
+class DocLink < ActiveRecord::Base
+end

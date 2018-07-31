@@ -31,6 +31,8 @@ gem 'active_directory'
 gem 'devise'
 gem "paperclip", "~> 6.0.0"
 gem "trix"
+gem 'remotipart', '~> 1.2'
+gem 'bootstrap-datepicker-rails', :require => 'bootstrap-datepicker-rails', :git => 'https://github.com/Nerian/bootstrap-datepicker-rails.git'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

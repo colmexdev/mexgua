@@ -24,15 +24,29 @@
     <%= f.text_field :autor %>
   </div>
   <div class="field">
+    <%= f.label :titulo_evento, "Título del evento (si aplica)" %><br>
+    <%= f.text_field :titulo_evento %>
+  </div>
+  <div class="field">
     <%= f.label :abstract, "Reseña" %><br>
     <%= f.trix_editor :abstract %>
   </div>
   <div class="field">
-    <%= f.label :link_vid, "Liga al video" %><br>
-    <%= f.text_field :link_vid %>
+		<div style="float:left;width:-webkit-calc(50% - 15px);width:-moz-calc(50% - 15px);width:calc(50% - 15px);">
+    <%= f.label :link_vids, "Liga al video" %><br>
+    <%= f.text_field :link_vids %>
+		</div>
+		<div style="float:left;width:-webkit-calc(50% - 15px);width:-moz-calc(50% - 15px);width:calc(50% - 15px);">
+    <%= f.label :tit_vids, "Título del video" %><br>
+    <%= f.text_field :tit_vids %>
+		</div>
+		<div style="float:left;width:15px;">
+    	<span style="font-size:12px;" class="glyphicon glyphicon-plus" id="vid-new-0" data-id="0"></span>
+    	<span style="font-size:12px;" class="glyphicon glyphicon-minus" id="vid-del-0" data-id="0"></span>
+		</div>
   </div>
   <div class="actions">
-    <%= f.submit "Guardar cápsula" %>
+    <%= f.submit "Guardar foro o conferencia" %>
   </div>
 <% end %>
 

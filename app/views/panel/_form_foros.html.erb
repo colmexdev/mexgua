@@ -31,7 +31,7 @@
     <%= f.label :abstract, "Reseña" %><br>
     <%= f.trix_editor :abstract %>
   </div>
-  <div class="field">
+  <div class="field" style="overflow:auto;">
 		<div style="float:left;width:-webkit-calc(50% - 15px);width:-moz-calc(50% - 15px);width:calc(50% - 15px);">
     <%= f.label :link_vids, "Liga al video" %><br>
     <%= f.text_field :link_vids %>
@@ -40,7 +40,7 @@
     <%= f.label :tit_vids, "Título del video" %><br>
     <%= f.text_field :tit_vids %>
 		</div>
-		<div style="float:left;width:15px;">
+		<div style="float:left;width:30px;">
     	<span style="font-size:12px;" class="glyphicon glyphicon-plus" id="vid-new-0" data-id="0"></span>
     	<span style="font-size:12px;" class="glyphicon glyphicon-minus" id="vid-del-0" data-id="0"></span>
 		</div>

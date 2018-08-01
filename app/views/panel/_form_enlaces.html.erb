@@ -17,7 +17,7 @@
   </div>
   <div class="field">
     <%= f.label :subcategoria, "Subcategoría" %><br>
-    <%= f.select(:categoria,[["Dependencias del Poder Ejecutivo","Dependencias del Poder Ejecutivo","Dependencias del Poder Ejecutivo"],["Poder Legislativo","Poder legislativo"],["Estados de la República Mexicana","Estados de la República Mexicana"],["Organismos ciudadanos y académicos","Organismos ciudadanos y académicos"]], include_blank: true, selected: (@obj.categoria || "")) %>
+    <%= f.select(:subcategoria,[["Dependencias del Poder Ejecutivo","Dependencias del Poder Ejecutivo","Dependencias del Poder Ejecutivo"],["Poder Legislativo","Poder legislativo"],["Estados de la República Mexicana","Estados de la República Mexicana"],["Organismos ciudadanos y académicos","Organismos ciudadanos y académicos"]], include_blank: true, selected: (@obj.subcategoria || "")) %>
   </div>
   <div class="field">
     <%= f.label :info, "Información" %><br>

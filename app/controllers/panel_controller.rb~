@@ -285,17 +285,17 @@ class PanelController < ApplicationController
         trix: [:ficha]
       }, "Revistas": {
         model: Magazine,
-        fields: {ficha: "Ficha bibliográfica", link: "Liga", anio: "Año de publicación"},
+        fields: {ficha: "Ficha bibliográfica", link: "Liga", anio: "Año de publicación", especial: "Número especial"},
         imgs: {},
         trix: [:ficha]
       }, "Tesis": {
         model: Tesis,
-        fields: {ficha: "Ficha bibliográfica", anio: "Año de publicación"},
+        fields: {ficha: "Ficha bibliográfica", anio: "Año de publicación", especial: "Número especial"},
         imgs: {},
         trix: [:ficha]
       }, "Boletines y estadísticas": {
         model: Stat,
-        fields: {ficha: "Ficha bibliográfica", link: "Liga", anio: "Año de publicación"},
+        fields: {ficha: "Ficha bibliográfica", link: "Liga", anio: "Año de publicación", especial: "Número especial"},
         imgs: {},
         trix: [:ficha]
       }, "Comunicados": {

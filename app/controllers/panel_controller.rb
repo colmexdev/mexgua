@@ -360,7 +360,7 @@ class PanelController < ApplicationController
     elsif params[:set] == "Documentos elaborados por el grupo"
       params.require(:doc_link).permit(:ficha, :link)
     elsif params[:set] == "Libros"
-      params.require(:book).permit(:ficha, :link, :anio)
+      params.require(:book).permit(:ficha, :link, :anio, :imagen)
     elsif params[:set] == "Artículos"
       params.require(:article).permit(:ficha, :link, :anio)
     elsif params[:set] == "Revistas"

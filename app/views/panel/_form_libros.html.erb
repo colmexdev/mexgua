@@ -13,7 +13,7 @@
 <%= hidden_field_tag :authenticity_token, form_authenticity_token -%>
   <div class="field">
     <%= f.label :anio, "Año de publicación" %><br>
-    <%= f.number_field :anio, {value: 2000, min: 2000, step: 1} %>
+    <%= f.number_field :anio, {value: (@obj.anio || 2000, min: 2000, step: 1} %>
   </div>
   <div class="field">
     <%= f.label :ficha, "Ficha bibliográfica" %><br>

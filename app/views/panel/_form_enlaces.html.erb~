@@ -12,14 +12,22 @@
   <% end %>
 <%= hidden_field_tag :authenticity_token, form_authenticity_token -%>
   <div class="field">
-    <%= f.label :ficha, "Ficha bibliográfica" %><br>
-    <%= f.trix_editor :ficha %>
+    <%= f.label :categoria, "Categoría" %><br>
+    <%= f.select(:categoria,[["Guatemala","Guatemala"],["México","México"],["Centro y Sudamérica","Centro y Sudamérica"],["Estados Unidos","Estados Unidos"],["Otros países","Otros países"],["Naciones Unidas","Naciones Unidas"],["Universidades e institutos","Universidades e institutos"],["Fundaciones","Fundaciones"],["Derechos Humanos","Derechos Humanos"]], selected: (@obj.categoria || "Guatemala") %>
+  </div>
+  <div class="field">
+    <%= f.label :subcategoria, "Subcategoría" %><br>
+    <%= f.select(:categoria,[["Dependencias del Poder Ejecutivo","Dependencias del Poder Ejecutivo","Dependencias del Poder Ejecutivo"],["Poder Legislativo","Poder legislativo"],["Estados de la República Mexicana","Estados de la República Mexicana"],["Organismos ciudadanos y académicos","Organismos ciudadanos y académicos"]], include_blank: true, selected: (@obj.categoria || "") %>
+  </div>
+  <div class="field">
+    <%= f.label :info, "Información" %><br>
+    <%= f.text_field :info %>
   </div>
   <div class="field">
     <%= f.label :link, "Liga" %><br>
     <%= f.text_field :link %>
   </div>
   <div class="actions">
-    <%= f.submit "Guardar cuaderno" %>
+    <%= f.submit "Guardar enlace" %>
   </div>
 <% end %>

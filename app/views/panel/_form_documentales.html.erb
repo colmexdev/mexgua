@@ -25,7 +25,7 @@
   </div>
   <div class="field">
     <%= f.label :tipo, "Tipo de documental" %><br>
-    <%= f.select(:tipo, [["Cortometraje documental","Cortometraje documental"],["Cortometraje","Cortometraje"]], include_blank: true, selected: @obj.tipo || "") %>
+    <%= f.select(:tipo, [["Cortometraje documental","Cortometraje documental"],["Documental","Documental"]], include_blank: true, selected: @obj.tipo || "") %>
   </div>
   <div class="field">
     <%= f.label :abstract, "Reseña" %><br>

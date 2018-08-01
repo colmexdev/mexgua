@@ -24,6 +24,10 @@
     <%= f.text_field :autor %>
   </div>
   <div class="field">
+    <%= f.label :tipo, "Tipo de documental" %><br>
+    <%= f.select(:tipo, [["Cortometraje documental","Cortometraje documental"],["Cortometraje","Cortometraje"]], include_blank: true, selected: @obj.tipo || "") %>
+  </div>
+  <div class="field">
     <%= f.label :abstract, "Reseña" %><br>
     <%= f.trix_editor :abstract %>
   </div>
@@ -32,12 +36,12 @@
     <%= f.text_field :link_vid %>
   </div>
   <div class="actions">
-    <%= f.submit "Guardar cápsula" %>
+    <%= f.submit "Guardar documental" %>
   </div>
 <% end %>
 
 <script>
-$('#capsule_fecha').datepicker({
+$('#documental_fecha').datepicker({
     format: 'yyyy-mm-dd',
 		language: 'es'
  });

@@ -1,7 +1,7 @@
 <%= form_for(@obj, :remote => true, :url => {:controller => "panel", :action => (action_name == "editar" ? "editar" : "crear"), :params => {:set => params[:set], :id => (@obj.id if action_name == "editar")}}, :html => {:multipart => true}) do |f| %>
   <% if @obj.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@obj.errors.count, "error") %> prohibited this frase from being saved:</h2>
+      <h2>No se pudo guardar el objeto porque:</h2>
 
       <ul>
       <% @obj.errors.full_messages.each do |message| %>

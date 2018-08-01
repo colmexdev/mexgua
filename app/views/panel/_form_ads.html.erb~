@@ -44,3 +44,14 @@
     <%= f.submit "Guardar anuncio" %>
   </div>
 <% end %>
+
+<script>
+$('#ad_fecha').datepicker({
+    format: 'yyyy-mm-dd',
+		language: 'es'
+ });
+$('#ad_fecha_pub').datepicker({
+    format: 'yyyy-mm-dd',
+		language: 'es'
+ });
+</script>

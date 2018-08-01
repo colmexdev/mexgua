@@ -2,7 +2,8 @@ class Ad < ActiveRecord::Base
 
   has_attached_file :imagen, :styles => {},
                     :url => "/assets/ad-pics/:basename-:style.:extension",
-                    :path => ":rails_root/public/assets/ad-pics/:basename-:style.:extension"
+                    :path => ":rails_root/public/assets/ad-pics/:basename-:style.:extension",
+                    :default_url => "/vacio.png"
 
   validates_presence_of :titulo
   validates_presence_of :fecha

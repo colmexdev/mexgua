@@ -330,7 +330,7 @@ class PanelController < ApplicationController
         trix: [:abstract]
       }, "Enlaces de interés": {
         model: Link,
-        fields: {categoria: "Categoría", info: "Información", link: "Liga"},
+        fields: {categoria: "Categoría", subcategoria: "Subcategoría", info: "Información", link: "Liga"},
         imgs: {},
         trix: [:info]
       }
@@ -382,7 +382,7 @@ class PanelController < ApplicationController
     elsif params[:set] == "Videos de foros y conferencias"
       params.require(:forum).permit(:titulo, :fecha, :autor, :titulo_evento, :abstract, :link_vids, :tit_vids)
     elsif params[:set] == "Enlaces de interés"
-      params.require(:link).permit(:categoria, :info, :link)
+      params.require(:link).permit(:categoria, :subcategoria, :info, :link)
     end
   end
 end

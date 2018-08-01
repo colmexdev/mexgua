@@ -23,7 +23,11 @@
     <%= f.label :ficha, "Ficha bibliográfica" %><br>
     <%= f.trix_editor :ficha %>
   </div>
+  <div class="field">
+    <%= f.label :link, "Liga" %><br>
+    <%= f.text_field :link %>
+  </div>
   <div class="actions">
-    <%= f.submit "Guardar tesis" %>
+    <%= f.submit "Guardar revista" %>
   </div>
 <% end %>

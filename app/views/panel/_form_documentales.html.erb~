@@ -12,18 +12,33 @@
   <% end %>
 <%= hidden_field_tag :authenticity_token, form_authenticity_token -%>
   <div class="field">
-    <%= f.label :anio, "Año de publicación" %><br>
-    <%= f.number_field :anio, 2000, min: 2000, step: 1 %>
+    <%= f.label :titulo, "Título" %><br>
+    <%= f.text_field :titulo %>
   </div>
   <div class="field">
-    	<%= f.check_box :tematica, {multiple: false}, true, false %>
-			<%= f.label :tematica, "Número especial" %><br>
+    <%= f.label :fecha, "Fecha (si aplica)" %><br>
+    <%= f.text_field :fecha, {"data-provide" => "datepicker"} %>
   </div>
   <div class="field">
-    <%= f.label :ficha, "Ficha bibliográfica" %><br>
-    <%= f.trix_editor :ficha %>
+    <%= f.label :autor, "Autor (si aplica)" %><br>
+    <%= f.text_field :autor %>
+  </div>
+  <div class="field">
+    <%= f.label :abstract, "Reseña" %><br>
+    <%= f.trix_editor :abstract %>
+  </div>
+  <div class="field">
+    <%= f.label :link_vid, "Liga al video" %><br>
+    <%= f.text_field :link_vid %>
   </div>
   <div class="actions">
-    <%= f.submit "Guardar tesis" %>
+    <%= f.submit "Guardar cápsula" %>
   </div>
 <% end %>
+
+<script>
+$('#capsule_fecha').datepicker({
+    format: 'yyyy-mm-dd',
+		language: 'es'
+ });
+</script>

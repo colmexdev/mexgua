@@ -285,17 +285,17 @@ class PanelController < ApplicationController
         trix: [:ficha]
       }, "Revistas": {
         model: Magazine,
-        fields: {ficha: "Ficha bibliográfica", link: "Liga", anio: "Año de publicación"},
+        fields: {ficha: "Ficha bibliográfica", link: "Liga", anio: "Año de publicación", especial: "Número especial"},
         imgs: {},
         trix: [:ficha]
       }, "Tesis": {
         model: Tesis,
-        fields: {ficha: "Ficha bibliográfica", anio: "Año de publicación"},
+        fields: {ficha: "Ficha bibliográfica", anio: "Año de publicación", especial: "Número especial"},
         imgs: {},
         trix: [:ficha]
       }, "Boletines y estadísticas": {
         model: Stat,
-        fields: {ficha: "Ficha bibliográfica", link: "Liga", anio: "Año de publicación"},
+        fields: {ficha: "Ficha bibliográfica", link: "Liga", anio: "Año de publicación", especial: "Número especial"},
         imgs: {},
         trix: [:ficha]
       }, "Comunicados": {
@@ -364,11 +364,11 @@ class PanelController < ApplicationController
     elsif params[:set] == "Artículos"
       params.require(:article).permit(:ficha, :link, :anio)
     elsif params[:set] == "Revistas"
-      params.require(:magazine).permit(:ficha, :link, :anio)
+      params.require(:magazine).permit(:ficha, :link, :anio, :especial)
     elsif params[:set] == "Tesis"
-      params.require(:tesis).permit(:ficha, :anio)
+      params.require(:tesis).permit(:ficha, :anio, :especial)
     elsif params[:set] == "Boletines y estadísticas"
-      params.require(:stat).permit(:ficha, :link, :anio)
+      params.require(:stat).permit(:ficha, :link, :anio, :especial)
     elsif params[:set] == "Comunicados"
       params.require(:notice).permit(:ficha, :link)
     elsif params[:set] == "Cuadernos migratorios"

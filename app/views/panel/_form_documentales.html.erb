@@ -1,0 +1,48 @@
+<%= form_for(@obj, :remote => true, :url => {:controller => "panel", :action => (action_name == "editar" ? "editar" : "crear"), :params => {:set => params[:set], :id => (@obj.id if action_name == "editar")}}, :html => {:multipart => true}) do |f| %>
+  <% if @obj.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@obj.errors.count, "error") %> prohibited this frase from being saved:</h2>
+
+      <ul>
+      <% @obj.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<%= hidden_field_tag :authenticity_token, form_authenticity_token -%>
+  <div class="field">
+    <%= f.label :titulo, "Título" %><br>
+    <%= f.text_field :titulo %>
+  </div>
+  <div class="field">
+    <%= f.label :fecha, "Fecha (si aplica)" %><br>
+    <%= f.text_field :fecha, {"data-provide" => "datepicker"} %>
+  </div>
+  <div class="field">
+    <%= f.label :autor, "Autor (si aplica)" %><br>
+    <%= f.text_field :autor %>
+  </div>
+  <div class="field">
+    <%= f.label :tipo, "Tipo de documental" %><br>
+    <%= f.select(:tipo, [["Cortometraje documental","Cortometraje documental"],["Cortometraje","Cortometraje"]], include_blank: true, selected: @obj.tipo || "") %>
+  </div>
+  <div class="field">
+    <%= f.label :abstract, "Reseña" %><br>
+    <%= f.trix_editor :abstract %>
+  </div>
+  <div class="field">
+    <%= f.label :link_vid, "Liga al video" %><br>
+    <%= f.text_field :link_vid %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Guardar documental" %>
+  </div>
+<% end %>
+
+<script>
+$('#documental_fecha').datepicker({
+    format: 'yyyy-mm-dd',
+		language: 'es'
+ });
+</script>

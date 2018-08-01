@@ -20,6 +20,10 @@
     <%= f.text_area :texto %>
   </div>
   <div class="field">
+    <%= f.label :link, "Liga" %><br>
+    <%= f.text_field :link %>
+  </div>
+  <div class="field">
     <%= f.label :fecha_pub, "Fecha de publicación" %><br>
     <%= f.text_field :fecha_pub, {"data-provide" => "datepicker"} %>
   </div>

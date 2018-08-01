@@ -29,7 +29,7 @@
     <%= f.file_field :imagen, :onchange => "readURL(this,'#foto-imagen')" %><br>
 		</div>
 		<div class="img-display">
-			<% if !@obj.foto.url.nil? %>
+			<% if !@obj.imagen.url.nil? %>
 				<img id="foto-imagen" src="<%= @obj.imagen.url %>">
 			<% else %>
 				<span>No hay foto para mostrar.</span>

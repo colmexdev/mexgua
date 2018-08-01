@@ -24,6 +24,6 @@
     <%= f.text_field :link %>
   </div>
   <div class="actions">
-    <%= f.submit "Guardar libro" %>
+    <%= f.submit "Guardar artículo" %>
   </div>
 <% end %>

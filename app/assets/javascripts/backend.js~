@@ -98,6 +98,10 @@ function formatDate(fecha){
 	return months[month] + " " + padZero(day) /*padZero(month)*/
 }
 
+function addField(event,element){
+	console.log(element.dataset["id"]);
+}
+
 /* Funciones de edición de texto */
 function configTrix(){
 	Trix.config.blockAttributes.left = {

@@ -99,7 +99,7 @@ function formatDate(fecha){
 }
 
 function addField(event,element){
-	console.log(element.dataset["id"]);
+	console.log(element.parentNode.parentNode);
 }
 
 /* Funciones de edición de texto */

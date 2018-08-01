@@ -12,45 +12,14 @@
   <% end %>
 <%= hidden_field_tag :authenticity_token, form_authenticity_token -%>
   <div class="field">
-    <%= f.label :articulo, "Título del artículo" %><br>
-    <%= f.text_field :articulo %>
+    <%= f.label :ficha, "Ficha bibliográfica" %><br>
+    <%= f.trix_editor :ficha %>
   </div>
   <div class="field">
-    <%= f.label :autores, "Autor(es)" %><br>
-    <%= f.text_area :autores %>
-  </div>
-  <div class="field">
-    <%= f.label :volumen, "Volumen" %><br>
-    <%= f.text_field :volumen %>
-  </div>
-  <div class="field">
-    <%= f.label :numero, "Número" %><br>
-    <%= f.text_field :numero %>
-  </div>
-  <div class="field">
-    <%= f.label :fecha, "Periodo de publicación" %><br>
-    <%= f.text_field :fecha %>
-  </div>
-  <div class="field">
-    <%= f.label :tematica, "Temática(s)" %><br>
-		<% ["Historia","Lengua y literatura","Instituciones políticas","Cuestiones socioeconómicas","Relaciones internacionales","Violencia"].each do |t| %>
-    	<%= f.check_box :tematica, {multiple: true}, t, nil %>
-			<%= f.label :tematica, t %><br>
-		<% end %>
-  </div>
-  <div class="field">
-    <%= f.label :link, "Liga al artículo" %><br>
-    <%= f.text_field :link %>
-  </div>
-  <div class="field">
-    <%= f.label :revista, "Revista a la que pertenece" %><br>
-    <%= f.select(:revista, [["Foro Internacional","Foro Internacional"],["Estudios de Asia y África","Estudios de Asia y África"],["Estudios Demográficos y Urbanos","Estudios Demográficos y Urbanos"],["Estudios Económicos","Estudios Económicos"],["Estudios Sociológicos","Estudios Sociológicos"],["Revista Interdisciplinaria de Estudios de Género","Revista Interdisciplinaria de Estudios de Género"],["Revista Historia Mexicana","Revista Historia Mexicana"],["Nueva Revista de Filología Hispánica","Nueva Revista de Filología Hispánica"],["Cuadernos de Lingüística","Cuadernos de Lingüística"]], selected: (@obj.revista || "Foro Internacional")) %>
-  </div>
-  <div class="field">
-    <%= f.label :centro, "Centro de Estudios" %><br>
-    <%= f.select(:centro,[["CEAA","CEAA"],["CEDUA","CEDUA"],["CEE","CEE"],["CEH","CEH"],["CEI","CEI"],["CELL","CELL"],["CES","CES"]], selected: (@obj.centro || "CEAA")) %>
+    <%= f.label :link, "Liga" %><br>
+    <%= f.text_area :link %>
   </div>
   <div class="actions">
-    <%= f.submit "Guardar artículo" %>
+    <%= f.submit "Guardar documento" %>
   </div>
 <% end %>

@@ -358,7 +358,7 @@ class PanelController < ApplicationController
     if params[:set] == "Anuncios (principal)"
       params.require(:ad).permit(:titulo, :texto, :link, :fecha, :fecha_pub, :imagen)
     elsif params[:set] == "Documentos elaborados por el grupo"
-      params.require(:doclink).permit(:ficha, :link)
+      params.require(:doc_link).permit(:ficha, :link)
     elsif params[:set] == "Libros"
       params.require(:book).permit(:ficha, :link, :anio)
     elsif params[:set] == "Artículos"

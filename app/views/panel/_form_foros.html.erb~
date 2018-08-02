@@ -57,18 +57,19 @@
 		</div>
 		<% else %>
 			<% @obj.link_vids.zip(@obj.tit_vids).each_with_index do |vt,i| %>
-		<div style="width:100%" class="fields-vids" id="<%= 'vid-' + str(i) %>">
-			<div style="float:left;width:-webkit-calc(50% - 15px);width:-moz-calc(50% - 15px);width:calc(50% - 15px);">
-		  	<%= f.text_field :link_vids, {multiple: true, value: vt[0]} %>
+			<div style="width:100%" class="fields-vids" id="<%= 'vid-' + str(i) %>">
+				<div style="float:left;width:-webkit-calc(50% - 15px);width:-moz-calc(50% - 15px);width:calc(50% - 15px);">
+					<%= f.text_field :link_vids, {multiple: true, value: vt[0]} %>
+				</div>
+				<div style="float:left;width:-webkit-calc(50% - 15px);width:-moz-calc(50% - 15px);width:calc(50% - 15px);">
+				<%= f.text_field :tit_vids, {multiple: true, value: vt[1]} %>
+				</div>
+				<div style="float:left;width:30px;">
+					<span style="font-size:12px;cursor:pointer;" class="glyphicon glyphicon-plus" id="<%= 'vid-new-' + str(i) %>" data-id="<%= str(i) %>" onclick="addField(event,this,'.fields-vids','fields-videos','vid-')"></span>
+					<span style="font-size:12px;cursor:pointer;" class="glyphicon glyphicon-minus" id="<%= 'vid-del-' + str(i) %>" data-id="<%= str(i) %>" onclick="deleteField(event,this,'vid-')"></span>
+				</div>
 			</div>
-			<div style="float:left;width:-webkit-calc(50% - 15px);width:-moz-calc(50% - 15px);width:calc(50% - 15px);">
-		  <%= f.text_field :tit_vids, {multiple: true, value: vt[1]} %>
-			</div>
-			<div style="float:left;width:30px;">
-		  	<span style="font-size:12px;cursor:pointer;" class="glyphicon glyphicon-plus" id="<%= 'vid-new-' + str(i) %>" data-id="<%= str(i) %>" onclick="addField(event,this,'.fields-vids','fields-videos','vid-')"></span>
-		  	<span style="font-size:12px;cursor:pointer;" class="glyphicon glyphicon-minus" id="<%= 'vid-del-' + str(i) %>" data-id="<%= str(i) %>" onclick="deleteField(event,this,'vid-')"></span>
-			</div>
-		</div>
+			<% end %>
 		<% end %>
   </div>
   <div class="actions">

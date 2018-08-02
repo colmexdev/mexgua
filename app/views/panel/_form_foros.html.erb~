@@ -56,6 +56,8 @@
 			</div>
 		</div>
 		<% else %>
+			<%= @obj.link_vids.zip(@obj.tit_vids) %>
+			<% if false %>
 			<% @obj.link_vids.zip(@obj.tit_vids).each_with_index do |vt,i| %>
 			<div style="width:100%" class="fields-vids" id="<%= 'vid-' + str(i) %>">
 				<div style="float:left;width:-webkit-calc(50% - 15px);width:-moz-calc(50% - 15px);width:calc(50% - 15px);">
@@ -69,6 +71,7 @@
 					<span style="font-size:12px;cursor:pointer;" class="glyphicon glyphicon-minus" id="<%= 'vid-del-' + str(i) %>" data-id="<%= str(i) %>" onclick="deleteField(event,this,'vid-')"></span>
 				</div>
 			</div>
+			<% end %>
 			<% end %>
 		<% end %>
   </div>

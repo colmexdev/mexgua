@@ -1,0 +1,81 @@
+<!-- Footer section -->
+<footer class="footer-section">
+  <div class="footer-top">
+    <div class="container">
+      <div class="row">
+        <div class="row">
+          <div class="col-lg-6 col-md-6 col-sm-6">
+            <div class="f-widget">
+              <div class="footer-content">
+                <h2>Contacto</h2>
+                <h4>SECRETARÍA TÉCNICA EN MÉXICO</h4>
+                <p>El Colegio de México (COLMEX) </p>
+              </div>
+              <div class="contact-info">
+                <ul>
+                  <li><i class="fa fa-home" aria-hidden="true"></i><span> Carretera Picacho Ajusco 20, Col. Ampliación Fuentes del Pedregal, C.P. 14110 Tlalpan, Ciudad de México </span></li>
+                  <li><i class="fa fa-phone" aria-hidden="true"></i><span> +52 55 54493000 ext. 4070</span></li>
+                  <li><i class="fa fa-globe" aria-hidden="true"></i><span> <a href="https://www.colmex.mx/" target="_blank">www.colmex.mx</a></span></li>
+                </ul>
+              </div>
+              <hr>
+              <p>Mtro. Manuel  Ángel Castillo (Responsable)</p>
+              <div class="contact-info">
+                <ul>
+                  <li><i class="fa fa-envelope-o" aria-hidden="true"></i><span> castillo@colmex.mx</span></li>
+                </ul>
+              </div>
+              <hr>
+              <p>Cecilia Yolitzma Valdés (Contacto)</p>
+              <div class="contact-info">
+                <ul>
+                  <li><i class="fa fa-envelope-o" aria-hidden="true"></i><span> cyvaldes@colmex.mx</span></li>
+                </ul>
+              </div>
+              <br>
+              <div class="col-lg-6 col-md-6 col-sm-6">
+                <div class="footer-logo"> <a href="https://www.colmex.mx/" target="_blank"><img src="images/colmex.png" alt="El Colegio de México"></a></div>
+              </div>
+              <div class="col-lg-6 col-md-6 col-sm-6">
+                <div class="footer-logo"><a href="http://cedua.colmex.mx/" target="_blank"><img src="images/cedua.png" alt="Cedua"></a></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-6">
+            <div class="f-widget">
+              <div class="footer-content">
+                <h2>&nbsp;</h2>
+                <h4>SECRETARÍA TÉCNICA EN GUATEMALA</h4>
+                <p>Instituto Centroamericano de Estudios Sociales y Desarrollo (INCEDES)</p>
+              </div>
+              <div class="contact-info">
+                <ul>
+                  <li><i class="fa fa-home" aria-hidden="true"></i><span> 40 Avenida 13-91 zona 5 , Jardines de la Asunción Norte, Arco 4-7, Ciudad de Guatemala, Guatemala</span></li>
+                  <li><i class="fa fa-phone" aria-hidden="true"></i><span> (+502) 2336-1347 / 2336-1933</span></li>
+                  <li><i class="fa fa-envelope-o" aria-hidden="true"></i><span> informacion@incedes.org.gt</span></li>
+                  <li><i class="fa fa-globe" aria-hidden="true"></i><span> <a href="www.incedes.org.gt" target="_blank">www.incedes.org.gt</a></span></li>
+                </ul>
+              </div>
+              <hr>
+              <p>Silvia Irene Palma (Responsable)</p>
+              <div class="contact-info">
+                <ul>
+                  <li><i class="fa fa-envelope-o" aria-hidden="true"></i><span> irenepalmacalderon@gmail.com</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <div class="row">
+        <div class="copyright-text">
+          <p>&copy; <%= Date.current.year %>. El Colegio de México</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

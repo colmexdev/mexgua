@@ -177,4 +177,5 @@
 <!-- Fin Artículos y Noticias --> 
 
 <%= render 'inicio/footer' %>
+<script src="/js/bootstrap.min.js"></script> 
 <script src="/js/functions.js"></script>

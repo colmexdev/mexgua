@@ -12,9 +12,12 @@
  *
  *= require bootstrap-datepicker
  *= require trix
- *= require_tree .
+ *= require_self
  */
 
+@import "bootstrap.min.css";
+@import "style.css";
+@import "responsive.css";
 @import "font-awesome-sprockets";
 @import "font-awesome";
 @import "panel";

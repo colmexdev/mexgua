@@ -19,5 +19,4 @@
 //= require bootstrap-datepicker/locales/bootstrap-datepicker.es.js
 //= require backend
 //= require trix
-//= require_tree .
 

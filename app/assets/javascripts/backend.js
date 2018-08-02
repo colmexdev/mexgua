@@ -104,7 +104,7 @@ function addField(event,element,parent_class,cont_id){
 	div.style.width = "100%";
 	div.className = parent_class;
 	var html = 	'<div style="float:left;width:-webkit-calc(50% - 15px);width:-moz-calc(50% - 15px);width:calc(50% - 15px);">' +
-		            '<input multiple="multiple" type="text" name="forum[link_vids][]" id="forum_link_vids">' +
+		            '<input multiple="multiple" type="text" name="forum[link_vids][]" id="forum_link_vids_' + total + '">' +
 		            '</div>' +
 			        '<div style="float:left;width:-webkit-calc(50% - 15px);width:-moz-calc(50% - 15px);width:calc(50% - 15px);">' +
 		            '<input multiple="multiple" type="text" name="forum[tit_vids][]" id="forum_tit_vids_' + total + '">' +

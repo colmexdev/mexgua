@@ -99,7 +99,7 @@ function formatDate(fecha){
 }
 
 function addField(event,element,parent_class,cont_id){
-	var total = $(parent_class).length - 1;
+	var total = $(parent_class).length;
 	var div = document.createElement("div");
 	div.style.width = "100%";
 	div.className = parent_class;

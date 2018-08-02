@@ -98,7 +98,7 @@ function formatDate(fecha){
 	return months[month] + " " + padZero(day) /*padZero(month)*/
 }
 
-function addField(event,element){
+function addField(event,element,parent){
 	console.log(element.parentNode.parentNode);
 }
 

@@ -1,0 +1,5 @@
+class AddVideosToForums < ActiveRecord::Migration
+  def change
+    add_column :forums, :link_vids, :text
+  end
+end

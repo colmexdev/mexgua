@@ -6,6 +6,8 @@ class CreateForums < ActiveRecord::Migration
       t.text :autor
       t.text :titulo_evento
       t.text :abstract
+      t.text :link_vids
+      t.text :tit_vids
 
       t.timestamps null: false
     end

@@ -110,7 +110,7 @@ function addField(event,element,parent_class,cont_id){
 		            '<input multiple="multiple" type="text" name="forum[tit_vids][]" id="forum_tit_vids_' + total + '">' +
 			        '</div>' +
 			        '<div style="float:left;width:30px;">' +
-		  	        '<span style="font-size:12px;cursor:pointer;" class="glyphicon glyphicon-plus" id="vid-new-' + total + '" data-id="' + total + '" onclick="addField(event,this,\'.fields-vids\',\'#fields-videos\')"></span>' +
+		  	        '<span style="font-size:12px;cursor:pointer;" class="glyphicon glyphicon-plus" id="vid-new-' + total + '" data-id="' + total + '" onclick="addField(event,this,\'.fields-vids\',\'fields-videos\')"></span>' +
 		  	        '<span style="font-size:12px;cursor:pointer;" class="glyphicon glyphicon-minus" id="vid-del-' + total + '" data-id="' + total + '"></span>' +
 			        '</div>';
 	div.innerHTML = html;

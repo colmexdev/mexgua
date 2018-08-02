@@ -56,7 +56,9 @@
 			</div>
 		</div>
 		<% else %>
-			<%= @obj.link_vids.zip(@obj.tit_vids) %>
+			<% @obj.link_vids.zip(@obj.tit_vids).each_with_index do |vt,i| %>
+				<%= vt %> <%= i %>
+			<% end %>
 			<% if false %>
 			<% @obj.link_vids.zip(@obj.tit_vids).each_with_index do |vt,i| %>
 			<div style="width:100%" class="fields-vids" id="<%= 'vid-' + str(i) %>">

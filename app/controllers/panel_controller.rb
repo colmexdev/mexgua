@@ -380,7 +380,7 @@ class PanelController < ApplicationController
     elsif params[:set] == "Programas televisivos"
       params.require(:program).permit(:titulo, :fecha, :autor, :abstract, :link_vid)
     elsif params[:set] == "Videos de foros y conferencias"
-      params.require(:forum).permit(:titulo, :fecha, :autor, :titulo_evento, :abstract, :link_vids, :tit_vids)
+      params.require(:forum).permit(:titulo, :fecha, :autor, :titulo_evento, :abstract, :link_vids => [], :tit_vids => [])
     elsif params[:set] == "Enlaces de interés"
       params.require(:link).permit(:categoria, :subcategoria, :info, :link)
     end

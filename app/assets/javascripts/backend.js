@@ -98,11 +98,13 @@ function formatDate(fecha){
 	return months[month] + " " + padZero(day) /*padZero(month)*/
 }
 
-function addField(event,element,parent_class,cont_id){
+function addField(event,element,parent_class,cont_id,field_id){
 	var total = $(parent_class).length;
 	var div = document.createElement("div");
 	div.style.width = "100%";
 	div.className = parent_class;
+	div.id = field_id + total;
+	//Estructura del campo a añadir
 	var html = 	'<div style="float:left;width:-webkit-calc(50% - 15px);width:-moz-calc(50% - 15px);width:calc(50% - 15px);">' +
 		            '<input multiple="multiple" type="text" name="forum[link_vids][]" id="forum_link_vids_' + total + '">' +
 		            '</div>' +
@@ -110,12 +112,16 @@ function addField(event,element,parent_class,cont_id){
 		            '<input multiple="multiple" type="text" name="forum[tit_vids][]" id="forum_tit_vids_' + total + '">' +
 			        '</div>' +
 			        '<div style="float:left;width:30px;">' +
-		  	        '<span style="font-size:12px;cursor:pointer;" class="glyphicon glyphicon-plus" id="vid-new-' + total + '" data-id="' + total + '" onclick="addField(event,this,\'.fields-vids\',\'fields-videos\')"></span>' +
-		  	        '<span style="font-size:12px;cursor:pointer;" class="glyphicon glyphicon-minus" id="vid-del-' + total + '" data-id="' + total + '"></span>' +
+		  	        '<span style="font-size:12px;cursor:pointer;" class="glyphicon glyphicon-plus" id="vid-new-' + total + '" data-id="' + total + '" onclick="addField(event,this,\'.fields-vids\',\'fields-videos\',\'vid-\')"></span>' +
+		  	        '<span style="font-size:12px;cursor:pointer;" class="glyphicon glyphicon-minus" id="vid-del-' + total + '" data-id="' + total + '"  onclick="deleteField(event,this,\'vid-\')"></span>' +
 			        '</div>';
 	div.innerHTML = html;
 	document.getElementById(cont_id).appendChild(div);
-	console.log(element.parentNode.parentNode);
+}
+
+function deleteField(event,element,field_id){
+	var field = document.getElementById(field_id + element.dataset["id"]);
+	return field.parentNode.removeChild(field);
 }
 
 /* Funciones de edición de texto */

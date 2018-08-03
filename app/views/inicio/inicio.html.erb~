@@ -143,6 +143,7 @@
         <h3>Artículos y noticias</h3>
       </div>
     </div>
+		<% @ads.each do |a| %>
     <div class="row">
       <div class="col-sm-3 col-xs-12"> </div>
       <div class="col-sm-6 col-xs-12">
@@ -157,6 +158,7 @@
           </div>
         </div>
       </div>
+			<% end %>
       <!--div class="col-sm-6 col-xs-12">
         <div class="single-blog">
           <div class="single-blog-img"> <a href="blog_single.html"><img src="images/home-blog-02.jpg" alt="Image Name"></a> </div>

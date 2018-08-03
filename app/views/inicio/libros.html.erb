@@ -14,7 +14,7 @@
           <!-- Nav tabs -->
           <ul role="tablist">
 						<% @anios_libro.each_with_index do |a,i| %>
-            <li role="presentation" class="<%= i == 1 ? 'in active' : '' %>"><a href="<%= '#' + a.to_s %>" aria-controls="<%= a.to_s %>" role="tab" data-toggle="tab"><span style="font-size: 16px;"><%= a.to_s %></span></a></li>
+            <li role="presentation" class="<%= i == 0 ? 'active' : '' %>"><a href="<%= '#' + a.to_s %>" aria-controls="<%= a.to_s %>" role="tab" data-toggle="tab"><span style="font-size: 16px;"><%= a.to_s %></span></a></li>
 						<% end %>
           </ul>
         </div>
@@ -22,8 +22,8 @@
           <!-- Tab panes -->
           <div class="tab-content">
 
-<% @anios_libro.each do |a| %>
-            <div role="tabpanel" class="tab-pane fade" id="<%= a.to_s %>">
+<% @anios_libro.each_with_index do |a,i| %>
+            <div role="tabpanel" class="<%= 'tab-pane fade' + (i == 0 ? ' in active' : '') %>" id="<%= a.to_s %>">
               <div class="helping-description">
                 <div class="widget">
                   <h3><%= a.to_s %></h3>

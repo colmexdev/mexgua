@@ -23,4 +23,8 @@ class InicioController < ApplicationController
   def principios
   end
 
+  def documentos
+    @docs = DocLink.all
+  end
+
 end

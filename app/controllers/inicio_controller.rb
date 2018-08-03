@@ -24,7 +24,7 @@ class InicioController < ApplicationController
   end
 
   def documentos
-    @docs = DocLink.all
+    @docs = DocLink.all.order(created_at: :desc)
   end
 
 end

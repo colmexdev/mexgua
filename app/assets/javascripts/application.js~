@@ -15,10 +15,10 @@
 //= require turbolinks
 //= require jquery.remotipart
 //= require bootstrap.min
-//= require functions
 //= require bootstrap-datepicker
 //= require bootstrap-datepicker/core
 //= require bootstrap-datepicker/locales/bootstrap-datepicker.es.js
 //= require backend
 //= require trix
+//= require functions
 

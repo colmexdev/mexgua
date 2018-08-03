@@ -17,4 +17,10 @@ class InicioController < ApplicationController
   def acciones
   end
 
+  def flujos
+  end
+
+  def principios
+  end
+
 end

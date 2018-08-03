@@ -23,6 +23,8 @@ Rails.application.routes.draw do
   get '/sobre' => 'inicio#sobre', :as => :sobre
   get '/antecedentes' => 'inicio#antecedentes', :as => :antecedentes
   get '/propuestas' => 'inicio#propuestas', :as => :propuestas
+  get '/acciones' => 'inicio#acciones', :as => :acciones
+  get '/flujos' => 'inicio#flujos', :as => :flujos
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

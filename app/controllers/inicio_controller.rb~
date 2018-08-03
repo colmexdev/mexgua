@@ -14,4 +14,10 @@ class InicioController < ApplicationController
   def propuestas
   end
 
+  def acciones
+  end
+
+  def flujos
+  end
+
 end

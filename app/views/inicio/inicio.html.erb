@@ -148,13 +148,13 @@
       <div class="col-sm-3 col-xs-12"> </div>
       <div class="col-sm-6 col-xs-12">
         <div class="single-blog">
-          <div class="single-blog-img"> <a href="http://cebem.org/?p=1969" target="_blank"><img src="noticias/convocatoria-cebem.png" alt="Blog Image"></a> </div>
+          <div class="single-blog-img"> <a href="<%= a.link %>" target="_blank"><img src="<%= a.imagen.url %>" alt="Blog Image"></a> </div>
           <div class="blog-content-box">
-            <div class="blog-post-date"> <span>17</span> <span>Oct 2017</span> </div>
+            <div class="blog-post-date"> <span><%= a.fecha_pub.mday %></span> <span><%= l a.fecha_pub, format: :mes_anio %></span> </div>
             <div class="blog-content">
-              <h4><a href="http://cebem.org/?p=1969" target="_blank">XVI Congreso Internacional sobre Integración Regional, Fronteras y Globalización en el Continente Americano</a></h4>
-              <div class="exerpt">El XVI Congreso internacional sobre integración regional, fronteras y globalización en el Continente Americano en Medellín-Colombia, representa la posibilidad de juntar esfuerzos, experiencias y trayectorias de personas de toda América Latina y de otras partes del mundo, tanto de los que vienen participando en los ya históricos y reconocidos congresos, como de los integrantes del GT CLACSO.</div>
-              <a href="http://cebem.org/?p=1969" class="btn-two" target="_blank">Leer más</a> </div>
+              <h4><a href="<% a.link %>" target="_blank"><%= a.titulo %></a></h4>
+              <div class="exerpt"><%= a.texto %></div>
+              <a href="<%= a.link %>" class="btn-two" target="_blank">Leer más</a> </div>
           </div>
         </div>
       </div>

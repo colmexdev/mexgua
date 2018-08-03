@@ -27,4 +27,8 @@ class InicioController < ApplicationController
     @docs = DocLink.all.order(created_at: :desc)
   end
 
+  def libros
+   @libros = Book.all.order(created_at: :desc)
+  end
+
 end

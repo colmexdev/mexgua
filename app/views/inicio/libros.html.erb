@@ -1,0 +1,1679 @@
+<%= render 'inicio/header' %>
+
+<!-- Helping Section -->
+<section class="section helping-section">
+  <div class="container">
+    <div class="row">
+      <div class="section-heading">
+        <h3>Libros</h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="helping-box">
+        <div class="helping-list"> 
+          <!-- Nav tabs -->
+          <ul role="tablist">
+						<% @libros.pluck(:anio).uniq.each_with_index do |a,i| %>
+            <li role="presentation" class="<%= i == 0 ? 'active' : '' %>"><a href="<%= '#' + a.to_s %>" aria-controls="<%= a.to_s %>" role="tab" data-toggle="tab"><span style="font-size: 16px;"><%= a.to_s %></span></a></li>
+						<% end %>
+          </ul>
+        </div>
+<% if false %>
+        <div class="helping-details"> 
+          <!-- Tab panes -->
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane fade in active" id="2018">
+              <div class="helping-description">
+                <div class="widget">
+                  <h3>2018</h3>
+                </div>
+                <!-- Inicia estructura Libro -->
+                <section class="section team-single" style="padding-top: 0">
+                  <div class="container"> 
+                    <!-- Inicia libro -->
+                    <div class="row" style="padding-top: 20px">
+                      <div class="col-sm-2">
+                        <div class="team-member-full-img"> <img src="libros/shining-new-light-on-the-un.png" alt="Portada de libro"> </div>
+                      </div>
+                      <div class="col-sm-10">
+                        <div class="member-details"> <br>
+                          <p>Desmond Alan (2018) <em>Shining new light on the UN Migrant Workers Convention</em>. Pretoria University Law Press (PULP) Sudáfrica</p>
+                          <a href="http://www.pulp.up.ac.za/edited-collections/shining-new-light-on-the-un-migrant-workers-convention" target="_blank" class="btn-two">Leer</a> </div>
+                      </div>
+                    </div>
+                    <br>
+                    <!-- Fin de libro --> 
+                    <!-- Inicia libro -->
+                    <div class="row" style="padding-top: 20px">
+                      <div class="col-sm-2">
+                        <div class="team-member-full-img"> <img src="libros/las-odiseas-de-penelope.png" alt="Portada de libro"> </div>
+                      </div>
+                      <div class="col-sm-10">
+                        <div class="member-details"> <br>
+                          <p>Guerra Palmero M.J., Pérez García N. y Roldán Dávila G., (Coords.) (2018) <em>Las odiseas de Penélope. Feminización de las migraciones y derechos humanos</em>. Universidad Nacional Autónoma de México Instituto de Investigaciones
+                            Económicas. México.</p>
+                          <!--a href="#" target="_blank" class="btn-two">Leer</a--> </div>
+                      </div>
+                    </div>
+                    <br>
+                    <!-- Fin de libro --> 
+                  </div>
+                </section>
+                <!-- Fin estructura Libro --> 
+              </div>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="2017">
+              <div class="helping-description">
+                <div class="widget">
+                  <h3>2017</h3>
+                </div>
+                <!-- Inicia estructura Libro -->
+                <section class="section team-single" style="padding-top: 0">
+                  <div class="container"> 
+                    <!-- Inicia libro -->
+                    <div class="row" style="padding-top: 20px">
+                      <div class="col-sm-2">
+                        <div class="team-member-full-img"> <img src="libros/criminalizacion-mujeres-migrantes.png" alt="Portada de libro"> </div>
+                      </div>
+                      <div class="col-sm-10">
+                        <div class="member-details"> <br>
+                          <p>Centro de Derechos Humanos Miguel Angel Agustín Pro Juárez (2017) <em>Criminalización de mujeres migrantes. Análisis de seis casos en la frontera sur</em>. Universidad Iberoamericana, Ciudad de México. Programa de asuntos Migratorios,
+                            Centro de derechos humanos Fray Matías Córdova. México.</p>
+                          <a href="http://cdhfraymatias.org/web/wp-content/uploads/2017/12/MujeresMigrantes_nov17-1.pdf" target="_blank" class="btn-two">Leer</a> </div>
+                      </div>
+                    </div>
+                    <br>
+                    <!-- Fin de libro --> 
+                    <!-- Inicia libro -->
+                    <div class="row" style="padding-top: 20px">
+                      <div class="col-sm-2">
+                        <div class="team-member-full-img"> <img src="libros/migracion-internacional-en-las-americas.png" alt="Portada de libro"> </div>
+                      </div>
+                      <div class="col-sm-10">
+                        <div class="member-details"> <br>
+                          <p>SICREMI (2017) <em>Migración Internacional en las Américas</em>. OEA. Washington</p>
+                          <a href="http://www.oas.org/documents/spa/press/SICREMI-2017-espanol-web-FINAL.pdf" target="_blank" class="btn-two">Leer</a> </div>
+                      </div>
+                    </div>
+                    <br>
+                    <!-- Fin de libro --> 
+                    <!-- Inicia libro -->
+                    <div class="row" style="padding-top: 20px">
+                      <div class="col-sm-2">
+                        <div class="team-member-full-img"> <img src="libros/womens-empowerment-and-migration.png" alt="Portada de libro"> </div>
+                      </div>
+                      <div class="col-sm-10">
+                        <div class="member-details"> <br>
+                          <p>Platonova, Anna y Gény, Lydia Rosa (2017) <em>Women's empowerment and migration in the Caribbean</em>. CEPAL. United Nations. Santiago, Chile.</p>
+                          <a href="https://www.cepal.org/en/publications/42491-womens-empowerment-and-migration-caribbean" target="_blank" class="btn-two">Leer</a> </div>
+                      </div>
+                    </div>
+                    <br>
+                    <!-- Fin de libro --> 
+                    <!-- Inicia libro -->
+                    <div class="row" style="padding-top: 20px">
+                      <div class="col-sm-2">
+                        <div class="team-member-full-img"> <img src="libros/exile-diaspora-and-return.png" alt="Portada de libro"> </div>
+                      </div>
+                      <div class="col-sm-10">
+                        <div class="member-details"> <br>
+                          <p>Luis Roniger, Leonardo Senkman, Saúl Sosnowski, y Mario Sznajder (2017) <em>Exile, Diaspora, and Return Changing Cultural Landscapes in Argentina, Chile, Paraguay, and Uruguay</em>. Oxford University Press, Estados Unidos</p>
+                          <!--a href="#" target="_blank" class="btn-two">Leer</a--> </div>
+                      </div>
+                    </div>
+                    <br>
+                    <!-- Fin de libro --> 
+                    <!-- Inicia libro -->
+                    <div class="row" style="padding-top: 20px">
+                      <div class="col-sm-2">
+                        <div class="team-member-full-img"> <img src="libros/world-migration-report.png" alt="Portada de libro"> </div>
+                      </div>
+                      <div class="col-sm-10">
+                        <div class="member-details"> <br>
+                          <p>International Organization for Migration (2017) <em>WORLD MIGRATION REPORT 2018</em>. OIM The UN Migration Agency, Suiza.</p>
+                          <a href="https://publications.iom.int/es/system/files/pdf/wmr_2018_en.pdf" target="_blank" class="btn-two">Leer</a> </div>
+                      </div>
+                    </div>
+                    <br>
+                    <!-- Fin de libro --> 
+                    <!-- Inicia libro -->
+                    <div class="row" style="padding-top: 20px">
+                      <div class="col-sm-2">
+                        <div class="team-member-full-img"> <img src="libros/familias-centroamericanas-migrantes-en-mexico.png" alt="Portada de libro"> </div>
+                      </div>
+                      <div class="col-sm-10">
+                        <div class="member-details"> <br>
+                          <p>Gabriela Díaz Prieto (2017) <em>Familias centroamericanas migrantes en México. Recomendaciones para ampliar su protección</em>. Instituto para las Mujeres en la Migración, AC Ciudad de México, México.</p>
+                          <a href="http://familiascentroamericanasmigrantesenmexico.imumi.org/wp-content/uploads/2017/11/Familias-centroamericanas-completo.pdf" target="_blank" class="btn-two">Leer</a> </div>
+                      </div>
+                    </div>
+                    <br>
+                    <!-- Fin de libro --> 
+                    <!-- Inicia libro -->
+                    <div class="row" style="padding-top: 20px">
+                      <div class="col-sm-2">
+                        <div class="team-member-full-img"> <img src="libros/desarrollo-sostenible.png" alt="Portada de libro"> </div>
+                      </div>
+                      <div class="col-sm-10">
+                        <div class="member-details"> <br>
+                          <p>Ricardo Jordán, Luis Antonio Prado, Luis Riffo (Coord.) (2017) <em>Desarrollo sostenible. Urbanización y desigualdad en América Latina y el Caribe. Dinámicas y desafíos para el cambio estructural</em>. Naciones Unidas. Santiago,
+                            Chile. </p>
+                          <a href="http://repositorio.cepal.org/bitstream/handle/11362/42141/1/S1700701_es.pdf" target="_blank" class="btn-two">Leer</a> </div>
+                      </div>
+                    </div>
+                    <br>
+                    <!-- Fin de libro --> 
+                    <!-- Inicia libro -->
+                    <div class="row" style="padding-top: 20px">
+                      <div class="col-sm-2">
+                        <div class="team-member-full-img"> <img src="libros/labour-market-entry.png" alt="Portada de libro"> </div>
+                      </div>
+                      <div class="col-sm-10">
+                        <div class="member-details"> <br>
+                          <p>Olof Alund, Et. Al. (2017) <em>Labour market entry of non- labour migrants- Swedish evidende. Working paper 2017:15</em>. IFAU. Upsala, Suecia.</p>
+                          <a href="http://www.ifau.se/globalassets/pdf/se/2017/wp2017-15-labour-market-entry-of-non-labour-migrants.pdf" target="_blank" class="btn-two">Leer</a> </div>
+                      </div>
+                    </div>
+                    <br>
+                    <!-- Fin de libro --> 
+                    <!-- Inicia libro -->
+                    <div class="row" style="padding-top: 20px">
+                      <div class="col-sm-2">
+                        <div class="team-member-full-img"> <img src="libros/problema-maras.png" alt="Portada de libro"> </div>
+                      </div>
+                      <div class="col-sm-10">
+                        <div class="member-details"> <br>
+                          <p>Emilio Sánchez de Rojas Díaz, Daniel López. (2017) <em>El problema de las "maras" y bandas latinas, dos visiones: desde El Salvador y España</em>. Instituto Español de Estudios Estratégicos. España.</p>
+                          <a href="http://www.ieee.es/Galerias/fichero/docs_trabajo/2017/DIEEET04-2017_Problem_Maras_BandasLatinas_ElSalvador-Espana_DanielLopez.pdf" target="_blank" class="btn-two">Leer</a> </div>
+                      </div>
+                    </div>
+                    <br>
+                    <!-- Fin de libro --> 
+                    <!-- Inicia libro -->
+                    <div class="row" style="padding-top: 20px">
+                      <div class="col-sm-2">
+                        <div class="team-member-full-img"> <img src="libros/fronteras-latinoamericanas.png" alt="Portada de libro"> </div>
+                      </div>
+                      <div class="col-sm-10">
+                        <div class="member-details"> <br>
+                          <p>Juan Carlos Ramírez Brenes (Coord) (2017) <em>Fronteras latinoamericanas ejemplos para su comprensión</em>. Universidad Nacional de Costa Rica. Costa Rica.</p>
+                          <a href="http://jadecr.com/librosdigitales/fronteras/index.html" target="_blank" class="btn-two">Leer</a> </div>
+                      </div>
+                    </div>
+                    <br>
+                    <!-- Fin de libro --> 
+                    <!-- Inicia libro -->
+                    <div class="row" style="padding-top: 20px">
+                      <div class="col-sm-2">
+                        <div class="team-member-full-img"> <img src="libros/forzados-a-huir.png" alt="Portada de libro"> </div>
+                      </div>
+                      <div class="col-sm-10">
+                        <div class="member-details"> <br>
+                          <p>Carmen Rodríguez. (2017) <em>Forzados a Huir del Triángulo Norte de Centroamérica: Una crisis humanitaria olvidada</em>. Médicos sin Fronteras. México.</p>
+                          <a href="https://arhp.msf.es/sites/default/files/Informe-MSF_Forzados-a-huir-del-triangulo-norte-de-Centroamerica.pdf" target="_blank" class="btn-two">Leer</a> </div>
+                      </div>
+                    </div>
+                    <br>
+                    <!-- Fin de libro --> 
+                    <!-- Inicia libro -->
+                    <div class="row" style="padding-top: 20px">
+                      <div class="col-sm-2">
+                        <div class="team-member-full-img"> <img src="libros/ninos-ninas-adolescentes-fonteras-mercosur.png" alt="Portada de libro"> </div>
+                      </div>
+                      <div class="col-sm-10">
+                        <div class="member-details"> <br>
+                          <p>Jorge Guirrieri, Constanza Argentieri y Javier Paummo (Coords) (2017) <em>Niños, niñas y adolescentes a través de las fronteras del MERCOSUR. Motivos y modalidades de los cruces entre Argentina y Paraguay. Aportes para pensar la protección</em>.
+                            Oficina Regional de la OIM para América del Sur. Argentina</p>
+                          <a href="http://www.ippdh.mercosur.int/wp-content/uploads/2017/06/Editorial_Final-Digital-1.pdf" target="_blank" class="btn-two">Leer</a> </div>
+                      </div>
+                    </div>
+                    <br>
+                    <!-- Fin de libro --> 
+                    <!-- Inicia libro -->
+                    <div class="row" style="padding-top: 20px">
+                      <div class="col-sm-2">
+                        <div class="team-member-full-img"> <img src="libros/movimientos-migratorios-fronteras-iberoamericanas.png" alt="Portada de libro"> </div>
+                      </div>
+                      <div class="col-sm-10">
+                        <div class="member-details"> <br>
+                          <p>Alberto Ares y Joaquín Fguren (Eds.) (2017) <em>Los movimientos migratorios en las fronteras Iberoaméricanas</em>. BIMID. Kamar. Guatemala</p>
+                          <a href="http://www.comillas.edu/Documentos/OBIMID/obimid_vol2.pdf" target="_blank" class="btn-two">Leer</a> </div>
+                      </div>
+                    </div>
+                    <br>
+                    <!-- Fin de libro --> 
+                    <!-- Inicia libro -->
+                    <div class="row" style="padding-top: 20px">
+                      <div class="col-sm-2">
+                        <div class="team-member-full-img"> <img src="libros/politicas-leyes-migracion-laboral.png" alt="Portada de libro"> </div>
+                      </div>
+                      <div class="col-sm-10">
+                        <div class="member-details"> <br>
+                          <p>OIT (2017) <em>Políticas y leyes de migración laboral: El panorama en 5 países de América Latina y el Caribe</em>. OIT. Brasil</p>
+                          <a href="http://www.ilo.org/wcmsp5/groups/public/---americas/---ro-lima/---ilo-brasilia/documents/publication/wcms_563942.pdf" target="_blank" class="btn-two">Leer</a> </div>
+                      </div>
+                    </div>
+                    <br>
+                    <!-- Fin de libro --> 
+                    <!-- Inicia libro -->
+                    <div class="row" style="padding-top: 20px">
+                      <div class="col-sm-2">
+                        <div class="team-member-full-img"> <img src="libros/history-global-migration-governance.png" alt="Portada de libro"> </div>
+                      </div>
+                      <div class="col-sm-10">
+                        <div class="member-details"> <br>
+                          <p>Alexander Betts y Lena Kains (2017) <em>The history of global migration governance. RSC Working Paper Series, 122</em>. Refugee Studies Centre. Estados Unidos.</p>
+                          <a href="https://www.rsc.ox.ac.uk/publications/the-history-of-global-migration-governance" target="_blank" class="btn-two">Leer</a> </div>
+                      </div>
+                    </div>
+                    <br>
+                    <!-- Fin de libro --> 
+                    <!-- Inicia libro -->
+                    <div class="row" style="padding-top: 20px">
+                      <div class="col-sm-2">
+                        <div class="team-member-full-img"> <img src="libros/informe-programa-estudios-pobreza.png" alt="Portada de libro"> </div>
+                      </div>
+                      <div class="col-sm-10">
+                        <div class="member-details"> <br>
+                          <p>Carlos Nieto (2017) <em>Migración haitiana a Brasil. Redes migratorias y espacio social transnacional</em>. CLACSO. Libro Digital</p>
+                          <a href="http://biblioteca.clacso.edu.ar/gsdl/collect/clacso/index/assoc/D9599.dir/NIETOMigracionhaitianaaBrasil.pdf" target="_blank" class="btn-two">Leer</a> </div>
+                      </div>
+                    </div>
+                    <br>
+                    <!-- Fin de libro --> 
+                    <!-- Inicia libro -->
+                    <div class="row" style="padding-top: 20px">
+                      <div class="col-sm-2">
+                        <div class="team-member-full-img"> <img src="libros/interrelations-between-public-policies.png" alt="Portada de libro"> </div>
+                      </div>
+                      <div class="col-sm-10">
+                        <div class="member-details"> <br>
+                          <p>OECD (2017) <em>Interrelations between Public Policies, Migration and Development in Costa Rica</em>. OECD publications. Paris</p>
+                          <a href="http://www.oecd.org/countries/costarica/interrelations-between-public-policy-migration-and-development-in-costa-rica-9789264278967-en.htm" target="_blank" class="btn-two">Leer</a> </div>
+                      </div>
+                    </div>
+                    <br>
+                    <!-- Fin de libro --> 
+                    <!-- Inicia libro -->
+                    <div class="row" style="padding-top: 20px">
+                      <div class="col-sm-2">
+                        <div class="team-member-full-img"> <img src="libros/personas-en-detencion-migratoria.png" alt="Portada de libro"> </div>
+                      </div>
+                      <div class="col-sm-10">
+                        <div class="member-details"> <br>
+                          <p>CCINM, (2017) <em>Personas en detención migratoria en México Misión de Monitoreo de Estaciones Migratorias y Estancias Provisionales del Instituto Nacional de Migración</em>. CCINM, México.</p>
+                          <a href="http://vocesmesoamericanas.org/wp-content/uploads/2017/08/CCINM-Informe_Final-Monitoreo.pdf" target="_blank" class="btn-two">Leer</a> </div>
+                      </div>
+                    </div>
+                    <br>
+                    <!-- Fin de libro --> 
+                    <!-- Inicia libro -->
+                    <div class="row" style="padding-top: 20px">
+                      <div class="col-sm-2">
+                        <div class="team-member-full-img"> <img src="libros/por-que-la-gente-huye.png" alt="Portada de libro"> </div>
+                      </div>
+                      <div class="col-sm-10">
+                        <div class="member-details"> <br>
+                          <p>OIM (2017) Seguridad alimentaria y emigración. <em>Por qué la gente huye y el impacto que esto tiene en las familias que permanecen en El Salvador, Guatemala y Honduras. Reporte de investigación</em>. WFP.</p>
+                          <a href="https://reliefweb.int/sites/reliefweb.int/files/resources/WFP-0000019633.pdf" target="_blank" class="btn-two">Leer</a> </div>
+                      </div>
+                    </div>
+                    <br>
+                    <!-- Fin de libro --> 
+                    <!-- Inicia libro -->
+                    <div class="row" style="padding-top: 20px">
+                      <div class="col-sm-2">
+                        <div class="team-member-full-img"> <img src="libros/revolving-door.gif" alt="Portada de libro"> </div>
+                      </div>
+                      <div class="col-sm-10">
+                        <div class="member-details"> <br>
+                          <p>Ryan Schultheis and Ariel G. Ruiz Soto (2017) <em>A Revolving Door No More? A Statistical Profile of Mexican Adults Repatriated from the United States</em>. MPI Washington</p>
+                          <a href="http://www.migrationpolicy.org/research/revolving-door-no-more-statistical-profile-mexican-adults-repatriated-united-states" target="_blank" class="btn-two">Leer</a> </div>
+                      </div>
+                    </div>
+                    <br>
+                    <!-- Fin de libro --> 
+                    <!-- Inicia libro -->
+                    <div class="row" style="padding-top: 20px">
+                      <div class="col-sm-2">
+                        <div class="team-member-full-img"> <img src="libros/accion-colectiva.gif" alt="Portada de libro"> </div>
+                      </div>
+                      <div class="col-sm-10">
+                        <div class="member-details"> <br>
+                          <p>Aracely Martínez Rodas (2017) <em>La acción colectiva migrante guatemalteca en Estados Unidos</em>. INFORME OBIMID. Madrid</p>
+                          <a href="http://www.comillas.edu/images/OBIMID/boletines_e_informes/Informe_OBIMID_marzo2017.pdf" target="_blank" class="btn-two">Leer</a> </div>
+                      </div>
+                    </div>
+                    <br>
+                    <!-- Fin de libro --> 
+                    <!-- Inicia libro -->
+                    <div class="row" style="padding-top: 20px">
+                      <div class="col-sm-2">
+                        <div class="team-member-full-img"> <img src="libros/siglo-migraciones.gif" alt="Portada de libro"> </div>
+                      </div>
+                      <div class="col-sm-10">
+                        <div class="member-details"> <br>
+                          <p>Nadia De Cristóforis Susana Novick (Comp) (2017) <em>Jornadas Un siglo de migraciones en la Argentina contemporánea: 1914-2014</em>. Fundación Pan Klub-Museo Xul Solar. Argentina</p>
+                          <a href="http://pobmigraiigg.sociales.uba.ar/files/2013/07/LibroMigraciones_compr.pdf" target="_blank" class="btn-two">Leer</a> </div>
+                      </div>
+                    </div>
+                    <br>
+                    <!-- Fin de libro --> 
+                    <!-- Inicia libro -->
+                    <div class="row" style="padding-top: 20px">
+                      <div class="col-sm-2">
+                        <div class="team-member-full-img"> <img src="libros/transnational-migration.gif" alt="Portada de libro"> </div>
+                      </div>
+                      <div class="col-sm-10">
+                        <div class="member-details"> <br>
+                          <p>Ito Peng (2017) <em>Transnational migration of domestic and care workers in Asia Pacific</em>. International Labour Office Geneva</p>
+                          <a href="http://www.ilo.org/wcmsp5/groups/public/---ed_protect/---protrav/---migrant/documents/publication/wcms_547228.pdf" target="_blank" class="btn-two">Leer</a> </div>
+                      </div>
+                    </div>
+                    <br>
+                    <!-- Fin de libro --> 
+                    <!-- Inicia libro -->
+                    <div class="row" style="padding-top: 20px">
+                      <div class="col-sm-2">
+                        <div class="team-member-full-img"> <img src="libros/hogar-refugio.gif" alt="Portada de libro"> </div>
+                      </div>
+                      <div class="col-sm-10">
+                        <div class="member-details"> <br>
+                          <p>Pies Descalzos. (2017) La 72. En los límites de la frontera, quebrando los Límites. <em>Hogar refugio para personas migrantes. Pies Dezcalsos</em>, A.C. Tenosique Tabasco</p>
+                          <a href="http://www.la72.org/wp-content/uploads/2017/04/Informe-DDHH-2016-LA-72.pdf" target="_blank" class="btn-two">Leer</a> </div>
+                      </div>
+                    </div>
+                    <br>
+                    <!-- Fin de libro --> 
+                    <!-- Inicia libro -->
+                    <div class="row" style="padding-top: 20px">
+                      <div class="col-sm-2">
+                        <div class="team-member-full-img"> <img src="libros/migracion-laboral.gif" alt="Portada de libro"> </div>
+                      </div>
+                      <div class="col-sm-10">
+                        <div class="member-details"> <br>
+                          <p>Oficina Internacional del Trabajo (2017) <em>Migración laboral: nuevo contexto y desafío de gobernanza. Conferencia Internacional del Trabajo, 106.ª reunión, 2017</em>. <br>
+                            Oficina Internacional del Trabajo, Ginebra, Suiza.</p>
+                          <a href="http://www.ilo.org/wcmsp5/groups/public/---ed_norm/---relconf/documents/meetingdocument/wcms_550278.pdf" target="_blank" class="btn-two">Leer</a> </div>
+                      </div>
+                    </div>
+                    <br>
+                    <!-- Fin de libro --> 
+                  </div>
+                </section>
+                <!-- Fin estructura Libro --> 
+              </div>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="2016">
+              <div class="helping-description">
+                <div class="widget">
+                  <h3>2016</h3>
+                </div>
+                <!-- Inicia estructura Libro -->
+                <section class="section team-single" style="padding-top: 0">
+                  <div class="container"> 
+                    <!-- Inicia libro -->
+                    <div class="row" style="padding-top: 20px">
+                      <div class="col-sm-2">
+                        <div class="team-member-full-img"> <img src="libros/ninos-perdidos.png" alt="Portada de libro"> </div>
+                      </div>
+                      <div class="col-sm-10">
+                        <div class="member-details"> <br>
+                          <p>Valeria Luiselli (2016) <em>Los niños perdidos. Un ensayo en cuarenta preguntas</em>. España. Sexto Piso</p>
+                        </div>
+                      </div>
+                    </div>
+                    <br>
+                    <!-- Fin de libro --> 
+                    <!-- Inicia libro -->
+                    <div class="row" style="padding-top: 20px">
+                      <div class="col-sm-2">
+                        <div class="team-member-full-img"> <img src="libros/migracion-movilidad-internacional-mujeres.png" alt="Portada de libro"> </div>
+                      </div>
+                      <div class="col-sm-10">
+                        <div class="member-details"> <br>
+                          <p>Graciela Martínez Caballero (2016) <em>Migración y movilidad internacional de Mujeres en  México Síntesis 2015</em> México, SEGOB</p>
+                          <a href="http://www.politicamigratoria.gob.mx/work/models/SEGOB/CEM/PDF/Estadisticas/Migracion_Mujeres/MM_2015.pdf" target="_blank" class="btn-two">Leer</a> </div>
+                      </div>
+                    </div>
+                    <br>
+                    <!-- Fin de libro --> 
+                    <!-- Inicia libro -->
+                    <div class="row" style="padding-top: 20px">
+                      <div class="col-sm-2">
+                        <div class="team-member-full-img"> <img src="libros/mexico-movilidad-migracion.jpg" alt="Portada de libro"> </div>
+                      </div>
+                      <div class="col-sm-10">
+                        <div class="member-details"> <br>
+                          <p>Raúl Plascencia Villanue (Coord.) (2016) <em>México, movilidad y migración</em>. Comisión Nacional de los derechos Humanos. México</p>
+                        </div>
+                      </div>
+                    </div>
+                    <br>
+                    <!-- Fin de libro --> 
+                    <!-- Inicia libro -->
+                    <div class="row" style="padding-top: 20px">
+                      <div class="col-sm-2">
+                        <div class="team-member-full-img"> <img src="libros/historia-minima-eu.jpg" alt="Portada de libro"> </div>
+                      </div>
+                      <div class="col-sm-10">
+                        <div class="member-details"> <br>
+                          <p>Erika Pani (2016) <em>Historia mínima de... Estados Unidos de américa</em>. Colegio de México. México </p>
+                        </div>
+                      </div>
+                    </div>
+                    <br>
+                    <!-- Fin de libro --> 
+                    <!-- Inicia libro -->
+                    <div class="row" style="padding-top: 20px">
+                      <div class="col-sm-2">
+                        <div class="team-member-full-img"> <img src="libros/detencion-sin-excepcion.jpg" alt="Portada de libro"> </div>
+                      </div>
+                      <div class="col-sm-10">
+                        <div class="member-details"> <br>
+                          <p>Joselin Barja Coria (2016) <em>Detención sin excepción. 15 años de monitereo de la situación de los derechos de las personas privadas de su libertad en estaciones migratorias de México</em>. Sin fronteras I.A.P. México</p>
+                        </div>
+                      </div>
+                    </div>
+                    <br>
+                    <!-- Fin de libro --> 
+                    <!-- Inicia libro -->
+                    <div class="row" style="padding-top: 20px">
+                      <div class="col-sm-2">
+                        <div class="team-member-full-img"> <img src="libros/100-profesionales.png" alt="Portada de libro"> </div>
+                      </div>
+                      <div class="col-sm-10">
+                        <div class="member-details"> <br>
+                          <p>Zahahira Fabiola González (2016) <em>100 Profesionales de la creación artística. Mexicanos Radicales en Europa</em>. Coordinadora del Sector Industeias Creativas de la Region Europa Red Global MX. Mexicanos Calificados en el
+                            Exterior </p>
+                          <a href="https://issuu.com/lacasita/docs/profesionales_ic" target="_blank" class="btn-two">Leer</a> </div>
+                      </div>
+                    </div>
+                    <br>
+                    <!-- Fin de libro --> 
+                    <!-- Inicia libro -->
+                    <div class="row" style="padding-top: 20px">
+                      <div class="col-sm-2">
+                        <div class="team-member-full-img"> <img src="libros/regional-report-on-citizenship.png" alt="Portada de libro"> </div>
+                      </div>
+                      <div class="col-sm-10">
+                        <div class="member-details"> <br>
+                          <p>Diego Acosta (2016) <em>Regional Report on Citizenship. The South American and mexican cases</em>. Edinburgh Yniversity Law School. Italia</p>
+                        </div>
+                      </div>
+                    </div>
+                    <br>
+                    <!-- Fin de libro --> 
+                    <!-- Inicia libro -->
+                    <div class="row" style="padding-top: 20px">
+                      <div class="col-sm-2">
+                        <div class="team-member-full-img"> <img src="libros/migrante-cero.jpg" alt="Portada de libro"> </div>
+                      </div>
+                      <div class="col-sm-10">
+                        <div class="member-details"> <br>
+                          <p>Cassem Gerardo Velásquez Grunstein (2016) <em>Migrante cero. Una propuesta de indicadores de seguridad para las personas migrantes</em>. INEDIM. México</p>
+                        </div>
+                      </div>
+                    </div>
+                    <br>
+                    <!-- Fin de libro --> 
+                    <!-- Inicia libro -->
+                    <div class="row" style="padding-top: 20px">
+                      <div class="col-sm-2">
+                        <div class="team-member-full-img"> <img src="libros/compromisos-mexico-derechos-humanos.jpg" alt="Portada de libro"> </div>
+                      </div>
+                      <div class="col-sm-10">
+                        <div class="member-details"> <br>
+                          <p>ONU MUJERES (2016) <em>Compromisos de México con los derechos Humanos de las Trabajadoras migrantes</em>. Instituto para las Mujeres en la Migración. México</p>
+                          <a href="http://www2.unwomen.org/~/media/field%20office%20mexico/documentos/publicaciones/2016/compromisos%20mexico%20derechos%20humanos%20trab%20migrantes-para%20difusi%C3%B3n.pdf?v=1&d=20160217T205424" target="_blank" class="btn-two">Leer</a> </div>
+                      </div>
+                    </div>
+                    <br>
+                    <!-- Fin de libro --> 
+                    <!-- Inicia libro -->
+                    <div class="row" style="padding-top: 20px">
+                      <div class="col-sm-2">
+                        <div class="team-member-full-img"> <img src="libros/resolving-policy.png" alt="Portada de libro"> </div>
+                      </div>
+                      <div class="col-sm-10">
+                        <div class="member-details"> <br>
+                          <p>Marie Mc Auliffe (2016) <em>Resolving policy conundrums. Enhancing Humanitarian Protection in Southast Asia</em>., Migration Policu Institute. Washington D.C.</p>
+                          <a href="http://www.migrationpolicy.org/research/resolving-policy-conundrums-enhancing-humanitarian-protection-southeast-asia" target="_blank" class="btn-two">Leer</a> </div>
+                      </div>
+                    </div>
+                    <br>
+                    <!-- Fin de libro --> 
+                    <!-- Inicia libro -->
+                    <div class="row" style="padding-top: 20px">
+                      <div class="col-sm-2">
+                        <div class="team-member-full-img"> <img src="libros/makin-la-home.jpg" alt="Portada de libro"> </div>
+                      </div>
+                      <div class="col-sm-10">
+                        <div class="member-details"> <br>
+                          <p>Alarcón Rafael, Escala Luis Odgers Olga (2016) <em>Making Los Angeles Home. The integration of mexican immigrants in the United States</em>. University of California Press. Oakland, California.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <br>
+                    <!-- Fin de libro --> 
+                    <!-- Inicia libro -->
+                    <div class="row" style="padding-top: 20px">
+                      <div class="col-sm-2">
+                        <div class="team-member-full-img"> <img src="libros/migracion-laboral-al-caribe.png" alt="Portada de libro"> </div>
+                      </div>
+                      <div class="col-sm-10">
+                        <div class="member-details"> <br>
+                          <p>Organización Internacional del Trabajo (2016) <em>OIT Informes Técnicos 2016-2 La migración laboral en América Latina y el Caribe. Diagnóstico, Estrategia y líneas de trabajo de la OIT en la región</em>. Oficina Regional para
+                            América Latina y el Caribe. Perú</p>
+                          <a href="http://www.ilo.org/wcmsp5/groups/public/---americas/---ro-lima/documents/publication/wcms_502766.pdf" target="_blank" class="btn-two">Leer</a> </div>
+                      </div>
+                    </div>
+                    <br>
+                    <!-- Fin de libro --> 
+                    <!-- Inicia libro -->
+                    <div class="row" style="padding-top: 20px">
+                      <div class="col-sm-2">
+                        <div class="team-member-full-img"> <img src="libros/stop-trump.png" alt="Portada de libro"> </div>
+                      </div>
+                      <div class="col-sm-10">
+                        <div class="member-details"> <br>
+                          <p>Federico Campbell Peña (2016) <em>¡Stop Trump!</em> Mexico. Paradigma</p>
+                          <a href="https://www.amazon.com/%C2%A1Stop-Trump-Spanish-Federico-Campbell-ebook/dp/B01IB1B1WU#nav-subnav" target="_blank" class="btn-two">Leer</a> </div>
+                      </div>
+                    </div>
+                    <br>
+                    <!-- Fin de libro --> 
+                    <!-- Inicia libro -->
+                    <div class="row" style="padding-top: 20px">
+                      <div class="col-sm-2">
+                        <div class="team-member-full-img"> <img src="libros/migrantes-transito-salud.png" alt="Portada de libro"> </div>
+                      </div>
+                      <div class="col-sm-10">
+                        <div class="member-details"> <br>
+                          <p>Rene Leyva Flores, César Infante Xilbille, Frida Quintino Pérez (2016) <em>Migrantes en tránsito por méxico: situación de salud, riesgos y acceso a servicios de salud</em>. México Instituto Nacional de Salud Pública</p>
+                        </div>
+                      </div>
+                    </div>
+                    <br>
+                    <!-- Fin de libro --> 
+                    <!-- Inicia libro -->
+                    <div class="row" style="padding-top: 20px">
+                      <div class="col-sm-2">
+                        <div class="team-member-full-img"> <img src="libros/historia-minima-migracion-mx-eu.jpg" alt="Portada de libro"> </div>
+                      </div>
+                      <div class="col-sm-10">
+                        <div class="member-details"> <br>
+                          <p>Jorge Durand (2016) <em>Historia mínima de la migración México</em> - Estados Unidos. México, Colegio de México</p>
+                        </div>
+                      </div>
+                    </div>
+                    <br>
+                    <!-- Fin de libro --> 
+                    <!-- Inicia libro -->
+                    <div class="row" style="padding-top: 20px">
+                      <div class="col-sm-2">
+                        <div class="team-member-full-img"> <img src="libros/yo-migrante.jpg" alt="Portada de libro"> </div>
+                      </div>
+                      <div class="col-sm-10">
+                        <div class="member-details"> <br>
+                          <p>Aracely J. Martínez Rodas (2016) <em>Yo migrante</em>. D´buk Editors. Guatemala</p>
+                        </div>
+                      </div>
+                    </div>
+                    <br>
+                    <!-- Fin de libro --> 
+                    <!-- Inicia libro -->
+                    <div class="row" style="padding-top: 20px">
+                      <div class="col-sm-2">
+                        <div class="team-member-full-img"> <img src="libros/situacion-migracion-mx.jpg" alt="Portada de libro"> </div>
+                      </div>
+                      <div class="col-sm-10">
+                        <div class="member-details"> <br>
+                          <p><em>Situación Migración México. Primer semestre de 2016. Unidad de México</em>, México, Fundación BBVA Bancomer.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <br>
+                    <!-- Fin de libro --> 
+                    <!-- Inicia libro -->
+                    <div class="row" style="padding-top: 20px">
+                      <div class="col-sm-2">
+                        <div class="team-member-full-img"> <img src="libros/anuario-migracion-remesas.jpg" alt="Portada de libro"> </div>
+                      </div>
+                      <div class="col-sm-10">
+                        <div class="member-details"> <br>
+                          <p><em>Anuario de migración y remesas México 2016</em> (2016), México, Secretaría de Gobernación, Consejo Nacional de Población, Fundación BBVA Bancomer.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <br>
+                    <!-- Fin de libro --> 
+                    <!-- Inicia libro -->
+                    <div class="row" style="padding-top: 20px">
+                      <div class="col-sm-2">
+                        <div class="team-member-full-img"> <img src="libros/informe-desarrollo-2015.jpg" alt="Portada de libro"> </div>
+                      </div>
+                      <div class="col-sm-10">
+                        <div class="member-details"> <br>
+                          <p>Rolando Cordera Campos y Enrique Provencio Durazo (Coords.) (2016), Informe del desarrollo en México 2015, Coordinación de Humanidades, Programa Universitario de Estudios del Desarrollo, Universidad Nacional Autónoma de México.</p>
+                          <a href="http://www.pued.unam.mx/publicaciones/26/Informe_Desarrollo_2015.pdf" target="_blank" class="btn-two">Leer</a> </div>
+                      </div>
+                    </div>
+                    <br>
+                    <!-- Fin de libro --> 
+                  </div>
+                </section>
+                <!-- Fin estructura Libro --> 
+              </div>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="2015">
+              <div class="helping-description">
+                <div class="widget">
+                  <h3>2015</h3>
+                </div>
+                <!-- Inicia estructura Libro -->
+                <section class="section team-single" style="padding-top: 0">
+                  <div class="container"> 
+                    <!-- Inicia libro -->
+                    <div class="row" style="padding-top: 20px">
+                      <div class="col-sm-2">
+                        <div class="team-member-full-img"> <img src="libros/proteccion-consular.jpg" alt="Portada de libro"> </div>
+                      </div>
+                      <div class="col-sm-10">
+                        <div class="member-details"> <br>
+                          <p>Jorge A. Schiavon (2015) <em>La protección consular como política de Estado para proteger a los migrantes de México y Centroamérica</em>. Policy Brief Series (07). CANAMID</p>
+                          <a href="http://www.canamid.org/publication?id=PB07" target="_blank" class="btn-two">Leer</a> </div>
+                      </div>
+                    </div>
+                    <br>
+                    <!-- Fin de libro --> 
+                    <!-- Inicia libro -->
+                    <div class="row" style="padding-top: 20px">
+                      <div class="col-sm-2">
+                        <div class="team-member-full-img"> <img src="libros/deportacion-salud-mental.jpg" alt="Portada de libro"> </div>
+                      </div>
+                      <div class="col-sm-10">
+                        <div class="member-details"> <br>
+                          <p>Ietza Bojorquez (2015) <em>Deportación y salud mental en migrantes centroamericanos</em>. Policy Brief Series (06). CANAMID</p>
+                          <a href="http://www.canamid.org/publication?id=PB06" target="_blank" class="btn-two">Leer</a> </div>
+                      </div>
+                    </div>
+                    <br>
+                    <!-- Fin de libro --> 
+                    <!-- Inicia libro -->
+                    <div class="row" style="padding-top: 20px">
+                      <div class="col-sm-2">
+                        <div class="team-member-full-img"> <img src="libros/acceso-servicios-salud.jpg" alt="Portada de libro"> </div>
+                      </div>
+                      <div class="col-sm-10">
+                        <div class="member-details"> <br>
+                          <p>Rene Leyva, <em>Et. al. </em>(2015) <em>Acceso a servicios de salud para los migrantes centroamericanos en tránsito por México</em>. Policy Brief Series (05). CANAMID</p>
+                          <a href="http://www.canamid.org/publication?id=PB05" target="_blank" class="btn-two">Leer</a> </div>
+                      </div>
+                    </div>
+                    <br>
+                    <!-- Fin de libro --> 
+                    <!-- Inicia libro -->
+                    <div class="row" style="padding-top: 20px">
+                      <div class="col-sm-2">
+                        <div class="team-member-full-img"> <img src="libros/visitantes-residentes.jpg" alt="Portada de libro"> </div>
+                      </div>
+                      <div class="col-sm-10">
+                        <div class="member-details"> <br>
+                          <p>Liliana Meza González (2015) <em>Visitantes y Residentes. Trabajadores Guatemaltecos, Salvadoreños y Hondureños en México.</em> Policy Brief Series (04). CANAMID</p>
+                          <a href="http://www.canamid.org/publication?id=PB04" target="_blank" class="btn-two">Leer</a> </div>
+                      </div>
+                    </div>
+                    <br>
+                    <!-- Fin de libro --> 
+                    <!-- Inicia libro -->
+                    <div class="row" style="padding-top: 20px">
+                      <div class="col-sm-2">
+                        <div class="team-member-full-img"> <img src="libros/centroamericanos-reporte-laboral.jpg" alt="Portada de libro"> </div>
+                      </div>
+                      <div class="col-sm-10">
+                        <div class="member-details"> <br>
+                          <p>Pia M. Orrenius Madeline Zavodny (2015) <em>Los centroamericanos en el mercado laboral de Estados Unidos: Tendencias Recientes e impactos de la política pública</em>. Policy Brief Series (03). CANAMID</p>
+                          <a href="http://www.canamid.org/publication?id=PB03" target="_blank" class="btn-two">Leer</a> </div>
+                      </div>
+                    </div>
+                    <br>
+                    <!-- Fin de libro --> 
+                    <!-- Inicia libro -->
+                    <div class="row" style="padding-top: 20px">
+                      <div class="col-sm-2">
+                        <div class="team-member-full-img"> <img src="libros/retrato-ninos-estadounidenses.jpg" alt="Portada de libro"> </div>
+                      </div>
+                      <div class="col-sm-10">
+                        <div class="member-details"><br>
+                          <p>Bryant Jensen y James D. Bachmeier (2015) <em>Un retrato de los niños estadounidenses de origen centroamericano y sus oportunidades educativas.</em> Policy Brief Series(02). CANAMID</p>
+                          <a href="http://www.canamid.org/publication?id=PB02" target="_blank" class="btn-two">Leer</a> </div>
+                      </div>
+                    </div>
+                    <br>
+                    <!-- Fin de libro --> 
+                    <!-- Inicia libro -->
+                    <div class="row" style="padding-top: 20px">
+                      <div class="col-sm-2">
+                        <div class="team-member-full-img"> <img src="libros/visitantes-residentes-trabajores.jpg" alt="Portada de libro"> </div>
+                      </div>
+                      <div class="col-sm-10">
+                        <div class="member-details"> <br>
+                          <p>Carla Pederzini, Fernando Riosmena, Claudia Masferrer y Noemy Molina (2015) <em>Visitantes y Residentes.  Trabajadores Guatemaltecos, Salvadoreños y Hondureños en México</em>. Policy Brief Series (01). CANAMID</p>
+                          <a href="http://www.canamid.org/publication?id=PB01" target="_blank" class="btn-two">Leer</a> </div>
+                      </div>
+                    </div>
+                    <br>
+                    <!-- Fin de libro --> 
+                    <!-- Inicia libro -->
+                    <div class="row" style="padding-top: 20px">
+                      <div class="col-sm-2">
+                        <div class="team-member-full-img"> <img src="libros/frontera-sur-mexico.png" alt="Portada de libro"> </div>
+                      </div>
+                      <div class="col-sm-10">
+                        <div class="member-details"> <br>
+                          <p><strong>Cuadernos de inter.c.a.mbio Sobre Centroamérica y El Caribe. Migraciones y exilios en Centroamérica</strong> (2015), Costa Rica. Universidad de Costa Rica <em>"La frontera sur de México: Orígenes y desarrollo de la migración centroamericana" Manuel Ángel Castilloy Mónica Toussaint</em></p>
+                          <a href="https://dialnet.unirioja.es/ejemplar/409008" target="_blank" class="btn-two">Leer</a> </div>
+                      </div>
+                    </div>
+                    <br>
+                    <!-- Fin de libro --> 
+                    <!-- Inicia libro -->
+                    <div class="row" style="padding-top: 20px">
+                      <div class="col-sm-2">
+                        <div class="team-member-full-img"> <img src="libros/cultura-politica-migrante.jpg" alt="Portada de libro"> </div>
+                      </div>
+                      <div class="col-sm-10">
+                        <div class="member-details"> <br>
+                          <p>Josefina Franzoni Lobo (2015), <em>Cultura política de migrantes indígenas a Estados Unidos y participación ciudadana</em>, Consejo Nacional para la Cultura y las Artes, Fondo Nacional para la Cultura y las Artes, Miguel Ángel
+                            Porrúa. </p>
+                        </div>
+                      </div>
+                    </div>
+                    <br>
+                    <!-- Fin de libro --> 
+                    <!-- Inicia libro -->
+                    <div class="row" style="padding-top: 20px">
+                      <div class="col-sm-2">
+                        <div class="team-member-full-img"> <img src="libros/imaginarios-migracion-internacional.jpg" alt="Portada de libro"> </div>
+                      </div>
+                      <div class="col-sm-10">
+                        <div class="member-details"> <br>
+                          <p>Maritza Caicedo y Agustín Morales Mena (2015), <em>Imaginarios de la migración internacional en México. Una mirada a los que se van y a los que se quedan</em>, Encuesta Nacional de Migración, Instituto de Investigaciones Jurídicas,
+                            Universidad Nacional Autónoma de México.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <br>
+                    <!-- Fin de libro --> 
+                    <!-- Inicia libro -->
+                    <div class="row" style="padding-top: 20px">
+                      <div class="col-sm-2">
+                        <div class="team-member-full-img"> <img src="libros/ciudadania-multiple-migracion.jpg" alt="Portada de libro"> </div>
+                      </div>
+                      <div class="col-sm-10">
+                        <div class="member-details"> <br>
+                          <p>Pablo Mateos (2015), <em>Ciudadanía múltiple y migración. Perspectivas latinoamericanas</em>, México, Centro de Investigación y Docencia Económicas, Centro de Investigaciones y Estudios Superiores en Antropología Social.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <br>
+                    <!-- Fin de libro --> 
+                    <!-- Inicia libro -->
+                    <div class="row" style="padding-top: 20px">
+                      <div class="col-sm-2">
+                        <div class="team-member-full-img"> <img src="libros/derechos-cautivos.jpg" alt="Portada de libro"> </div>
+                      </div>
+                      <div class="col-sm-10">
+                        <div class="member-details"> <br>
+                          <p>Joselin Barja Coria (2015), <em>Derechos cautivos. La situación de las personas migrantes y sujetas a protección internacional en los centros de detención migratoria: siete experiencias de monitoreo desde la sociedad civil</em>,
+                            Frontera con Justicia A. C., Casa del migrante de Saltillo, Centro de Derechos Humanos Fray Matías de Córdova A. C., Dignidad y Justicia en el Camino A. C., Instituto de Derechos Humanos Ignacio Ellacuría, Universidad Iberoamericana
+                            de Puebla, Sin Fronteras I. A. P.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <br>
+                    <!-- Fin de libro --> 
+                    <!-- Inicia libro -->
+                    <div class="row" style="padding-top: 20px">
+                      <div class="col-sm-2">
+                        <div class="team-member-full-img"> <img src="libros/la-migra.jpg" alt="Portada de libro"> </div>
+                      </div>
+                      <div class="col-sm-10">
+                        <div class="member-details"> <br>
+                          <p>Kelly Lytle (2015), <em>¡La migra! Una historia de la Patrulla Fronteriza de Estados Unidos</em>, México, Fondo de Cultura Económica.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <br>
+                    <!-- Fin de libro --> 
+                    <!-- Inicia libro -->
+                    <div class="row" style="padding-top: 20px">
+                      <div class="col-sm-2">
+                        <div class="team-member-full-img"> <img src="libros/tierras-arrasadas.jpg" alt="Portada de libro"> </div>
+                      </div>
+                      <div class="col-sm-10">
+                        <div class="member-details"> <br>
+                          <p>Emiliano Monge (2015), Las tierras arrasadas, México, Literatura Random House.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <br>
+                    <!-- Fin de libro --> 
+                  </div>
+                </section>
+                <!-- Fin estructura Libro --> 
+              </div>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="2014">
+              <div class="helping-description">
+                <div class="widget">
+                  <h3>2014</h3>
+                </div>
+                <!-- Inicia estructura Libro -->
+                <section class="section team-single" style="padding-top: 0">
+                  <div class="container"> 
+                    <!-- Inicia libro -->
+                    <div class="row" style="padding-top: 20px">
+                      <div class="col-sm-2">
+                        <div class="team-member-full-img"> <img src="libros/historia-comparada-migraciones.gif" alt="Portada de libro"> </div>
+                      </div>
+                      <div class="col-sm-10">
+                        <div class="member-details"> <br>
+                          <p>Patricia Galeana (Coord) (2014) <em>Historia Comparada de las Migraciones en las Américas</em> Instituto de investigaciones juridicas UNAM, México</p>
+                          <a href="https://archivos.juridicas.unam.mx/www/bjv/libros/8/3828/30.pdf" target="_blank" class="btn-two">Leer</a> </div>
+                      </div>
+                    </div>
+                    <br>
+                    <!-- Fin de libro --> 
+                    <!-- Inicia libro -->
+                    <div class="row" style="padding-top: 20px">
+                      <div class="col-sm-2">
+                        <div class="team-member-full-img"> <img src="libros/genero-movimiento.jpg" alt="Portada de libro"> </div>
+                      </div>
+                      <div class="col-sm-10">
+                        <div class="member-details"> <br>
+                          <p>María Eugenia Zavala de Cosío y Virginie Rozée Gómez (coords.) (2014), <em>El género en movimiento. Familias y migraciones</em>, México, El Colegio de México, Centro de Estudios Demográficos Urbanos y Ambientales.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <br>
+                    <!-- Fin de libro --> 
+                    <!-- Inicia libro -->
+                    <div class="row" style="padding-top: 20px">
+                      <div class="col-sm-2">
+                        <div class="team-member-full-img"> <img src="libros/caminhos-da-migrao.png" alt="Portada de libro"> </div>
+                      </div>
+                      <div class="col-sm-10">
+                        <div class="member-details"> <br>
+                          <p>Miriam de Oliveira Santos, Regina Petrus, Helion Póvoa e Charles Gomes (orgs.) (2014)<em> Caminhos da Migração: memória, integração e conflitos</em> Brasil Oikos</p>
+                          <a href="http://oikoseditora.com.br/obra/index/id/611" target="_blank" class="btn-two">Leer</a> </div>
+                      </div>
+                    </div>
+                    <br>
+                    <!-- Fin de libro --> 
+                    <!-- Inicia libro -->
+                    <div class="row" style="padding-top: 20px">
+                      <div class="col-sm-2">
+                        <div class="team-member-full-img"> <img src="libros/narrativa-fotografia.jpg" alt="Portada de libro"> </div>
+                      </div>
+                      <div class="col-sm-10">
+                        <div class="member-details"> <br>
+                          <p>Martha Luz Rojas Wiesner (2014) <em>Narrativa y fotografía de niños adolescentes trabajadores guatemaltecos en Tapachula</em>, Chiapas. Ecosur.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <br>
+                    <!-- Fin de libro --> 
+                    <!-- Inicia libro -->
+                    <div class="row" style="padding-top: 20px">
+                      <div class="col-sm-2">
+                        <div class="team-member-full-img"> <img src="libros/ciencia-mexico.jpg" alt="Portada de libro"> </div>
+                      </div>
+                      <div class="col-sm-10">
+                        <div class="member-details"> <br>
+                          <p>Raúl Delgado (coord.) (2014), Hacia dónde va la ciencia en México. Migración y desarrollo, México, Consejo Nacional de Ciencia y Tecnología, Academia Mexicana de Ciencias A. C., Secretaría Ejecutiva del Consejo Consultivo de
+                            Ciencias. </p>
+                        </div>
+                      </div>
+                    </div>
+                    <br>
+                    <!-- Fin de libro --> 
+                    <!-- Inicia libro -->
+                    <div class="row" style="padding-top: 20px">
+                      <div class="col-sm-2">
+                        <div class="team-member-full-img"> <img src="libros/controlling-inmigration.jpg" alt="Portada de libro"> </div>
+                      </div>
+                      <div class="col-sm-10">
+                        <div class="member-details"> <br>
+                          <p>James F. Hollifield, Philip L. Martin, y Pia M. Orreniu (comps.) (2014), <em>Controlling Immigration: A Global Perspective</em>, Stanford University Press, California.</p>
+                          <a href="http://www.sup.org/books/title/?id=22520&promo=S14SOC&utm_source=MyEmma&utm_medium=email&utm_campaign=MyEmma%2520Hollifield" target="_blank" class="btn-two">Leer</a> </div>
+                      </div>
+                    </div>
+                    <br>
+                    <!-- Fin de libro --> 
+                    <!-- Inicia libro -->
+                    <div class="row" style="padding-top: 20px">
+                      <div class="col-sm-2">
+                        <div class="team-member-full-img"> <img src="libros/aproximaciones-conocimiento-cuantitativo.png" alt="Portada de libro"> </div>
+                      </div>
+                      <div class="col-sm-10">
+                        <div class="member-details"> <br>
+                          <p>Sin Fronteras, I.A.P. (2014), <em>Aproximaciones al Conocimiento Cuantitativo y de Identidades de las Mujeres en la Migración</em>, México.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <br>
+                    <!-- Fin de libro --> 
+                    <!-- Inicia libro -->
+                    <div class="row" style="padding-top: 20px">
+                      <div class="col-sm-2">
+                        <div class="team-member-full-img"> <img src="libros/40-consejo-nac-poblacion.png" alt="Portada de libro"> </div>
+                      </div>
+                      <div class="col-sm-10">
+                        <div class="member-details"> <br>
+                          <p>Patricia Chemor Ruiz (coord.) (2014), <em>40 años del Consejo Nacional de Población 1974-2014</em>, México, Consejo Nacional de Población.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <br>
+                    <!-- Fin de libro --> 
+                    <!-- Inicia libro -->
+                    <div class="row" style="padding-top: 20px">
+                      <div class="col-sm-2">
+                        <div class="team-member-full-img"> <img src="libros/portada.png" alt="Portada de libro"> </div>
+                      </div>
+                      <div class="col-sm-10">
+                        <div class="member-details"> <br>
+                          <p>Carolina Rivera Farfán (coord.) (2014), <em>Trabajo y vida cotidiana de centroamericanos en la frontera suroccidental del México</em>, México, Centro de Investigaciones y Estudios Superiores en Antropología Social, Publicaciones
+                            de la Casa Chata.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <br>
+                    <!-- Fin de libro --> 
+                    <!-- Inicia libro -->
+                    <div class="row" style="padding-top: 20px">
+                      <div class="col-sm-2">
+                        <div class="team-member-full-img"> <img src="libros/memoria-exilio.jpg" alt="Portada de libro"> </div>
+                      </div>
+                      <div class="col-sm-10">
+                        <div class="member-details"> <br>
+                          <p>Gregorio Arrien (2014) <em>Memoria y exilio: Las organizaciones e iniciativas de memoria colectiva</em>, 1982-2012, Euskadi, Bilbao.</p>
+                          <a href="http://www.todostuslibros.com/libros/erbesteratuen-oroimenak-memoria-y-exilio_978-84-7752-528-8" target="_blank" class="btn-two">Leer</a> </div>
+                      </div>
+                    </div>
+                    <br>
+                    <!-- Fin de libro --> 
+                    <!-- Inicia libro -->
+                    <div class="row" style="padding-top: 20px">
+                      <div class="col-sm-2">
+                        <div class="team-member-full-img"> <img src="libros/migracion-derechos-humanos-desarrollo.jpg" alt="Portada de libro"> </div>
+                      </div>
+                      <div class="col-sm-10">
+                        <div class="member-details"> <br>
+                          <p>María del Carmen García Aguilar y Daniel Villafuerte Solís (2014) <em>Migración, derechos humanos y desarrollo: Aproximaciones desde el sur de México y Centroamérica</em>, Universidad de Ciencias y Artes de Chiapas, México.</p>
+                          <a href="libros/migracion-derechos-humanos-desarrollo.pdf" target="_blank" class="btn-two">Leer</a> </div>
+                      </div>
+                    </div>
+                    <br>
+                    <!-- Fin de libro --> 
+                    <!-- Inicia libro -->
+                    <div class="row" style="padding-top: 20px">
+                      <div class="col-sm-2">
+                        <div class="team-member-full-img"> <img src="libros/sacrificing-families.png" alt="Portada de libro"> </div>
+                      </div>
+                      <div class="col-sm-10">
+                        <div class="member-details"> <br>
+                          <p>Leisy J. Abrego (2014), <em>Sacrificing Families: Navigating Laws, Labor, and Love Across Borders</em>, Stanford University Press, California.</p>
+                          <a href="libros/sacrificing-families.pdf" target="_blank" class="btn-two">Leer</a> </div>
+                      </div>
+                    </div>
+                    <br>
+                    <!-- Fin de libro --> 
+                    <!-- Inicia libro -->
+                    <div class="row" style="padding-top: 20px">
+                      <div class="col-sm-2">
+                        <div class="team-member-full-img"> <img src="libros/guatemala-us-migration.jpg" alt="Portada de libro"> </div>
+                      </div>
+                      <div class="col-sm-10">
+                        <div class="member-details"> <br>
+                          <p>Sussane Jonas y Néstor Rodríguez (2014), <em>Guatemala- U. S. Migration. Transforming regions</em>, Estados Unidos de Norteamérica, University of Texas Press.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <br>
+                    <!-- Fin de libro --> 
+                    <!-- Inicia libro -->
+                    <div class="row" style="padding-top: 20px">
+                      <div class="col-sm-2">
+                        <div class="team-member-full-img"> <img src="libros/mudando-hogar-norte.jpg" alt="Portada de libro"> </div>
+                      </div>
+                      <div class="col-sm-10">
+                        <div class="member-details"> <br>
+                          <p>Rafael Alarcón Acosta, Luis Escalada Rabadán y Olga Odgers Ortiz (2014), <em>Mudando el hogar al norte. Trayectorias de integración de los inmigrantes mexicanos en Los Ángeles</em>, Tijuana, El Colegio de la Frontera Norte.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <br>
+                    <!-- Fin de libro --> 
+                  </div>
+                </section>
+                <!-- Fin estructura Libro --> 
+              </div>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="2013">
+              <div class="helping-description">
+                <div class="widget">
+                  <h3>2013</h3>
+                </div>
+                <!-- Inicia estructura Libro -->
+                <section class="section team-single" style="padding-top: 0">
+                  <div class="container"> 
+                    <!-- Inicia libro -->
+                    <div class="row" style="padding-top: 20px">
+                      <div class="col-sm-2">
+                        <div class="team-member-full-img"> <img src="libros/desierto-suenos-rotos.jpg" alt="Portada de libro"> </div>
+                      </div>
+                      <div class="col-sm-10">
+                        <div class="member-details"> <br>
+                          <p>Guillermo Alsonso Meneses (2013), <em>El desierto de los sueños rotos. Detenciones y muertes de migrantes en la frontera México-Estados Unidos 1993-2013</em>, Tijuana, El Colegio de la Frontera Norte.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <br>
+                    <!-- Fin de libro --> 
+                    <!-- Inicia libro -->
+                    <div class="row" style="padding-top: 20px">
+                      <div class="col-sm-2">
+                        <div class="team-member-full-img"> <img src="libros/manual-indicadores-interculturalidad.jpg" alt="Portada de libro"> </div>
+                      </div>
+                      <div class="col-sm-10">
+                        <div class="member-details"> <br>
+                          <p>Instituto de Estudios y Divulgación sobre Migración, A.C. (2013), <em>Manual de Indicadores de Interculturalidad e Inclusión, Secretaría de Desarrollo Rural y Equidad para las Comunidades</em>, México</p>
+                          <a href="libros/inedim.jpg" target="_blank" class="btn-two">Leer</a> </div>
+                      </div>
+                    </div>
+                    <br>
+                    <!-- Fin de libro --> 
+                    <!-- Inicia libro -->
+                    <div class="row" style="padding-top: 20px">
+                      <div class="col-sm-2">
+                        <div class="team-member-full-img"> <img src="libros/el-retorno.jpg" alt="Portada de libro"> </div>
+                      </div>
+                      <div class="col-sm-10">
+                        <div class="member-details"> <br>
+                          <p>Alicia Gil Lázaro, Martín Nájera, y Aurelio. Pedro Pérez Herrero (coords.), (2013), <em>El Retorno: Migración económica y exilio político en América Latina y España</em>, Universidad de Alcalá, Madrid.</p>
+                          <a href="libros/el-retorno.pdf" target="_blank" class="btn-two">Leer</a> </div>
+                      </div>
+                    </div>
+                    <br>
+                    <!-- Fin de libro --> 
+                    <!-- Inicia libro -->
+                    <div class="row" style="padding-top: 20px">
+                      <div class="col-sm-2">
+                        <div class="team-member-full-img"> <img src="libros/migracion-transito.jpg" alt="Portada de libro"> </div>
+                      </div>
+                      <div class="col-sm-10">
+                        <div class="member-details"> <br>
+                          <p>Mónica Salmón Gómez (2013), <em>Migración en tránsito por la Zona Metropolitana de Guadalajara: actores, retos y perspectivas desde la experiencia de FM4 Paso Libre</em>, Prometeo Editores, México.</p>
+                          <a href="libros/migracion-transito.pdf" target="_blank" class="btn-two">Leer</a> </div>
+                      </div>
+                    </div>
+                    <br>
+                    <!-- Fin de libro --> 
+                    <!-- Inicia libro -->
+                    <div class="row" style="padding-top: 20px">
+                      <div class="col-sm-2">
+                        <div class="team-member-full-img"> <img src="libros/portada.png" alt="Portada de libro"> </div>
+                      </div>
+                      <div class="col-sm-10">
+                        <div class="member-details"> <br>
+                          <p>Carlos Quenan, <em>et. al.</em> (coords.) (2013), <em>Anuario Americanista Europeo</em>, CEISAL & REDIAL Editores, París.</p>
+                          <a href="http://www.red-redial.net/revista/index.php/anuario-americanista-europeo/issue/view/15/showToc" target="_blank" class="btn-two">Leer</a> </div>
+                      </div>
+                    </div>
+                    <br>
+                    <!-- Fin de libro --> 
+                    <!-- Inicia libro -->
+                    <div class="row" style="padding-top: 20px">
+                      <div class="col-sm-2">
+                        <div class="team-member-full-img"> <img src="libros/international-migration-outlook.png" alt="Portada de libro"> </div>
+                      </div>
+                      <div class="col-sm-10">
+                        <div class="member-details"> <br>
+                          <p>Organisation for Economic Co-operation and Development (2013), <em>International Migration Outlook 201</em>, OECD Publishing.</p>
+                          <a href="http://www.keepeek.com/Digital-Asset-Management/oecd/social-issues-migration-health/international-migration-outlook-2013_migr_outlook-2013-en" target="_blank" class="btn-two">Leer</a> </div>
+                      </div>
+                    </div>
+                    <br>
+                    <!-- Fin de libro --> 
+                    <!-- Inicia libro -->
+                    <div class="row" style="padding-top: 20px">
+                      <div class="col-sm-2">
+                        <div class="team-member-full-img"> <img src="libros/portada.png" alt="Portada de libro"> </div>
+                      </div>
+                      <div class="col-sm-10">
+                        <div class="member-details"> <br>
+                          <p>Manuel Ángel Castillo y Telésforo Ramírez García (coords) (2013), <em>El Estado de la Migración: México ante los recientes desafíos de la migración internacional</em>, México.</p>
+                          <a href="libros/estado-migracion.pdf" target="_blank" class="btn-two">Leer</a> </div>
+                      </div>
+                    </div>
+                    <br>
+                    <!-- Fin de libro --> 
+                  </div>
+                </section>
+                <!-- Fin estructura Libro --> 
+              </div>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="2012">
+              <div class="helping-description">
+                <div class="widget">
+                  <h3>2012</h3>
+                </div>
+                <!-- Inicia estructura Libro -->
+                <section class="section team-single" style="padding-top: 0">
+                  <div class="container"> 
+                    <!-- Inicia libro -->
+                    <div class="row" style="padding-top: 20px">
+                      <div class="col-sm-2">
+                        <div class="team-member-full-img"> <img src="libros/migraciones-culturales.jpg" alt="Portada de libro"> </div>
+                      </div>
+                      <div class="col-sm-10">
+                        <div class="member-details"> <br>
+                          <p>Vittoria Borsó, Yasmin Temelli y Karolin, Viseneber (eds.) (2012), <em>México: migraciones culturales - topografías transatlánticas. Acercamiento a las culturas desde el movimiento</em>. Madrid / Frankfurt, Iberoamericana /
+                            Vervuert. </p>
+                          <a href="libros/migraciones-culturales.pdf" target="_blank" class="btn-two">Leer</a> </div>
+                      </div>
+                    </div>
+                    <br>
+                    <!-- Fin de libro --> 
+                    <!-- Inicia libro -->
+                    <div class="row" style="padding-top: 20px">
+                      <div class="col-sm-2">
+                        <div class="team-member-full-img"> <img src="libros/migracion-internacional-desarrollo-local.jpg" alt="Portada de libro"> </div>
+                      </div>
+                      <div class="col-sm-10">
+                        <div class="member-details"> <br>
+                          <p>Fernando Neira y Miguel A. Ugalde (coords.) (2012), <em>Migración internacional y desarrollo local: experiencias recientes en Centroamérica y México</em>, Guatemala, INGEP, CARA PARENS y Universidad Rafael Landívar.</p>
+                          <a href="libros/migracion-internacional-desarrollo-local-indice.jpg" target="_blank" class="btn-two">Leer</a> </div>
+                      </div>
+                    </div>
+                    <br>
+                    <!-- Fin de libro --> 
+                    <!-- Inicia libro -->
+                    <div class="row" style="padding-top: 20px">
+                      <div class="col-sm-2">
+                        <div class="team-member-full-img"> <img src="libros/migrantes-desplazados-braceros-deportados.jpg" alt="Portada de libro"> </div>
+                      </div>
+                      <div class="col-sm-10">
+                        <div class="member-details"> <br>
+                          <p>María París (coord.) (2012), <em>Migrantes, desplazados, braceros y deportados. Experiencias migratorias y prácticas políticas</em>, México, El Colef, AUCJ y UAM-X.</p>
+                          <a href="http://libreria.colef.mx/detalle.aspx" target="_blank" class="btn-two">Leer</a> </div>
+                      </div>
+                    </div>
+                    <br>
+                    <!-- Fin de libro --> 
+                    <!-- Inicia libro -->
+                    <div class="row" style="padding-top: 20px">
+                      <div class="col-sm-2">
+                        <div class="team-member-full-img"> <img src="libros/movilizacion-migracion-retorno-ninez-migrante.jpg" alt="Portada de libro"> </div>
+                      </div>
+                      <div class="col-sm-10">
+                        <div class="member-details"> <br>
+                          <p>Gloria Valdez (comp.) (2012), <em>Movilización, migración y retorno de la niñez migrante. Una mirada antropológica</em>, México, El Colegio de Sonora y Universidad Autónoma de Sinaloa.</p>
+                          <a href="https://www.colson.edu.mx:4433/LibreriaColson/detalleProducto.aspx?i=2247" target="_blank" class="btn-two">Leer</a> </div>
+                      </div>
+                    </div>
+                    <br>
+                    <!-- Fin de libro --> 
+                    <!-- Inicia libro -->
+                    <div class="row" style="padding-top: 20px">
+                      <div class="col-sm-2">
+                        <div class="team-member-full-img"> <img src="libros/anti-immigrant.jpg" alt="Portada de libro"> </div>
+                      </div>
+                      <div class="col-sm-10">
+                        <div class="member-details"> <br>
+                          <p>Mónica Verea (2012), <em>Anti-Immigrant. Sentiments, actions, and Policies. Sentimientos, acciones y políticas antiinmigrantes</em>, México, Universidad Nacional Autónoma de México, Centro de Investigaciones sobre América del
+                            Norte. </p>
+                        </div>
+                      </div>
+                    </div>
+                    <br>
+                    <!-- Fin de libro --> 
+                    <!-- Inicia libro -->
+                    <div class="row" style="padding-top: 20px">
+                      <div class="col-sm-2">
+                        <div class="team-member-full-img"> <img src="libros/migracion-medios-vida-rurales.png" alt="Portada de libro"> </div>
+                      </div>
+                      <div class="col-sm-10">
+                        <div class="member-details"> <br>
+                          <p>Susan Hecht, Susan Kandel y Abelardo Morales (eds.) (2012), <em>Migración, medios de vida rurales y manejo de recursos naturales</em>, El Salvador, Centro Internacional de Investigaciones para el Desarrollo (IDRC) de Canadá,
+                            Fundación Ford, Fundación PRISMA.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <br>
+                    <!-- Fin de libro --> 
+                  </div>
+                </section>
+                <!-- Fin estructura Libro --> 
+              </div>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="2011">
+              <div class="helping-description">
+                <div class="widget">
+                  <h3>2011</h3>
+                </div>
+                <!-- Inicia estructura Libro -->
+                <section class="section team-single" style="padding-top: 0">
+                  <div class="container"> 
+                    <!-- Inicia libro -->
+                    <div class="row" style="padding-top: 20px">
+                      <div class="col-sm-2">
+                        <div class="team-member-full-img"> <img src="libros/refugio-mexico.jpg" alt="Portada de libro"> </div>
+                      </div>
+                      <div class="col-sm-10">
+                        <div class="member-details"> <br>
+                          <p>Katya Somohano y Pablo Yankelevich (coord.) (2011), <em>El refugio en México. Entre la historia y los desafíos contemporáneos</em>, México, COMAR y SEGOB.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <br>
+                    <!-- Fin de libro --> 
+                    <!-- Inicia libro -->
+                    <div class="row" style="padding-top: 20px">
+                      <div class="col-sm-2">
+                        <div class="team-member-full-img"> <img src="libros/deseables-inconvenientes.jpg" alt="Portada de libro"> </div>
+                      </div>
+                      <div class="col-sm-10">
+                        <div class="member-details"> <br>
+                          <p>Pablo Yankelevich (2011), <em>¿Deseables o inconvenientes? Las fronteras de la extranjería en el México posrevolucionario</em>, México, ENAH, Bonilla Artigas Editores e Iberoamericana.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <br>
+                    <!-- Fin de libro --> 
+                    <!-- Inicia libro -->
+                    <div class="row" style="padding-top: 20px">
+                      <div class="col-sm-2">
+                        <div class="team-member-full-img"> <img src="libros/diasporas.jpg" alt="Portada de libro"> </div>
+                      </div>
+                      <div class="col-sm-10">
+                        <div class="member-details"> <br>
+                          <p>Nattie Golubov (ed.) (2011), <em>Diásporas. Reflexiones teóricas</em>, México, Universidad Autónoma de México, Centro de Investigaciones sobre América del Norte.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <br>
+                    <!-- Fin de libro --> 
+                    <!-- Inicia libro -->
+                    <div class="row" style="padding-top: 20px">
+                      <div class="col-sm-2">
+                        <div class="team-member-full-img"> <img src="libros/poblacion-flotante.jpg" alt="Portada de libro"> </div>
+                      </div>
+                      <div class="col-sm-10">
+                        <div class="member-details"> <br>
+                          <p>Carlos Garrocho (2011), <em>Población Flotante, Población en Movimiento: conceptos Clave y Métodos de Análisis Exitosos</em>, México, CONAPO y El Colegio Mexiquense.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <br>
+                    <!-- Fin de libro --> 
+                    <!-- Inicia libro -->
+                    <div class="row" style="padding-top: 20px">
+                      <div class="col-sm-2">
+                        <div class="team-member-full-img"> <img src="libros/situacion-demografica.jpg" alt="Portada de libro"> </div>
+                      </div>
+                      <div class="col-sm-10">
+                        <div class="member-details"> <br>
+                          <p>Consejo Nacional de Población (2011), <em>La situación demográfica de México 2011</em>, México, CONAPO.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <br>
+                    <!-- Fin de libro --> 
+                    <!-- Inicia libro -->
+                    <div class="row" style="padding-top: 20px">
+                      <div class="col-sm-2">
+                        <div class="team-member-full-img"> <img src="libros/international-migration.jpg" alt="Portada de libro"> </div>
+                      </div>
+                      <div class="col-sm-10">
+                        <div class="member-details"> <br>
+                          <p>International Migration Outlook 2011, OECD</p>
+                        </div>
+                      </div>
+                    </div>
+                    <br>
+                    <!-- Fin de libro --> 
+                    <!-- Inicia libro -->
+                    <div class="row" style="padding-top: 20px">
+                      <div class="col-sm-2">
+                        <div class="team-member-full-img"> <img src="libros/mexico-disapora.jpg" alt="Portada de libro"> </div>
+                      </div>
+                      <div class="col-sm-10">
+                        <div class="member-details"> <br>
+                          <p>Alexandra Délano (2011), <em>Mexico and its Diaspora in the United States: Policies of Emigration since 1848</em>, United States, Cambridge.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <br>
+                    <!-- Fin de libro --> 
+                    <!-- Inicia libro -->
+                    <div class="row" style="padding-top: 20px">
+                      <div class="col-sm-2">
+                        <div class="team-member-full-img"> <img src="libros/migracion-internaciona-al.jpg" alt="Portada de libro"> </div>
+                      </div>
+                      <div class="col-sm-10">
+                        <div class="member-details"> <br>
+                          <p>Jorge Martínez (2011), <em>Migración internacional en América Latina y el Caribe. Nuevas tendencias, nuevos enfoques</em>, Chile, CELADE</p>
+                          <a href="http://www.cepal.org/es/publicaciones/35288-migracion-internacional-america-latina-caribe-nuevas-tendencias-nuevos-enfoques" target="_blank" class="btn-two">Leer</a> </div>
+                      </div>
+                    </div>
+                    <br>
+                    <!-- Fin de libro --> 
+                  </div>
+                </section>
+                <!-- Fin estructura Libro --> 
+              </div>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="2010">
+              <div class="helping-description">
+                <div class="widget">
+                  <h3>2010</h3>
+                </div>
+                <!-- Inicia estructura Libro -->
+                <section class="section team-single" style="padding-top: 0">
+                  <div class="container"> 
+                    <!-- Inicia libro -->
+                    <div class="row" style="padding-top: 20px">
+                      <div class="col-sm-2">
+                        <div class="team-member-full-img"> <img src="libros/directorio-expertos.png" alt="Portada de libro"> </div>
+                      </div>
+                      <div class="col-sm-10">
+                        <div class="member-details"> <br>
+                          <p>Cecilia Imaz Bayona, Patricia Salcido Cañedo y Ma. Elena Galeana Rodríguez (2010), <em>Directorio de expertos en materia migratoria en México</em>, Facultad de Ciencias Políticas y Sociales, Universidad Nacional Autónoma de
+                            México, Centro de Estudios Migratorios, Instituto Nacional de Migración.</p>
+                          <a href="http://www.politicamigratoria.gob.mx/work/models/SEGOB/Resource/2246/1/images/Directorio_Expertos_Temas_Migratorios.pdf" target="_blank" class="btn-two">Leer</a> </div>
+                      </div>
+                    </div>
+                    <br>
+                    <!-- Fin de libro --> 
+                    <!-- Inicia libro -->
+                    <div class="row" style="padding-top: 20px">
+                      <div class="col-sm-2">
+                        <div class="team-member-full-img"> <img src="libros/estudios-sobre-inmigracion.jpg" alt="Portada de libro"> </div>
+                      </div>
+                      <div class="col-sm-10">
+                        <div class="member-details"> <br>
+                          <p>Fundación Ciudadanía y Valores (2010), <em>Estudios sobre inmigración. Selección de textos de los Simposios internacionales, 2007-2010</em>, México, COLEF y Fundación Ciudadanía y Valores.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <br>
+                    <!-- Fin de libro --> 
+                    <!-- Inicia libro -->
+                    <div class="row" style="padding-top: 20px">
+                      <div class="col-sm-2">
+                        <div class="team-member-full-img"> <img src="libros/reflexiones-emigracion-mexicana.jpg" alt="Portada de libro"> </div>
+                      </div>
+                      <div class="col-sm-10">
+                        <div class="member-details"> <br>
+                          <p>Paula Leite y Silvia E. Giorguli (coords.) (2010), <em>Reflexiones en torno a la emigración mexicana como objeto de políticas públicas</em>, México, Consejo Nacional de Población.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <br>
+                    <!-- Fin de libro --> 
+                    <!-- Inicia libro -->
+                    <div class="row" style="padding-top: 20px">
+                      <div class="col-sm-2">
+                        <div class="team-member-full-img"> <img src="libros/migraciones-contemporaneas.jpg" alt="Portada de libro"> </div>
+                      </div>
+                      <div class="col-sm-10">
+                        <div class="member-details"> <br>
+                          <p>Hugo Ángeles Cruz, Mario Ortiz, Martha Rojas y Donato Ramos (coords.) (2010), <em>Migraciones contemporáneas, en la región sur-sureste de México</em>, México: IISUABJO y ECOSUR.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <br>
+                    <!-- Fin de libro --> 
+                    <!-- Inicia libro -->
+                    <div class="row" style="padding-top: 20px">
+                      <div class="col-sm-2">
+                        <div class="team-member-full-img"> <img src="libros/manual-justicia-binacional.jpg" alt="Portada de libro"> </div>
+                      </div>
+                      <div class="col-sm-10">
+                        <div class="member-details"> <br>
+                          <p>PRODESC y CDM (2010), <em>Manual de justicia binacional. Marco normativo para la defensa de trabajadoras y trabajadores migrantes en México y Estados Unidos</em>, México: PRODESC y CDM.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <br>
+                    <!-- Fin de libro --> 
+                    <!-- Inicia libro -->
+                    <div class="row" style="padding-top: 20px">
+                      <div class="col-sm-2">
+                        <div class="team-member-full-img"> <img src="libros/construccion-politicas-mujeres-migrantes.jpg" alt="Portada de libro"> </div>
+                      </div>
+                      <div class="col-sm-10">
+                        <div class="member-details"> <br>
+                          <p>N. Pérez (2010), <em>Hacia la construcción de políticas públicas a favor de las mujeres migrantes. Caso Chiapas, México</em>, México: Unión Europea, INCIDE Social y Sin Fronteras.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <br>
+                    <!-- Fin de libro --> 
+                    <!-- Inicia libro -->
+                    <div class="row" style="padding-top: 20px">
+                      <div class="col-sm-2">
+                        <div class="team-member-full-img"> <img src="libros/migraciones-trabajo-movilidad-territorial.png" alt="Portada de libro"> </div>
+                      </div>
+                      <div class="col-sm-10">
+                        <div class="member-details"> <br>
+                          <p>Sara María Lara Flores (coord.), (2010), <em>Migraciones de trabajo y movilidad territorial</em>, México, H. Cámara de Diputados, LXI Legislatura, Consejo Nacional de Ciencia y Tecnología, Miguel Ángel Porrúa.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <br>
+                    <!-- Fin de libro --> 
+                    <!-- Inicia libro -->
+                    <div class="row" style="padding-top: 20px">
+                      <div class="col-sm-2">
+                        <div class="team-member-full-img"> <img src="libros/migration-canada.jpg" alt="Portada de libro"> </div>
+                      </div>
+                      <div class="col-sm-10">
+                        <div class="member-details"> <br>
+                          <p>Alan B. Simmons (2010), <em>Migration and Canada. Global and transnational perspectives</em>, Toronto, Canadian Scholars´Press Inc.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <br>
+                    <!-- Fin de libro --> 
+                    <!-- Inicia libro -->
+                    <div class="row" style="padding-top: 20px">
+                      <div class="col-sm-2">
+                        <div class="team-member-full-img"> <img src="libros/migraciones-sur-sureste.jpg" alt="Portada de libro"> </div>
+                      </div>
+                      <div class="col-sm-10">
+                        <div class="member-details"> <br>
+                          <p>Hugo Ángeles Cruz, Mario Ortíz Gabriel, Martha Luz Rojas Wiesner, Donato Ramos Pioquinto (coords.) (2010), <em>Migraciones contemporáneas en la región sur-sureste de México</em>, México, Instituto de Investigaciones Sociológicas
+                            de la Universidad Autónoma Benito Juárez de Oaxaca, El Colegio de la Frontera Sur.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <br>
+                    <!-- Fin de libro --> 
+                    <!-- Inicia libro -->
+                    <div class="row" style="padding-top: 20px">
+                      <div class="col-sm-2">
+                        <div class="team-member-full-img"> <img src="libros/salvando-fronteras.jpg" alt="Portada de libro"> </div>
+                      </div>
+                      <div class="col-sm-10">
+                        <div class="member-details"> <br>
+                          <p>Kataharine M. Donato, Jonathan Hiskey, Jorge Durand y Douglas S. Massey (coords.) (2010), <em>Salvando fronteras. Migración internacional en América Latina y el Caribe</em>, México, Vanderbilt University, Mexican migration
+                            project, Miguel Ángel Porrúa.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <br>
+                    <!-- Fin de libro --> 
+                  </div>
+                </section>
+                <!-- Fin estructura Libro --> 
+              </div>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="2009">
+              <div class="helping-description">
+                <div class="widget">
+                  <h3>2009</h3>
+                </div>
+                <!-- Inicia estructura Libro -->
+                <section class="section team-single" style="padding-top: 0">
+                  <div class="container"> 
+                    <!-- Inicia libro -->
+                    <div class="row" style="padding-top: 20px">
+                      <div class="col-sm-2">
+                        <div class="team-member-full-img"> <img src="libros/en-busca-vida.jpg" alt="Portada de libro"> </div>
+                      </div>
+                      <div class="col-sm-10">
+                        <div class="member-details"> <br>
+                          <p>B. Villaseñor y J. Moreno, J. (2009), <em>En busca de la vida. ¿Dónde están los derechos humanos?</em>, México, Albergue del Desierto.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <br>
+                    <!-- Fin de libro --> 
+                    <!-- Inicia libro -->
+                    <div class="row" style="padding-top: 20px">
+                      <div class="col-sm-2">
+                        <div class="team-member-full-img"> <img src="libros/migracion-creencias.jpg" alt="Portada de libro"> </div>
+                      </div>
+                      <div class="col-sm-10">
+                        <div class="member-details"> <br>
+                          <p>Olga Odgers Ortíz y Juan Carlos Ruíz Guadalajara (coords.) (2009), <em>Migración y creencias. Pensar las religiones en tiempo de movilidad</em>, México, El Colegio de San Luis, El Colegio de la Frontera Norte.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <br>
+                    <!-- Fin de libro --> 
+                    <!-- Inicia libro -->
+                    <div class="row" style="padding-top: 20px">
+                      <div class="col-sm-2">
+                        <div class="team-member-full-img"> <img src="libros/flujos-migratorios.jpg" alt="Portada de libro"> </div>
+                      </div>
+                      <div class="col-sm-10">
+                        <div class="member-details"> <br>
+                          <p>M. Anguiano y R. Corona (2009), <em>Flujos migratorios en la frontera Guatemala – México</em>, México: INM, COLEF y DGE Ediciones</p>
+                        </div>
+                      </div>
+                    </div>
+                    <br>
+                    <!-- Fin de libro --> 
+                    <!-- Inicia libro -->
+                    <div class="row" style="padding-top: 20px">
+                      <div class="col-sm-2">
+                        <div class="team-member-full-img"> <img src="libros/legislacion-migratoria.jpg" alt="Portada de libro"> </div>
+                      </div>
+                      <div class="col-sm-10">
+                        <div class="member-details"> <br>
+                          <p>Instituto Nacional de Migración (2009), <em>Legislación migratoria e instrumentos jurídicos para la gestión de la migración en México, 2009</em>, México: SEGOB/INM.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <br>
+                    <!-- Fin de libro --> 
+                    <!-- Inicia libro -->
+                    <div class="row" style="padding-top: 20px">
+                      <div class="col-sm-2">
+                        <div class="team-member-full-img"> <img src="libros/gestion-migratoria.jpg" alt="Portada de libro"> </div>
+                      </div>
+                      <div class="col-sm-10">
+                        <div class="member-details"> <br>
+                          <p>Instituto Nacional de Migración y Organización Internacional de Migración (2009), <em>Aspectos básicos para la gestión migratoria</em>, México: OIM / INM.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <br>
+                    <!-- Fin de libro --> 
+                    <!-- Inicia libro -->
+                    <div class="row" style="padding-top: 20px">
+                      <div class="col-sm-2">
+                        <div class="team-member-full-img"> <img src="libros/frontera-perversa.jpg" alt="Portada de libro"> </div>
+                      </div>
+                      <div class="col-sm-10">
+                        <div class="member-details"> <br>
+                          <p>M. Marroni (2009), <em>Frontera perversa, familias fracturadas. Los indocumentados mexicanos y el sueño americano</em>. México: Benemérita Universidad de Puebla y Grupo interdisciplinario sobre Mujer, Trabajo y Pobreza, A.C.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <br>
+                    <!-- Fin de libro --> 
+                  </div>
+                </section>
+                <!-- Fin estructura Libro --> 
+              </div>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="2007">
+              <div class="helping-description">
+                <div class="widget">
+                  <h3>2007</h3>
+                </div>
+                <!-- Inicia estructura Libro -->
+                <section class="section team-single" style="padding-top: 0">
+                  <div class="container"> 
+                    <!-- Inicia libro -->
+                    <div class="row" style="padding-top: 20px">
+                      <div class="col-sm-2">
+                        <div class="team-member-full-img"> <img src="libros/las-maras.jpg" alt="Portada de libro"> </div>
+                      </div>
+                      <div class="col-sm-10">
+                        <div class="member-details"> <br>
+                          <p>J. M. Valenzuela, A. Domínguez, y R. Reguillo (2007), <em>Las Maras. Identidades juveniles al límite</em>, México: UAM, COLEF y Casa Juan Pablos.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <br>
+                    <!-- Fin de libro --> 
+                  </div>
+                </section>
+                <!-- Fin estructura Libro --> 
+              </div>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="2005">
+              <div class="helping-description">
+                <div class="widget">
+                  <h3>2005</h3>
+                </div>
+                <!-- Inicia estructura Libro -->
+                <section class="section team-single" style="padding-top: 0">
+                  <div class="container"> 
+                    <!-- Inicia libro -->
+                    <div class="row" style="padding-top: 20px">
+                      <div class="col-sm-2">
+                        <div class="team-member-full-img"> <img src="libros/derecho-fuga.png" alt="Portada de libro"> </div>
+                      </div>
+                      <div class="col-sm-10">
+                        <div class="member-details"> <br>
+                          <p>Sandro Mezzadra (2005), <em>Derecho de Fuga: Migraciones, Ciudadanía y Globalización,</em> Madrid.</p>
+                          <a href="libros/derecho-fuga.pdf" target="_blank" class="btn-two">Leer</a> </div>
+                      </div>
+                    </div>
+                    <br>
+                    <!-- Fin de libro --> 
+                  </div>
+                </section>
+                <!-- Fin estructura Libro --> 
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Helping Section -->
+
+<%= render 'inicio/footer' %>
+
+<script src="/js/functions.js"></script>

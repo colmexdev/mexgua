@@ -21,7 +21,7 @@
     <%= f.file_field :documento %><br>
 		</div>
 		<div class="img-display">
-			<% if !@obj.documento.url.include?("/documentos/missing.png") %>
+			<% if !@obj.documento.url.include?("/documentos/original/missing.png") %>
 				<a id="arch-doc" href="<%= @obj.documento.url %>" target="_blank"><img id="archivo-doc" src="<%= image_url('documento.png') %>"></a>
 			<% else %>
 				<span>No hay archivo para mostrar.</span>

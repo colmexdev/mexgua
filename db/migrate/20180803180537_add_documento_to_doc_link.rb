@@ -1,6 +1,6 @@
 class AddDocumentoToDocLink < ActiveRecord::Migration
   def change
-    add_column :doc_links, :documento, :attachment
+    add_attachment :doc_links, :documento
     remove_column :doc_links, :link
   end
 end

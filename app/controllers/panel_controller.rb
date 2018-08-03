@@ -270,7 +270,7 @@ class PanelController < ApplicationController
         trix: []
       }, "Documentos elaborados por el grupo": {
         model: DocLink,
-        fields: {ficha: "Ficha (resumen)", link: "Liga"},
+        fields: {ficha: "Ficha (resumen)", documento: "Documento"},
         imgs: {},
         trix: [:ficha]
       }, "Libros": {
@@ -358,7 +358,7 @@ class PanelController < ApplicationController
     if params[:set] == "Anuncios (principal)"
       params.require(:ad).permit(:titulo, :texto, :link, :fecha, :fecha_pub, :imagen)
     elsif params[:set] == "Documentos elaborados por el grupo"
-      params.require(:doc_link).permit(:ficha, :link)
+      params.require(:doc_link).permit(:ficha, :documento)
     elsif params[:set] == "Libros"
       params.require(:book).permit(:ficha, :link, :anio, :imagen)
     elsif params[:set] == "Artículos"

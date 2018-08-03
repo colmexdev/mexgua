@@ -1,0 +1,27 @@
+<%= render 'inicio/header' %>
+
+<!-- Helping Section -->
+<section class="section helping-section">
+  <div class="container">
+    <div class="row">
+      <div class="section-heading">
+        <h3>Documentos elaborados por el Grupo</h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="helping-description col-xs-12 col-md-10">
+        <ul class="order-list">
+          <%= @docs.each do |d| %>
+          <li><%= d.ficha %><br>
+            <a href="<%= d.documento.url || '#' %>" target="_blank">Ver documento</a> </li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Helping Section --> 
+
+<%= render 'inicio/footer' %>
+
+<script src="/js/functions.js"></script>

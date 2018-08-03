@@ -30,7 +30,7 @@
                 <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span>Sobre Migración</span></a>
                   <ul class="dropdown-menu">
                     <li><a href="<%= flujos_path %>">Los Flujos migratorios y sus implicaciones</a></li>
-                    <li><a href="principios.html">Principios que deben regir los procesos migratorios de la región</a></li>
+                    <li><a href="<%= principios_path %>">Principios que deben regir los procesos migratorios de la región</a></li>
                   </ul>
                 </li>
                 <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span>Referencias</span></a>

@@ -72,12 +72,12 @@
 ----------------------------------------------- */
 @font-face {
 font-family: 'Glyphicons Halflings';
-src: url(#{$icon-font-path}#{$icon-font-name}.ttf) format('truetype');
-src: url(#{$icon-font-path}#{$icon-font-name}.eot?#iefix)
+src: url('glyphicons-halflings-regular.ttf') format('truetype');
+src: url('glyphicons-halflings-regular.eot?#iefix')
 format('embedded-opentype'),
-url(#{$icon-font-path}#{$icon-font-name}.woff) format('woff'),
-url(#{$icon-font-path}#{$icon-font-name}.ttf) , format('truetype'),
-url(#{$icon-font-path}#{$icon-font-name}.svg##{$icon-font-svg-id})
+url('glyphicons-halflings-regular.woff') format('woff'),
+url('glyphicons-halflings-regular.ttf') , format('truetype'),
+url('glyphicons-halflings-regular.svg?#iefix')
 format('svg');
 }
 

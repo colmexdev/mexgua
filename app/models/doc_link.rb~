@@ -6,5 +6,5 @@ class DocLink < ActiveRecord::Base
 
   validates_presence_of :ficha
   validates_presence_of :link
-  validates_attachment_content_type :archivo, :content_type => ['application/pdf']
+  validates_attachment_content_type :documento, :content_type => ['application/pdf']
 end

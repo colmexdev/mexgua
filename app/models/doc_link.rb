@@ -5,6 +5,5 @@ class DocLink < ActiveRecord::Base
                     :path => ":rails_root/public/assets/documentos/:basename.:extension"
 
   validates_presence_of :ficha
-  validates_presence_of :link
   validates_attachment_content_type :documento, :content_type => ['application/pdf']
 end

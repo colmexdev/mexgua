@@ -27,4 +27,9 @@ class InicioController < ApplicationController
     @docs = DocLink.all.order(created_at: :desc)
   end
 
+  def libros
+    @anios_libro = Book.pluck(:anio).uniq.sort_by{|n| -n}
+    @libros = Book.all.order(created_at: :desc)
+  end
+
 end

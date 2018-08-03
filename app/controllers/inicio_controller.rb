@@ -28,7 +28,7 @@ class InicioController < ApplicationController
   end
 
   def libros
-   @libros = Book.all.order(created_at: :desc)
+    @anios_libro = Book.pluck(:anio).uniq.sort_by{|n| -n}
   end
 
 end

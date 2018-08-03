@@ -13,7 +13,7 @@
         <div class="helping-list"> 
           <!-- Nav tabs -->
           <ul role="tablist">
-						<% Book.pluck(:anio).uniq.each_with_index do |a,i| %>
+						<% @anios_libro.each_with_index do |a,i| %>
             <li role="presentation" class="<%= i == 0 ? 'active' : '' %>"><a href="<%= '#' + a.to_s %>" aria-controls="<%= a.to_s %>" role="tab" data-toggle="tab"><span style="font-size: 16px;"><%= a.to_s %></span></a></li>
 						<% end %>
           </ul>

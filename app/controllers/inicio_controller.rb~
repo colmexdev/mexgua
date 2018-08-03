@@ -5,4 +5,13 @@ class InicioController < ApplicationController
     @ads = Ad.all
   end
 
+  def sobre
+  end
+
+  def antecedentes
+  end
+
+  def propuestas
+  end
+
 end

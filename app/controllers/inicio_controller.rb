@@ -6,7 +6,15 @@ class InicioController < ApplicationController
   end
 
   def sobre
+  end
 
+  def antecedentes
+  end
+
+  def propuestas
+  end
+
+  def acciones
   end
 
 end

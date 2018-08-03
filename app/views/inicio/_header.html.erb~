@@ -21,9 +21,9 @@
               <ul class="nav navbar-nav">
                 <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span>¿Quiénes somos?</span></a>
                   <ul class="dropdown-menu">
-                    <li><a href="sobre.html">Información del grupo</a></li>
-                    <li><a href="antecedentes.html">Antecedentes</a></li>
-                    <li><a href="propuestas.html">Propuestas y acciones</a></li>
+                    <li><a href="<%= sobre_path %>">Información del grupo</a></li>
+                    <li><a href="<%= antecedentes_path %>">Antecedentes</a></li>
+                    <li><a href="<%= propuestas_path %>">Propuestas y acciones</a></li>
                     <li><a href="acciones.html">Acciones prioritarias</a></li>
                   </ul>
                 </li>

@@ -275,7 +275,7 @@ class PanelController < ApplicationController
         trix: [:ficha]
       }, "Libros": {
         model: Book,
-        fields: {ficha: "Ficha bibliográfica", link: "Liga", anio: "Año de publicación"},
+        fields: {ficha: "Ficha bibliográfica", link: "Liga", anio: "Año de publicación", documento: "Documento en PDF (si aplica)"},
         imgs: {imagen: "Imagen de portada"},
         trix: [:ficha]
       }, "Artículos": {
@@ -360,7 +360,7 @@ class PanelController < ApplicationController
     elsif params[:set] == "Documentos elaborados por el grupo"
       params.require(:doc_link).permit(:ficha, :documento)
     elsif params[:set] == "Libros"
-      params.require(:book).permit(:ficha, :link, :anio, :imagen)
+      params.require(:book).permit(:ficha, :link, :anio, :imagen, :documento)
     elsif params[:set] == "Artículos"
       params.require(:article).permit(:ficha, :link, :anio)
     elsif params[:set] == "Revistas"

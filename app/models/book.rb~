@@ -6,7 +6,7 @@ class Book < ActiveRecord::Base
                     :default_url => "/vacio.png"
 
   validates_presence_of :ficha
-  validates :anio, presence: true, numericality: {greater_than: 2000, only_integer: true}
+  validates :anio, presence: true, numericality: {greater_than: 1999, only_integer: true}
   #validates_attachment_presence :imagen
   validates_attachment_content_type :imagen, content_type: /\Aimage/
 

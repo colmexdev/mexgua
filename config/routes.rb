@@ -20,6 +20,7 @@ Rails.application.routes.draw do
   patch 'panel' => 'panel#actualizar'
 
   get '/' => 'inicio#inicio', :as => :inicio
+  get '/sobre' => 'inicio#sobre', :as => :sobre
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

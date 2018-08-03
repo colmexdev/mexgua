@@ -16,6 +16,8 @@ Rails.application.routes.draw do
   delete 'panel/:id' => 'panel#eliminar', :as => :panel_eliminar
   put 'panel/editar' => 'panel#actualizar'
   patch 'panel/editar' => 'panel#actualizar'
+  put 'panel' => 'panel#actualizar'
+  patch 'panel' => 'panel#actualizar'
 
   get '/' => 'inicio#inicio', :as => :inicio
   # The priority is based upon order of creation: first created -> highest priority.

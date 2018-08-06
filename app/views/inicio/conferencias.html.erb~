@@ -28,9 +28,10 @@
                 <div class="widget">
                   <h3><%= t.titulo %></h3>
                 </div>
-								<% if t.autor.present? || t.fecha.present? %>
+								<% if t.autor.present? || t.fecha.present? || t.titulo_evento.present? %>
                 <h5><%= !t.fecha.nil? ? ("Publicado el " + l(t.fecha, format: :normal) + "<br>").html_safe : "" %>
-					<%= !t.autor.nil? ? t.autor : "" %></h5>
+					<%= !t.autor.nil? ? (t.autor + '<br>').html_safe : "" %>
+					<%= !t.titulo_evento.nil? ? ("En: " + t.titulo_evento) : "" %></h5>
 								<% end %>
                 <br>
                 <%= t.abstract.gsub(/<div>/,"<p>").gsub(/<\/div>/,"</p>").html_safe %>

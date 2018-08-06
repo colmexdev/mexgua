@@ -22,7 +22,7 @@
           <!-- Tab panes -->
           <div class="tab-content">
 
-<% @anios_rev.each_with_index do |a,i| %>
+<% @anios_tesis.each_with_index do |a,i| %>
             <div role="tabpanel" class="<%= 'tab-pane fade' + (i == 0 ? ' in active' : '') %>" id="<%= a.to_s %>">
               <div class="helping-description">
                 <div class="widget">

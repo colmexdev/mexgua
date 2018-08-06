@@ -16,8 +16,8 @@
     <%= f.number_field :anio, {value: (@obj.anio || 2000), min: 2000, step: 1} %>
   </div>
   <div class="field">
-    	<%= f.check_box :tematica, {multiple: false}, true, false %>
-			<%= f.label :tematica, "Número especial" %><br>
+    	<%= f.check_box :especial, {multiple: false}, true, false %>
+			<%= f.label :especial, "Número especial" %><br>
   </div>
   <div class="field">
     <%= f.label :ficha, "Ficha bibliográfica" %><br>

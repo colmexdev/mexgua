@@ -5,7 +5,7 @@
   <div class="container">
     <div class="row">
       <div class="section-heading">
-        <h3>Artículos</h3>
+        <h3>Revistas</h3>
       </div>
     </div>
     <div class="row">
@@ -13,8 +13,8 @@
         <div class="helping-list"> 
           <!-- Nav tabs -->
           <ul role="tablist">
-						<% @anios_art.each_with_index do |a,i| %>
-            <li role="presentation" class="<%= i == 0 ? 'active' : '' %>"><a href="<%= '#' + a.to_s %>" aria-controls="<%= a.to_s %>" role="tab" data-toggle="tab"><span style="font-size: 16px;"><%= a.to_s %></span></a></li>
+						<% @anios_rev.each_with_index do |a,i| %>
+            <li role="presentation" class="<%= i == 0 ? 'active' : '' %>"><a href="<%= '#' + a.to_s %>" aria-controls="<%= a.to_s %>" role="tab" data-toggle="tab"><span style="font-size: 16px;"><%= a.to_s == "especiales" ? "Números especiales" : a.to_s %></span></a></li>
 						<% end %>
           </ul>
         </div>
@@ -22,16 +22,17 @@
           <!-- Tab panes -->
           <div class="tab-content">
 
-<% @anios_art.each_with_index do |a,i| %>
+<% @anios_rev.each_with_index do |a,i| %>
             <div role="tabpanel" class="<%= 'tab-pane fade' + (i == 0 ? ' in active' : '') %>" id="<%= a.to_s %>">
               <div class="helping-description">
                 <div class="widget">
-                  <h3><%= a.to_s %></h3>
+                  <h3><%= a.to_s == "especiales" ? "Números especiales" : a.to_s %></h3>
                 </div>
                 <!-- Inicia estructura Libro -->
                 <section class="section team-single" style="padding-top: 0">
                     <ul class="order-list">
-<% Article.where("anio = ?",a).order(created_at: :desc).each do |b| %> 
+<% revs = (a.to_s == "especiales" ? @special_rev : Article.where("anio = ?",a).order(created_at: :desc)
+<% revs.each do |b| %> 
                       <li><%= b.ficha.gsub(/<\/?((p)|(div)|(br))>/,"").html_safe %>
                         <br>
                         <a href="<%= b.link %>" target="_blank">Leer</a></li>

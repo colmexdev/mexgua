@@ -44,6 +44,7 @@
                    <iframe src="<%= v_id %>" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
                   </div>
                 </div>
+<% end %>
               </div>
             </div>
 <% end %>

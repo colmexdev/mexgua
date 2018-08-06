@@ -36,10 +36,10 @@
                 <br>
                 <%= t.abstract.gsub(/<div>/,"<p>").gsub(/<\/div>/,"</p>").html_safe %>
 
-<% if links_vid.size > 1 %>
-<% links_vid.each_with_index do |l,k| %>
+<% if link_vids.size > 1 %>
+<% link_vids.each_with_index do |l,k| %>
                   <div class="widget">
-                    <h3><%= t.tits_vid[k] %></h3>
+                    <h3><%= t.tit_vids[k] %></h3>
                   </div>
                   <div class="cajavideo">
                     <div class="embed-container">
@@ -51,12 +51,12 @@
 <% end %>
 <% else %>
 
-<% if !t.links_vid[0].include?("youtu") && !t.links_vid[0].include?("vimeo") %>
-                <p><a href="<%= t.links_vid[0] %>" target="_blank" class="btn-two">Ver video</a> </p>
+<% if !t.link_vids[0].include?("youtu") && !t.link_vids[0].include?("vimeo") %>
+                <p><a href="<%= t.link_vids[0] %>" target="_blank" class="btn-two">Ver video</a> </p>
 <% else %>
                 <div class="cajavideo">
                   <div class="embed-container">
-<% v_id = (t.links_vid[0].include?("vimeo") ? ("https://player.vimeo.com/video/" + t.links_vid[0].split("/")[-1]) : (t.links_vid[0].include?("embed") ? t.links_vid[0] : ("https://www.youtube.com/embed/" + (t.links_vid[0].include?("youtu.be") ? ( t.links_vid[0].split("/")[-1]) : ( t.links_vid[0].split("?")[1].split("&")[0].gsub("v=","")))))) %>
+<% v_id = (t.link_vids[0].include?("vimeo") ? ("https://player.vimeo.com/video/" + t.link_vids[0].split("/")[-1]) : (t.link_vids[0].include?("embed") ? t.link_vids[0] : ("https://www.youtube.com/embed/" + (t.link_vids[0].include?("youtu.be") ? ( t.link_vids[0].split("/")[-1]) : ( t.link_vids[0].split("?")[1].split("&")[0].gsub("v=","")))))) %>
 
                    <iframe src="<%= v_id %>" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
                   </div>

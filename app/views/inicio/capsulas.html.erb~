@@ -14,7 +14,7 @@
           <!-- Nav tabs -->
           <ul role="tablist">
 <% @capsulas.each_with_index do |t,i| %>
-            <li role="presentation" class="<%= i == 0 : 'active' : '' %>"><a href="<%= '#help_tab_' + i.to_s %>" aria-controls="<%= 'help_tab_' + i.to_s %>" role="tab" data-toggle="tab"><span style="font-size: 16px;"><%= t.titulo %></span></a></li>
+            <li role="presentation" class="<%= i == 0 ? 'active' : '' %>"><a href="<%= '#help_tab_' + i.to_s %>" aria-controls="<%= 'help_tab_' + i.to_s %>" role="tab" data-toggle="tab"><span style="font-size: 16px;"><%= t.titulo %></span></a></li>
 <% end %>
           </ul>
         </div>

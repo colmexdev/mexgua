@@ -42,4 +42,8 @@ class InicioController < ApplicationController
       @anios_rev.insert(0,"especiales")
     end
   end
+
+  def tesis
+    @anios_tesis = Tesis.pluck(:anio).uniq.sort_by{|n| -n}
+  end
 end

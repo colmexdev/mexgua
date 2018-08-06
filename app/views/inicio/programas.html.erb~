@@ -1,0 +1,63 @@
+<%= render 'inicio/header' %>
+
+<!-- Helping Section -->
+<section class="section helping-section">
+  <div class="container">
+    <div class="row">
+      <div class="section-heading">
+        <h3>Documentales</h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="helping-box">
+        <div class="helping-list"> 
+          <!-- Nav tabs -->
+          <ul role="tablist">
+<% @documentales.each_with_index do |t,i| %>
+            <li role="presentation" class="<%= i == 0 ? 'active' : '' %>"><a href="<%= '#help_tab_' + i.to_s %>" aria-controls="<%= 'help_tab_' + i.to_s %>" role="tab" data-toggle="tab"><span style="font-size: 16px;"><%= t.titulo %></span></a></li>
+<% end %>
+          </ul>
+        </div>
+        <div class="helping-details"> 
+          <!-- Tab panes -->
+          <div class="tab-content">
+
+<% @documentales.each_with_index do |t,i| %>
+            <div role="tabpanel" class="<%= 'tab-pane fade ' + (i == 0 ? 'in active' : '') %>" id="<%= 'help_tab_' + i.to_s %>">
+              <div class="helping-description">
+                <div class="widget">
+                  <h3><%= t.titulo %></h3>
+                </div>
+								<% if t.autor.present? || t.fecha.present? || t.tipo.present? %>
+                <h5><%= !t.fecha.nil? ? ("Publicado el " + l(t.fecha, format: :normal) + "<br>").html_safe : "" %>
+				  <%= !t.autor.nil? ? (t.autor + "<br>").html_safe : "" %>
+					<%= !t.tipo.nil? ? t.tipo : "" %></h5>
+								<% end %>
+                <br>
+                <%= t.abstract.gsub(/<div>/,"<p>").gsub(/<\/div>/,"</p>").html_safe %>
+<% if !t.link_vid.include?("youtu") && !t.link_vid.include?("vimeo") %>
+                <p><a href="<%= t.link_vid %>" target="_blank" class="btn-two">Ver video</a> </p>
+<% else %>
+                <div class="cajavideo">
+                  <div class="embed-container">
+<% v_id = (t.link_vid.include?("vimeo") ? ("https://player.vimeo.com/video/" + t.link_vid.split("/")[-1]) : (t.link_vid.include?("embed") ? t.link_vid : ("https://www.youtube.com/embed/" + (t.link_vid.include?("youtu.be") ? ( t.link_vid.split("/")[-1]) : ( t.link_vid.split("?")[1].split("&")[0].gsub("v=","")))))) %>
+
+                   <iframe src="<%= v_id %>" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+                  </div>
+                </div>
+<% end %>
+              </div>
+            </div>
+<% end %>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Helping Section --> 
+
+<%= render 'inicio/footer' %>
+
+<script src="/js/functions.js"></script>

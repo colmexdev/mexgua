@@ -31,4 +31,8 @@ class InicioController < ApplicationController
     @anios_libro = Book.pluck(:anio).uniq.sort_by{|n| -n}
   end
 
+  def articulos
+    @anios_art = Article.pluck(:anio).uniq.sort_by{|n| -n}
+  end
+
 end

@@ -1,0 +1,57 @@
+<%= render 'inicio/header' %>
+
+<!-- Helping Section -->
+<section class="section helping-section">
+  <div class="container">
+    <div class="row">
+      <div class="section-heading">
+        <h3>Artículos</h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="helping-box">
+        <div class="helping-list"> 
+          <!-- Nav tabs -->
+          <ul role="tablist">
+						<% @anios_art.each_with_index do |a,i| %>
+            <li role="presentation" class="<%= i == 0 ? 'active' : '' %>"><a href="<%= '#' + a.to_s %>" aria-controls="<%= a.to_s %>" role="tab" data-toggle="tab"><span style="font-size: 16px;"><%= a.to_s %></span></a></li>
+						<% end %>
+          </ul>
+        </div>
+        <div class="helping-details"> 
+          <!-- Tab panes -->
+          <div class="tab-content">
+
+<% @anios_art.each_with_index do |a,i| %>
+            <div role="tabpanel" class="<%= 'tab-pane fade' + (i == 0 ? ' in active' : '') %>" id="<%= a.to_s %>">
+              <div class="helping-description">
+                <div class="widget">
+                  <h3><%= a.to_s %></h3>
+                </div>
+                <!-- Inicia estructura Libro -->
+                <section class="section team-single" style="padding-top: 0">
+                    <ul class="order-list">
+<% Article.where("anio = ?",a).order(created_at: :desc).each do |b| %> 
+                      <li><%= b.ficha.gsub(/<\/?((p)|(div)|(br))>/,"").html_safe %>
+                        <br>
+                        <a href="<%= a.link %>" target="_blank">Leer</a></li>
+<% end %>
+                    </ul>
+                </section>
+                <!-- Fin estructura Libro --> 
+              </div>
+            </div>
+<% end %>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Helping Section -->
+
+<%= render 'inicio/footer' %>
+
+<script src="/js/functions.js"></script>

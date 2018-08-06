@@ -35,4 +35,11 @@ class InicioController < ApplicationController
     @anios_art = Article.pluck(:anio).uniq.sort_by{|n| -n}
   end
 
+  def revistas
+    @anios_rev = Article.where(especial: false).pluck(:anio).uniq.sort_by{|n| -n}
+    @special_rev = Article.where(especial: true).order(created_at: :desc)
+    if @special_rev.size > 0
+      @anios_rev.insert(0,"especiales")
+    end
+  end
 end

@@ -46,7 +46,7 @@
                   <ul class="dropdown-menu">
                     <li><a href="<%= boletines_path %>">Boletines</a></li>
                     <li><a href="<%= comunicados_path %>">Comunicados</a></li>
-                    <li><a href="cuadernos.html">Cuadernos migratorios</a></li>
+                    <li><a href="<%= cuadernos_path %>">Cuadernos migratorios</a></li>
                   </ul>
                 </li>
                 <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span>Videoteca</span></a>

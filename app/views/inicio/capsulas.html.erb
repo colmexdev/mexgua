@@ -34,12 +34,12 @@
 								<% end %>
                 <br>
                 <%= t.abstract.gsub(/<div>/,"<p>").gsub(/<\/div>/,"</p>").html_safe %>
-<% if !t.vid_link.include?(/(youtu)|(vimeo)/) %>
-                <p><a href="<%= t.link %>" target="_blank" class="btn-two">Ver video</a> </p>
+<% if !t.link_vid.include?(/(youtu)|(vimeo)/) %>
+                <p><a href="<%= t.link_vid %>" target="_blank" class="btn-two">Ver video</a> </p>
 <% else %>
                 <div class="cajavideo">
                   <div class="embed-container">
-<% v_id = (t.vid_link.include?("vimeo") ? ("https://player.vimeo.com/video/" + t.vid_link.split("/")[-1]) : (t.vid_link.include?("embed") ? t.vid_link : ("https://www.youtube.com/embed/" + (t.vid_link.include?("youtu.be") ? ( t.vid_link.split("/")[-1]) : ( t.vid_link.split("?")[1].split("&")[0].gsub("v=","")))))) %>
+<% v_id = (t.link_vid.include?("vimeo") ? ("https://player.vimeo.com/video/" + t.link_vid.split("/")[-1]) : (t.link_vid.include?("embed") ? t.link_vid : ("https://www.youtube.com/embed/" + (t.link_vid.include?("youtu.be") ? ( t.link_vid.split("/")[-1]) : ( t.link_vid.split("?")[1].split("&")[0].gsub("v=","")))))) %>
 
                    <iframe src="<%= v_id %>" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
                   </div>

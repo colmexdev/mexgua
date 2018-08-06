@@ -31,7 +31,7 @@
                 <!-- Inicia estructura Libro -->
                 <section class="section team-single" style="padding-top: 0">
                     <ul class="order-list">
-<% revs = (a.to_s == "especiales" ? @special_rev : Magazine.where("anio = ?",a).order(created_at: :desc) %>
+<% revs = (a.to_s == "especiales" ? @special_rev : Magazine.where("anio = ?",a).order(created_at: :desc)) %>
 <% revs.each do |b| %> 
                       <li><%= b.ficha.gsub(/<\/?((p)|(div)|(br))>/,"").html_safe %>
                         <br>

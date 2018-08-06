@@ -49,6 +49,8 @@
                     </div>
                   </div>
 <% end %>
+              </div>
+            </div>
 <% else %>
 
 <% if !t.link_vids[0].include?("youtu") && !t.link_vids[0].include?("vimeo") %>

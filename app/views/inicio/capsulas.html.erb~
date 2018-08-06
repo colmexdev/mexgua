@@ -34,7 +34,7 @@
 								<% end %>
                 <br>
                 <%= t.abstract.gsub(/<div>/,"<p>").gsub(/<\/div>/,"</p>").html_safe %>
-<% if !t.link_vid.include?(/(youtu)|(vimeo)/) %>
+<% if !t.link_vid.include?("youtu") && !t.link_vid.include?("vimeo") %>
                 <p><a href="<%= t.link_vid %>" target="_blank" class="btn-two">Ver video</a> </p>
 <% else %>
                 <div class="cajavideo">

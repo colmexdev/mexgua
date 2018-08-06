@@ -23,7 +23,7 @@
           <div class="tab-content">
 
 <% @capsulas.each_with_index do |t,i| %>
-            <div role="tabpanel" class="<%= 'tab-pane fade ' + (i == 0 ? 'active' : '') %>" id="<%= 'help_tab_' + i.to_s %>">
+            <div role="tabpanel" class="<%= 'tab-pane fade ' + (i == 0 ? 'in active' : '') %>" id="<%= 'help_tab_' + i.to_s %>">
               <div class="helping-description">
                 <div class="widget">
                   <h3><%= t.titulo %></h3>

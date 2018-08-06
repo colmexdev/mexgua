@@ -36,7 +36,7 @@
                 <br>
                 <%= t.abstract.gsub(/<div>/,"<p>").gsub(/<\/div>/,"</p>").html_safe %>
 
-<% if links_vide.size > 1 %>
+<% if links_vid.size > 1 %>
 <% links_vid.each_with_index do |l,k| %>
                   <div class="widget">
                     <h3><%= t.tits_vid[k] %></h3>

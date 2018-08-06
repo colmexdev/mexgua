@@ -37,7 +37,7 @@ class InicioController < ApplicationController
 
   def revistas
     @anios_rev = Article.where(especial: false).pluck(:anio).uniq.sort_by{|n| -n}
-    @special_rev = Article.where(especial: true)
+    @special_rev = Article.where(especial: true).order(created_at: :desc)
     if @special_rev.size > 0
       @anios_rev.insert(0,"especiales")
     end

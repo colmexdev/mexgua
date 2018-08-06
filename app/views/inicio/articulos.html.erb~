@@ -32,7 +32,7 @@
                 <section class="section team-single" style="padding-top: 0">
                     <ul class="order-list">
 <% Article.where("anio = ?",a).order(created_at: :desc).each do |b| %> 
-                      <li><%= b.ficha.gsub(/<\/?((p)|(div))>/,"").html_safe %>
+                      <li><%= b.ficha.gsub(/<\/?((p)|(div)|(br))>/,"").html_safe %>
                         <br>
                         <a href="<%= a.link %>" target="_blank">Leer</a></li>
 <% end %>

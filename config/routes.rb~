@@ -34,6 +34,7 @@ Rails.application.routes.draw do
   get '/boletines' => 'inicio#boletines', :as => :boletines
   get '/comunicados' => 'inicio#comunicados', :as => :comunicados
   get '/cuadernos' => 'inicio#cuadernos', :as => :cuadernos
+  get '/capsulas' => 'inicio#capsulas', :as => :capsulas
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -60,6 +60,10 @@ class InicioController < ApplicationController
   end
 
   def capsulas
-    @capsulas = Capsule.order(created_at: :asc)
+    @capsulas = Capsule.order(created_at: :desc)
+  end
+
+  def documentales
+    @documentales = Documental.order(created_at: :desc)
   end
 end

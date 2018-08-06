@@ -50,4 +50,8 @@ class InicioController < ApplicationController
   def boletines
     @anios_bol = Stat.pluck(:anio).uniq.sort_by{|n| -n}
   end
+
+  def comunicados
+    @comunicados = Notice.order(created_at: :desc)
+  end
 end

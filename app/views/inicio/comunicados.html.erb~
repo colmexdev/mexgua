@@ -1,0 +1,40 @@
+<%= render 'inicio/header' %>
+
+<!-- Helping Section -->
+<section class="section helping-section">
+  <div class="container">
+    <div class="row">
+      <div class="section-heading">
+        <h3>Comunicados</h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="helping-description col-xs-12 col-md-10">
+        <ul class="order-list">
+<% @comunicados.each do |c| %>
+          <li><%= c.ficha.gsub(/<\/?((p)|(div)|(li)|(br))>/,"").html_safe %><br>
+            <a href="<%= c.link %>" target="_blank">Ver comunicado</a> </li>
+<% end %>
+          <li>Migraciones laborales. Fuentes de información OIT. (2016), Biblioteca Regional de la OIT América Latina y el Caribe, Organización Internacional del Trabajo.<br>
+            <a href="http://www.ilo.org/wcmsp5/groups/public/---americas/---ro-lima/documents/publication/wcms_178829.pdf" target="_blank">Ver comunicado</a> </li>
+          <li>Las trabajadoras migrantes en la frontera sur de México. Hacia una agenda de investigación (2015), México, El Colegio de México, ONU Mujeres.<br>
+            <a href="http://www2.unwomen.org/~/media/field%20office%20mexico/documentos/publicaciones/2015/01/las%20trabajadoras%20migrantes%20en%20frontera%20sur%20de%20mexicoagenda%20de%20investigacin.pdf?v=1&d=20150721T223326" target="_blank">Ver comunicado</a> </li>
+          <li>Legislación mexicana y derechos de las trabajadoras migrantes. Un análisis del cumplimiento de la Convención sobre la Eliminación de todas las Formas de Discriminación contra la Mujer (CEDAW) y su Recomendación General No. 26 sobre trabajadoras migrantes en la legislación (2014), México, Instituto para las mujeres en la migración A. C., ONU Mujeres.<br>
+            <a href="http://www2.unwomen.org/~/media/headquarters/attachments/sections/library/publications/2015/legislacion%20mexicana%20y%20derechos%20de%20las%20trabajadoras%20migrantes.pdf?v=1&d=20150109T190010" target="_blank">Ver comunicado</a> </li>
+          <li>Caravana de Madres Centroamericanas: Una década de Lucha y Esperanza<br>
+            <a href="comunicados/caravana-madres-centroamericanas.pdf" target="_blank">Ver comunicado</a> </li>
+          <li>Comunicado de prensa: Caravana de Madres Centroamericanas<br>
+            <a href="comunicados/caravana-madres-centroamericanas-comunicado-prensa.pdf" target="_blank">Ver comunicado</a> </li>
+          <li>Reforma a la Ley sobre Refugiados y Protección Complementaria no protegen a la población, ni garantizan el derecho a solicitar asilo en México<br>
+            <a href="comunicados/nota-informativa-gtpm-nov14.pdf" target="_blank">Ver comunicado</a> </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Helping Section --> 
+
+
+<%= render 'inicio/footer' %>
+
+<script src="/js/functions.js"></script>

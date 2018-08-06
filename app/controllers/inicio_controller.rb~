@@ -46,4 +46,8 @@ class InicioController < ApplicationController
   def tesis
     @anios_tesis = Tesis.pluck(:anio).uniq.sort_by{|n| -n}
   end
+
+  def boletines
+    @anios_bol = Stat.pluck(:anio).uniq.sort_by{|n| -n}
+  end
 end

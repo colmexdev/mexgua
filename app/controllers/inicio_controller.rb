@@ -54,4 +54,8 @@ class InicioController < ApplicationController
   def comunicados
     @comunicados = Notice.order(created_at: :desc)
   end
+
+  def cuadernos
+    @cuadernos = Notebook.order(created_at: :asc)
+  end
 end

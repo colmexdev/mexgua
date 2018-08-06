@@ -1,0 +1,28 @@
+<%= render 'inicio/header' %>
+
+<!-- Helping Section -->
+<section class="section helping-section">
+  <div class="container">
+    <div class="row">
+      <div class="section-heading">
+        <h3>Cuadernos migratorios</h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="helping-description col-xs-12 col-md-10">
+        <ul class="order-list">
+<% @cuadernos.each do |c| %>
+          <li><%= c.ficha.gsub(/<\/?((p)|(div)|(li)|(br))>/,"").html_safe %><br>
+            <a href="<%= c.link %>" target="_blank">Ver comunicado</a> </li>
+<% end %>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Helping Section --> 
+
+
+<%= render 'inicio/footer' %>
+
+<script src="/js/functions.js"></script>

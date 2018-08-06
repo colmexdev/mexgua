@@ -37,6 +37,7 @@ Rails.application.routes.draw do
   get '/capsulas' => 'inicio#capsulas', :as => :capsulas
   get '/documentales' => 'inicio#documentales', :as => :documentales
   get '/programas' => 'inicio#programas', :as => :programas
+  get '/conferencias' => 'inicio#conferencias', :as => :conferencias
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

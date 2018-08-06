@@ -66,4 +66,8 @@ class InicioController < ApplicationController
   def documentales
     @documentales = Documental.order(created_at: :desc)
   end
+
+  def programas
+    @programas = Program.order(created_at: :desc)
+  end
 end

@@ -1,0 +1,79 @@
+<%= render 'inicio/header' %>
+
+<!-- Helping Section -->
+<section class="section helping-section">
+  <div class="container">
+    <div class="row">
+      <div class="section-heading">
+        <h3>Videos de foros y conferencias</h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="helping-box">
+        <div class="helping-list"> 
+          <!-- Nav tabs -->
+          <ul role="tablist">
+<% @conferencias.each_with_index do |t,i| %>
+            <li role="presentation" class="<%= i == 0 ? 'active' : '' %>"><a href="<%= '#help_tab_' + i.to_s %>" aria-controls="<%= 'help_tab_' + i.to_s %>" role="tab" data-toggle="tab"><span style="font-size: 16px;"><%= t.titulo %></span></a></li>
+<% end %>
+          </ul>
+        </div>
+        <div class="helping-details"> 
+          <!-- Tab panes -->
+          <div class="tab-content">
+
+<% @conferencias.each_with_index do |t,i| %>
+            <div role="tabpanel" class="<%= 'tab-pane fade ' + (i == 0 ? 'in active' : '') %>" id="<%= 'help_tab_' + i.to_s %>">
+              <div class="helping-description">
+                <div class="widget">
+                  <h3><%= t.titulo %></h3>
+                </div>
+								<% if t.autor.present? || t.fecha.present? %>
+                <h5><%= !t.fecha.nil? ? ("Publicado el " + l(t.fecha, format: :normal) + "<br>").html_safe : "" %>
+					<%= !t.autor.nil? ? t.autor : "" %></h5>
+								<% end %>
+                <br>
+                <%= t.abstract.gsub(/<div>/,"<p>").gsub(/<\/div>/,"</p>").html_safe %>
+
+<% if links_vide.size > 1 %>
+<% links_vid.each_with_index do |l,k| %>
+                  <div class="widget">
+                    <h3><%= t.tits_vid[k] %></h3>
+                  </div>
+                  <div class="cajavideo">
+                    <div class="embed-container">
+<% v_id = (l.include?("vimeo") ? ("https://player.vimeo.com/video/" + l.split("/")[-1]) : (l.include?("embed") ? l : ("https://www.youtube.com/embed/" + (l.include?("youtu.be") ? ( l.split("/")[-1]) : ( l.split("?")[1].split("&")[0].gsub("v=","")))))) %>
+
+                   <iframe src="<%= v_id %>" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+                    </div>
+                  </div>
+<% end %>
+<% else %>
+
+<% if !t.links_vid[0].include?("youtu") && !t.links_vid[0].include?("vimeo") %>
+                <p><a href="<%= t.links_vid[0] %>" target="_blank" class="btn-two">Ver video</a> </p>
+<% else %>
+                <div class="cajavideo">
+                  <div class="embed-container">
+<% v_id = (t.links_vid[0].include?("vimeo") ? ("https://player.vimeo.com/video/" + t.links_vid[0].split("/")[-1]) : (t.links_vid[0].include?("embed") ? t.links_vid[0] : ("https://www.youtube.com/embed/" + (t.links_vid[0].include?("youtu.be") ? ( t.links_vid[0].split("/")[-1]) : ( t.links_vid[0].split("?")[1].split("&")[0].gsub("v=","")))))) %>
+
+                   <iframe src="<%= v_id %>" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+                  </div>
+                </div>
+<% end %>
+              </div>
+            </div>
+<% end %>
+
+<% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Helping Section --> 
+
+<%= render 'inicio/footer' %>
+
+<script src="/js/functions.js"></script>

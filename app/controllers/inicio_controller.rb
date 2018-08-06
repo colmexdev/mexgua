@@ -58,4 +58,8 @@ class InicioController < ApplicationController
   def cuadernos
     @cuadernos = Notebook.order(created_at: :asc)
   end
+
+  def capsulas
+    @capsulas = Capsule.order(created_at: :asc)
+  end
 end

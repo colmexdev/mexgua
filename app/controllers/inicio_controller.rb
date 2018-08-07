@@ -78,4 +78,8 @@ class InicioController < ApplicationController
   def enlaces
     @enlaces = Link.order(created_at: :desc)
   end
+
+  def miembros
+    @miembros = Member.order(created_at: :desc)
+  end
 end

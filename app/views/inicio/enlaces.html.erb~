@@ -1,0 +1,57 @@
+<%= render 'inicio/header' %>
+
+<!-- Helping Section -->
+<section class="section helping-section">
+  <div class="container">
+    <div class="row">
+      <div class="section-heading">
+        <h3>Enlaces de Interés</h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="helping-box">
+        <div class="helping-list"> 
+          <!-- Nav tabs -->
+          <ul role="tablist">
+<% @enlaces.pluck(:categoria).uniq.each_with_index do |c,i| %>
+            <li role="presentation" class="<%= i== 0 ? 'active' : '' %>"><a href="<%= '#help_tab_' + i.to_s %>" aria-controls="<%= 'help_tab_' + i.to_s %>" role="tab" data-toggle="tab"><span style="font-size: 16px;"><%= c %></span></a></li>
+<% end %>
+          </ul>
+        </div>
+        <div class="helping-details"> 
+          <!-- Tab panes -->
+          <div class="tab-content">
+
+<% @enlaces.pluck(:categoria).uniq.each_with_index do |c,i| %>
+            <div role="tabpanel" class="<%= 'tab-pane fade ' + (i == 0 ? 'in active' : '') %>" id="<%= 'help_tab_' + i.to_s %>">
+              <div class="helping-description">
+                <div class="widget">
+                  <h3><%= c %></h3>
+                </div>
+
+<% subcats = @enlaces.where(categoria: c).pluck(:subcategoria).uniq %>
+<% subcats.each do |s| %>
+								<% if !s.nil? && s != "" %>
+                <h4><%= s %></h4>
+								<% end %>
+                <ul class="order-list">
+								<% Link.where({categoria: c, subcategoria: s}).order(created_at: :desc).each do |l| %>
+                  <li><%= l.info.gsub(/<\/?((p)|(div)|(li))>/,"").html_safe %><br>
+                    <a href="<%= l.link %>" target="_blank">Visitar sitio web</a> </li>
+								<% end %>
+                </ul>
+              </div>
+            </div>
+<% end %>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Helping Section -->
+
+<%= render 'inicio/footer' %>
+
+<script src="/js/functions.js"></script>

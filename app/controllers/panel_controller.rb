@@ -333,6 +333,11 @@ class PanelController < ApplicationController
         fields: {categoria: "Categoría", subcategoria: "Subcategoría", info: "Información", link: "Liga"},
         imgs: {},
         trix: [:info]
+      }, "Miembros del Consejo": {
+        model: Member,
+        fields: {categoria: "Categoría", pais: "País", nombre: "Nombre", semblanza: "Semblanza"},
+        imgs: {imagen: "Imagen"},
+        trix: [:semblanza]
       }
     }
   end
@@ -383,6 +388,8 @@ class PanelController < ApplicationController
       params.require(:forum).permit(:titulo, :fecha, :autor, :titulo_evento, :abstract, :link_vids => [], :tit_vids => [])
     elsif params[:set] == "Enlaces de interés"
       params.require(:link).permit(:categoria, :subcategoria, :info, :link)
+    elsif params[:set] == "Miembros del Consejo"
+      params.require(:member).permit(:categoria, :pais, :nombre, :semblanza, :imagen)
     end
   end
 end

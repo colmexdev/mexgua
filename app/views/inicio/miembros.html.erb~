@@ -1,0 +1,63 @@
+<%= render 'inicio/header' %>
+
+<!-- Helping Section -->
+<section class="section helping-section">
+  <div class="container">
+    <div class="row">
+      <div class="section-heading">
+        <h3>Miembros</h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="helping-box">
+        <div class="helping-list"> 
+          <!-- Nav tabs -->
+          <ul role="tablist">
+<% @miembros.pluck(:categoria).uniq.each_with_index do |c,i| %>
+            <li role="presentation" class="<%= i == 0 ? 'active' : '' %>"><a href="<%= '#help_tab_' + i.to_s %>" aria-controls="<%= 'help_tab_' + i.to_s %>" role="tab" data-toggle="tab"><span style="font-size: 16px;"><%= c %></span></a></li>
+<% end %>
+          </ul>
+        </div>
+        <div class="helping-details"> 
+          <!-- Tab panes -->
+          <div class="tab-content">
+<% @miembros.pluck(:categoria).uniq.each_with_index do |c,i| %>
+            <div role="tabpanel" class="<%= 'tab-pane fade ' + (i == 0 ? 'in active' : '') %>" id="<%= 'help_tab_' + i.to_s %>">
+              <div class="helping-description">
+<% @miembros.where(categoria: c).pluck(:pais).uniq.each do |p| %>
+                <div class="widget">
+                  <h3><%= 'En ' + p + ':' %></h3>
+                </div>
+<% @miembros.where({categoria: c, pais: p}).each do |m| %>
+                <ul class="comment-list">
+                  <li class="comment">
+                    <article class="comment-item">
+                      <div class="profile-image"> <img src="<%= m.imagen.url %>" alt="Julio Arnoldo Balconi Turcios" /> </div>
+                      <div class="comment-content">
+                        <div class="comment-meta">
+                          <div class="user-name">
+                            <h5><%= m.nombre %></h5>
+                          </div>
+                        </div>
+                        <%= m.semblanza.gsub(/<\/?((div)|(li))>/,"").html_safe %>
+                      </div>
+                    </article>
+                  </li>
+                </ul>
+<% end %>
+							</div>
+<% end %>
+						</div>
+<% end %>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Helping Section -->
+
+<%= render 'inicio/footer' %>
+
+<script src="/js/functions.js"></script>

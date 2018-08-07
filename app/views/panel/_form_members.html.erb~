@@ -41,17 +41,7 @@
 		</div>
   </div>
   <div class="actions">
-    <%= f.submit "Guardar anuncio" %>
+    <%= f.submit "Guardar miembro del consejo" %>
   </div>
 <% end %>
 
-<script>
-$('#ad_fecha').datepicker({
-    format: 'yyyy-mm-dd',
-		language: 'es'
- });
-$('#ad_fecha_pub').datepicker({
-    format: 'yyyy-mm-dd',
-		language: 'es'
- });
-</script>

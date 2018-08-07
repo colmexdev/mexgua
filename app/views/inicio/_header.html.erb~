@@ -54,7 +54,7 @@
                     <li><a href="<%= capsulas_path %>">Cápsulas informativas</a></li>
                     <li><a href="<%= documentales_path %>">Documentales</a></li>
                     <li><a href="<%= programas_path %>">Programas televisivos</a></li>
-                    <li><a href="conferencias.html">Videos de foros y conferencias</a></li>
+                    <li><a href="<%= conferencias_path %>">Videos de foros y conferencias</a></li>
                   </ul>
                 </li>
                 <li><a href="enlaces.html"><span>Enlaces</span></a></li>

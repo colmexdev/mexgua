@@ -70,4 +70,8 @@ class InicioController < ApplicationController
   def programas
     @programas = Program.order(created_at: :desc)
   end
+
+  def conferencias
+    @conferencias = Forum.order(created_at: :desc)
+  end
 end

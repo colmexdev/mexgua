@@ -74,4 +74,8 @@ class InicioController < ApplicationController
   def conferencias
     @conferencias = Forum.order(created_at: :desc)
   end
+
+  def enlaces
+    @enlaces = Link.order(created_at: :desc)
+  end
 end

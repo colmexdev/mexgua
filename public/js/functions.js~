@@ -1,7 +1,6 @@
 (function($){
-    'use strict';
-		$(document).ready(function() {
-      $(".container")[1].childNodes[1].style.height= "21px";     
+
+		$(document).on("ready page:change page:load",function() {    
 			//Js code for Header Top 
 			var $menu_fixed = $("#menu-fixed"),
 			$clone = $menu_fixed.after($menu_fixed.clone().addClass("clone"));

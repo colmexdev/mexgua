@@ -1,5 +1,5 @@
 (function($){
-
+		"use strict";
 		$(document).on("ready page:change page:load",function() {    
 			//Js code for Header Top 
 			var $menu_fixed = $("#menu-fixed"),

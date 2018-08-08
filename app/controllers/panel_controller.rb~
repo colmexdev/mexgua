@@ -290,7 +290,7 @@ class PanelController < ApplicationController
         trix: [:ficha]
       }, "Tesis": {
         model: Tesis,
-        fields: {ficha: "Ficha bibliográfica", anio: "Año de publicación"},
+        fields: {ficha: "Ficha bibliográfica", anio: "Año de publicación", link: "Liga (si aplica)"},
         imgs: {},
         trix: [:ficha]
       }, "Boletines y estadísticas": {
@@ -333,6 +333,11 @@ class PanelController < ApplicationController
         fields: {categoria: "Categoría", subcategoria: "Subcategoría", info: "Información", link: "Liga"},
         imgs: {},
         trix: [:info]
+      }, "Miembros del Consejo": {
+        model: Member,
+        fields: {categoria: "Categoría", pais: "País", nombre: "Nombre", semblanza: "Semblanza"},
+        imgs: {imagen: "Imagen"},
+        trix: [:semblanza]
       }
     }
   end
@@ -366,7 +371,7 @@ class PanelController < ApplicationController
     elsif params[:set] == "Revistas"
       params.require(:magazine).permit(:ficha, :link, :anio, :especial)
     elsif params[:set] == "Tesis"
-      params.require(:tesis).permit(:ficha, :anio)
+      params.require(:tesis).permit(:ficha, :anio, :link)
     elsif params[:set] == "Boletines y estadísticas"
       params.require(:stat).permit(:ficha, :link, :anio)
     elsif params[:set] == "Comunicados"
@@ -383,6 +388,8 @@ class PanelController < ApplicationController
       params.require(:forum).permit(:titulo, :fecha, :autor, :titulo_evento, :abstract, :link_vids => [], :tit_vids => [])
     elsif params[:set] == "Enlaces de interés"
       params.require(:link).permit(:categoria, :subcategoria, :info, :link)
+    elsif params[:set] == "Miembros del Consejo"
+      params.require(:member).permit(:categoria, :pais, :nombre, :semblanza, :imagen)
     end
   end
 end

@@ -290,7 +290,7 @@ class PanelController < ApplicationController
         trix: [:ficha]
       }, "Tesis": {
         model: Tesis,
-        fields: {ficha: "Ficha bibliográfica", anio: "Año de publicación"},
+        fields: {ficha: "Ficha bibliográfica", anio: "Año de publicación", link: "Liga"},
         imgs: {},
         trix: [:ficha]
       }, "Boletines y estadísticas": {
@@ -371,7 +371,7 @@ class PanelController < ApplicationController
     elsif params[:set] == "Revistas"
       params.require(:magazine).permit(:ficha, :link, :anio, :especial)
     elsif params[:set] == "Tesis"
-      params.require(:tesis).permit(:ficha, :anio)
+      params.require(:tesis).permit(:ficha, :anio, :link)
     elsif params[:set] == "Boletines y estadísticas"
       params.require(:stat).permit(:ficha, :link, :anio)
     elsif params[:set] == "Comunicados"

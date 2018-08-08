@@ -32,7 +32,11 @@
                 <section class="section team-single" style="padding-top: 0">
                     <ul class="order-list">
 <% Tesis.where(anio: a).order(created_at: :desc).each do |b| %> 
-                      <li><%= b.ficha.gsub(/<\/?((p)|(div)|(br)|(li))>/,"").html_safe %></li>
+                      <li><%= b.ficha.gsub(/<\/?((p)|(div)|(br)|(li))>/,"").html_safe %>
+				<% if b.link.present? %>
+					<br>
+            <a href="<%= b.link %>" target="_blank">Ver tesis</a></li>
+        <% end %>
 <% end %>
                     </ul>
                 </section>

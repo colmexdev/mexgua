@@ -1,6 +1,6 @@
 (function($){
 
-		$(document).ready(function() {    
+		$(document).on("ready page:change page:load",function() {    
 			//Js code for Header Top 
 			var $menu_fixed = $("#menu-fixed"),
 			$clone = $menu_fixed.after($menu_fixed.clone().addClass("clone"));

@@ -33,7 +33,9 @@
                     <ul class="order-list">
 <% revs = (a.to_s == "especiales" ? @special_rev : Magazine.where("anio = ?",a).order(created_at: :desc)) %>
 <% revs.each do |b| %> 
-                      <li><%= b.ficha.gsub(/<\/?((p)|(div)|(br))>/,"").html_safe %></li>
+                      <li><%= b.ficha.gsub(/<\/?((p)|(div)|(br))>/,"").html_safe %>
+                        <br>
+                        <a href="<%= b.link %>" target="_blank">Leer</a></li>
 <% end %>
                     </ul>
                 </section>
@@ -53,4 +55,5 @@
 
 <%= render 'inicio/footer' %>
 
+<script src="/js/bootstrap.min.js"></script>
 <script src="/js/functions.js"></script>

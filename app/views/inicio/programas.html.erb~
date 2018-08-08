@@ -5,7 +5,7 @@
   <div class="container">
     <div class="row">
       <div class="section-heading">
-        <h3>Documentales</h3>
+        <h3>Programas televisivos</h3>
       </div>
     </div>
     <div class="row">
@@ -13,7 +13,7 @@
         <div class="helping-list"> 
           <!-- Nav tabs -->
           <ul role="tablist">
-<% @documentales.each_with_index do |t,i| %>
+<% @programas.each_with_index do |t,i| %>
             <li role="presentation" class="<%= i == 0 ? 'active' : '' %>"><a href="<%= '#help_tab_' + i.to_s %>" aria-controls="<%= 'help_tab_' + i.to_s %>" role="tab" data-toggle="tab"><span style="font-size: 16px;"><%= t.titulo %></span></a></li>
 <% end %>
           </ul>
@@ -22,16 +22,15 @@
           <!-- Tab panes -->
           <div class="tab-content">
 
-<% @documentales.each_with_index do |t,i| %>
+<% @programas.each_with_index do |t,i| %>
             <div role="tabpanel" class="<%= 'tab-pane fade ' + (i == 0 ? 'in active' : '') %>" id="<%= 'help_tab_' + i.to_s %>">
               <div class="helping-description">
                 <div class="widget">
                   <h3><%= t.titulo %></h3>
                 </div>
-								<% if t.autor.present? || t.fecha.present? || t.tipo.present? %>
+								<% if t.autor.present? || t.fecha.present? %>
                 <h5><%= !t.fecha.nil? ? ("Publicado el " + l(t.fecha, format: :normal) + "<br>").html_safe : "" %>
-				  <%= !t.autor.nil? ? (t.autor + "<br>").html_safe : "" %>
-					<%= !t.tipo.nil? ? t.tipo : "" %></h5>
+					<%= !t.autor.nil? ? t.autor : "" %></h5>
 								<% end %>
                 <br>
                 <%= t.abstract.gsub(/<div>/,"<p>").gsub(/<\/div>/,"</p>").html_safe %>

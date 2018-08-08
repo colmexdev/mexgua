@@ -11,7 +11,7 @@
     <div class="row">
       <div class="helping-description col-xs-12 col-md-10">
         <p class="text-center"> <img src="<%= image_url('logo.png') %>" alt="Helping Image"> </p>
-        <p>El Grupo fue producto de una iniciativa ciudadana plural, integrado por <a href="miembros.html" target="_blank">veintidós personas, mujeres y hombres</a>, provenientes de sectores diversos de las sociedades de ambos países (México y Guatemala) entre los que se encuentran académicos, organizaciones civiles, religiosas, comunicadores sociales, artistas y empresarios. Todas ellas, personas interesadas en los estudios de la migración y percibiendo al fenómeno como una oportunidad para el desarrollo y el bienestar de ambos países.</p>
+        <p>El Grupo fue producto de una iniciativa ciudadana plural, integrado por <a href="<%= miembros_path %>" target="_blank">veintidós personas, mujeres y hombres</a>, provenientes de sectores diversos de las sociedades de ambos países (México y Guatemala) entre los que se encuentran académicos, organizaciones civiles, religiosas, comunicadores sociales, artistas y empresarios. Todas ellas, personas interesadas en los estudios de la migración y percibiendo al fenómeno como una oportunidad para el desarrollo y el bienestar de ambos países.</p>
         <p>El grupo Guatemala México. Migración y Desarrollo, fue plural y diverso en experiencias, perspectivas e ideas, coadyuvó a la definición de principios y propuestas concretas, como resultado de un ejercicio colectivo de construcción a partir del diálogo, la tolerancia y el respeto a las diferencias.</p>
       </div>
     </div>

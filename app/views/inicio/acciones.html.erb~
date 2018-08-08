@@ -1,0 +1,52 @@
+<%= render 'inicio/header' %>
+
+<!-- Helping Section -->
+<section class="section helping-section">
+  <div class="container">
+    <div class="row">
+      <div class="section-heading">
+        <h3>Acciones prioritarias</h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="helping-description col-xs-12 col-md-10">
+        <p>Las Acciones que fueron propuestas durante la formación del Grupo México-Guatemala Migración y Desarrollo, son las siguientes:</p>
+        <p>En materia de protección consular.</p>
+        <div class="widget">
+          <h3>Para el caso guatemalteco:</h3>
+        </div>
+        <ol class="lista alpha">
+          <li>Dotar de recursos financieros suficientes para la protección, considerando –entre otros elementos– el uso directo de los fondos privativos generados por las actividades relacionadas.</li>
+          <li>Establecer asignaciones específicas para asesoría jurídica, repatriación de personas vulnerables (menores, mujeres embarazadas, así como discapacitados y adultos mayores).</li>
+          <li>Incrementar el número de consulados de Guatemala en territorio mexicano e impulsar un programa específico de consulados móviles, con base en la identificación de puntos estratégicos de rutas de migrantes, así como elevar el estatus del consulado adscrito a la Embajada de Guatemala en México al de Consulado General.</li>
+          <li>Programar visitas periódicas a los centros de detención para verificar las condiciones en las que se encuentran los ciudadanos guatemaltecos, así como verificar el acceso a debido proceso, las posibilidades de conmutación de las penas y del cumplimiento de condenas en su país de origen.</li>
+          <li>Acompañar y verificar de manera efectiva los procesos de custodia y deportación de menores.</li>
+          <li>Impulsar mejoras a los sistemas de identificación, registro y repatriación de personas fallecidas en territorio mexicano.</li>
+          <li>Otorgar de manera sistemática y permanente la matrícula consular a los guatemaltecos indocumentados en el exterior, a muy bajo costo. Para el caso de México:<br>
+            Asegurar el principio de corresponsabilidad y coherencia entre la gestión de la protección de mexicanos en el exterior y la gestión de protección de los consulados guatemaltecos y de otros países centroamericanos en su territorio.</li>
+        </ol>
+        <div class="widget">
+          <h3>En materia de relaciones laborales entre Guatemala y México, el Grupo propone a ambos países lo siguiente:</h3>
+        </div>
+        <ol class="lista">
+          <li>Fortalecer los mecanismos de diálogo bilateral, especialmente en la ejecución de las acciones del Grupo ad hoc sobre Trabajadores Agrícolas Migrantes Temporales, en el contexto del Grupo Binacional sobre Asuntos Migratorios de la Comisión Binacional México-Guatemala, así como asegurar la inclusión de los temas relativos a la protección laboral en todos sus componentes y los procedimientos de verificación del adecuado cumplimiento de las disposiciones.</li>
+          <li>Impulsar un programa gubernamental de registro y supervisión de contratistas que reclutan trabajadores guatemaltecos para laborar en México.</li>
+          <li>Constituir un mecanismo de verificación permanente que asegure el ejercicio pleno de los derechos de los trabajadores establecidos en la ley, en materia de: contratación, condiciones y prestaciones laborales, pago de salarios y resolución de conflictos y controversias.</li>
+          <li>Asegurar el proceso de documentación y registro de la población trabajadora guatemalteca en México.</li>
+          <li>Activar en todos sus componentes el Programa de Atención a Trabajadores guatemaltecos temporales en México por parte del Ministerio de Trabajo y Previsión Social de Guatemala y las instituciones de la contraparte mexicana.</li>
+          <li>Desarrollar acuerdos específicos de reciprocidad para la atención en salud de los trabajadores migratorios en los dos países y realizar las reformas pertinentes a las leyes de protección social.</li>
+          <li>Incluir el tema de la migración en la negociación, puesta en operación, revisión y ajuste gradual de iniciativas regionales, tales como el Plan Puebla Panamá, el Tratado de Libre Comercio del Triángulo del Norte (México con Guatemala, El Salvador y Honduras) y otros.</li>
+          <li>Realizar estudios periódicos sobre los impactos de estos procesos en los movimientos de población y la constitución de nuevos mercados laborales en los que pudieran participar trabajadores guatemaltecos, mexicanos y de otros países de la región.</li>
+        </ol>
+        <p>El Grupo considera que estos aportes pueden constituir un punto de partida para un proceso de definición e instrumentación de políticas públicas en materia migratoria por parte de los gobiernos de Guatemala y México. Sin embargo, está consciente de que se trata de una responsabilidad compartida entre gobiernos y sociedades civiles, cuyas instancias organizadas tienen papeles y obligaciones que cumplir de manera diferenciada. Se estima que, de esta manera, se podrá avanzar en el camino de generar mejores condiciones y oportunidades para el bienestar de sus poblaciones y, al mismo tiempo, contribuir a la construcción de la democracia.</p>
+        <hr>
+        <h5>Diciembre de 2003</h5>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Helping Section -->
+
+<%= render 'inicio/footer' %>
+
+<script src="/js/functions.js"></script>

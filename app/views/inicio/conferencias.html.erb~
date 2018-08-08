@@ -31,7 +31,7 @@
 								<% if t.autor.present? || t.fecha.present? || t.titulo_evento.present? %>
                 <h5><%= !t.fecha.nil? ? ("Publicado el " + l(t.fecha, format: :normal) + "<br>").html_safe : "" %>
 					<%= !t.autor.nil? ? (t.autor + '<br>').html_safe : "" %>
-					<%= !t.titulo_evento.nil? ? ("En: " + t.titulo_evento) : "" %></h5>
+					<%= !t.titulo_evento.nil? && t.titulo_evento != "" ? ("En: " + t.titulo_evento) : "" %></h5>
 								<% end %>
                 <br>
                 <%= t.abstract.gsub(/<div>/,"<p>").gsub(/<\/div>/,"</p>").html_safe %>

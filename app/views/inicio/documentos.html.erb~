@@ -12,7 +12,7 @@
       <div class="helping-description col-xs-12 col-md-10">
         <ul class="order-list">
           <% @docs.each do |d| %>
-          <li><%= d.ficha.gsub(/<\/?p>/,"").html_safe %><br>
+          <li><%= d.ficha.gsub(/<\/?((p)|(div))>/,"").html_safe %><br>
             <a href="<%= d.documento.url %>" target="_blank">Ver documento</a> </li>
           <% end %>
         </ul>

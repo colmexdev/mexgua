@@ -1,0 +1,34 @@
+<%= render 'inicio/header' %>
+
+<!-- Helping Section -->
+<section class="section helping-section">
+  <div class="container">
+    <div class="row">
+      <div class="section-heading">
+        <h3>Principios que deben regir los procesos migratorios de la región</h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="helping-description col-xs-12 col-md-10">
+        <p>El Grupo planteó que las migraciones deben considerarse dentro del siguiente marco de principios y preceptos:</p>
+        <ol class="lista" type="a">
+          <li>La condición esencial de seres humanos de los migrantes y de sus familias los hace sujetos de derechos, independientemente de su estatus migratorio; por lo tanto, es deber de los Estados reconocerlos como tales y brindarles la protección que requieran.</li>
+          <li>Los Estados deben velar porque los migrantes y sus familiares, sin menoscabo de su condición migratoria, tengan acceso a bienes y servicios básicos, entre los que debe destacar el acceso a servicios de salud, educación, alojamiento / vivienda y alimentación, entre otros.</li>
+          <li>Los migrantes y sus familiares no deben ser discriminados o estigmatizados por ningún motivo o condición.</li>
+          <li>La documentación de los migrantes es un derecho, porque constituye un punto de partida y un medio para el ejercicio pleno de todos sus derechos y el cumplimiento de sus obligaciones.</li>
+          <li>Las migraciones, en tanto producto de la profundización de las asimetrías estructurales y la creciente interdependencia entre países, acentuadas en el contexto de la globalización, requieren ser abordadas mediante políticas regionales integrales.</li>
+          <li>Las preocupaciones legítimas y las acciones orientadas a los temas de seguridad por parte de gobiernos y sociedades no deben amenazar o vulnerar la dignidad y los derechos de las personas, por su sola condición de migrantes.</li>
+          <li>Las políticas migratorias de los Estados deben enfatizar su sentido humanitario y garantizar el debido proceso, sin prejuzgar su condición ni atribuirles relaciones no comprobadas con la comisión de ilícitos.</li>
+          <li>Los Estados deben reconocer de manera explícita los principios de protección y asistencia para resguardar la vigencia de las instituciones de asilo y refugio, así como también asegurar el principio de no devolución.</li>
+          <li>Las políticas migratorias deben sustentarse en principios de congruencia, de manera que los Estados garanticen la vigencia de los derechos que reclaman para sus connacionales en el exterior, en la admisión, ingreso, permanencia o tránsito de extranjeros en su territorio.</li>
+          <li>La mejor política migratoria es aquella que ordena y regulariza la migración en los distintos momentos en que ocurre: ingreso, tránsito, llegada, permanencia y retorno. Ésta es la medida de seguridad más conveniente para las personas que migran y para los Estados involucrados.</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Helping Section --> 
+
+<%= render 'inicio/footer' %>
+
+<script src="/js/functions.js"></script>

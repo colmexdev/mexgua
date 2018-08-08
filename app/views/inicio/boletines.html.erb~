@@ -5,7 +5,7 @@
   <div class="container">
     <div class="row">
       <div class="section-heading">
-        <h3>Boletines</h3>
+        <h3>Boletines y estadísticas</h3>
       </div>
     </div>
     <div class="row">
@@ -32,7 +32,7 @@
                 <section class="section team-single" style="padding-top: 0">
                     <ul class="order-list">
 <% Stat.where("anio = ?",a).order(created_at: :desc).each do |b| %> 
-                      <li><%= b.ficha.gsub(/<\/?((p)|(div)|(br))>/,"").html_safe %>
+                      <li><%= b.ficha.gsub(/<\/?((p)|(div)|(br)|(li))>/,"").html_safe %>
                         <br>
                         <a href="<%= b.link %>" target="_blank">Leer</a></li>
 <% end %>

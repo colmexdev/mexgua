@@ -34,7 +34,7 @@
 					<%= !t.titulo_evento.nil? && t.titulo_evento != "" ? ("En: " + t.titulo_evento) : "" %></h5>
 								<% end %>
                 <br>
-                <%= t.abstract.gsub(/<div>/,"<p>").gsub(/<\/div>/,"</p>").html_safe %>
+                <%= t.abstract.gsub(/<div>/,"<p>").gsub(/<\/div>/,"</p>").gsub(/<a href=/,'<a target="_blank" href=').html_safe %>
 
 <% if t.link_vids.size > 1 %>
 <% t.link_vids.each_with_index do |l,k| %>
@@ -79,4 +79,5 @@
 
 <%= render 'inicio/footer' %>
 
+<script src="/js/bootstrap.min.js"></script>
 <script src="/js/functions.js"></script>

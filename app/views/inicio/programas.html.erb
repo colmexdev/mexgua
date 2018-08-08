@@ -33,7 +33,7 @@
 					<%= !t.autor.nil? ? t.autor : "" %></h5>
 								<% end %>
                 <br>
-                <%= t.abstract.gsub(/<div>/,"<p>").gsub(/<\/div>/,"</p>").html_safe %>
+                <%= t.abstract.gsub(/<div>/,"<p>").gsub(/<\/div>/,"</p>").gsub(/<a href=/,'<a target="_blank" href=').html_safe %>
 <% if !t.link_vid.include?("youtu") && !t.link_vid.include?("vimeo") %>
                 <p><a href="<%= t.link_vid %>" target="_blank" class="btn-two">Ver video</a> </p>
 <% else %>
@@ -59,4 +59,5 @@
 
 <%= render 'inicio/footer' %>
 
+<script src="/js/bootstrap.min.js"></script>
 <script src="/js/functions.js"></script>

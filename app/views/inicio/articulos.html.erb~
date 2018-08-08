@@ -34,7 +34,7 @@
 <% Article.where("anio = ?",a).order(created_at: :desc).each do |b| %> 
                       <li><%= b.ficha.gsub(/<\/?((p)|(div)|(br))>/,"").html_safe %>
                         <br>
-                        <a href="<%= a.link %>" target="_blank">Leer</a></li>
+                        <a href="<%= b.link %>" target="_blank">Leer</a></li>
 <% end %>
                     </ul>
                 </section>

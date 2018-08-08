@@ -5,7 +5,4 @@ class Magazine < ActiveRecord::Base
   validates :anio, presence: true, numericality: {greater_than: 1999, only_integer: true}
   validates_presence_of :link
 
-  def check_especial
-    @especial = nil if params[:especial].nil?
-  end
 end

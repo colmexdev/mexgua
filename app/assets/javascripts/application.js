@@ -12,7 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require functions
 //= require turbolinks
 //= require jquery.remotipart
 //= require bootstrap.min

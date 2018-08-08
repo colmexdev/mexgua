@@ -80,5 +80,6 @@ class InicioController < ApplicationController
   end
 
   def miembros
+    @miembros = Member.order(created_at: :desc)
   end
 end

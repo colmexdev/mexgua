@@ -37,7 +37,7 @@ class InicioController < ApplicationController
 
   def revistas
     @anios_rev = Magazine.where("especial is null or especial = ?",false).pluck(:anio).uniq.sort_by{|n| -n}
-    @special_rev = Magazine.where(especial: true).order(created_at: :desc)
+    @special_rev = Magazine.where("especial is not null").order(created_at: :desc)
     if @special_rev.size > 0
       @anios_rev.insert(0,"especiales")
     end

@@ -12,12 +12,20 @@
   <% end %>
 <%= hidden_field_tag :authenticity_token, form_authenticity_token -%>
   <div class="field">
-    <%= f.label :ficha, "Ficha bibliográfica" %><br>
-    <%= f.trix_editor :ficha %>
+    <%= f.label :pais, "País" %><br>
+    <%= f.select(:pais, [["Guatemala","Guatemala"],["México","México"]], selected: (@obj.pais || "Guatemala")) %>
   </div>
   <div class="field">
-    <%= f.label :link, "Liga" %><br>
-    <%= f.text_field :link %>
+    <%= f.label :nombre, "Nombre" %><br>
+    <%= f.text_field :nombre %>
+  </div>
+  <div class="field">
+    <%= f.label :cargo, "Cargo" %><br>
+    <%= f.text_field :cargo %>
+  </div>
+  <div class="field">
+    <%= f.label :correo, "Correo" %><br>
+    <%= f.text_field :correo %>
   </div>
   <div class="actions">
     <%= f.submit "Guardar comunicado" %>

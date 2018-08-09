@@ -18,20 +18,15 @@
                   <li><i class="fa fa-globe" aria-hidden="true"></i><span> <a href="https://www.colmex.mx/" target="_blank">www.colmex.mx</a></span></li>
                 </ul>
               </div>
+<% Contact.where(pais: "México").order(created_at: :asc) do |c| %>
               <hr>
-              <p>Mtro. Manuel  Ángel Castillo (Responsable)</p>
+              <p><%= c.nombre + (c.cargo.present? ? (" (" + c.cargo + ")") : "") %></p>
               <div class="contact-info">
                 <ul>
-                  <li><i class="fa fa-envelope-o" aria-hidden="true"></i><span> castillo@colmex.mx</span></li>
+                  <li><i class="fa fa-envelope-o" aria-hidden="true"></i><span><%= c.correo %></span></li>
                 </ul>
               </div>
-              <hr>
-              <p>Cecilia Yolitzma Valdés (Contacto)</p>
-              <div class="contact-info">
-                <ul>
-                  <li><i class="fa fa-envelope-o" aria-hidden="true"></i><span> cyvaldes@colmex.mx</span></li>
-                </ul>
-              </div>
+<% end %>
               <br>
               <div class="col-lg-6 col-md-6 col-sm-6">
                 <div class="footer-logo"> <a href="https://www.colmex.mx/" target="_blank"><img src="<%= image_url('colmex.png') %>" alt="El Colegio de México"></a></div>
@@ -56,13 +51,15 @@
                   <li><i class="fa fa-globe" aria-hidden="true"></i><span> <a href="www.incedes.org.gt" target="_blank">www.incedes.org.gt</a></span></li>
                 </ul>
               </div>
+<% Contact.where(pais: "Guatemala").order(created_at: :asc) do |c| %>
               <hr>
-              <p>Silvia Irene Palma (Responsable)</p>
+              <p><%= c.nombre + (c.cargo.present? ? (" (" + c.cargo + ")") : "") %></p>
               <div class="contact-info">
                 <ul>
-                  <li><i class="fa fa-envelope-o" aria-hidden="true"></i><span> irenepalmacalderon@gmail.com</span></li>
+                  <li><i class="fa fa-envelope-o" aria-hidden="true"></i><span><%= c.correo %></span></li>
                 </ul>
               </div>
+<% end %>
             </div>
           </div>
         </div>

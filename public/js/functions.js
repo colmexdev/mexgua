@@ -19,7 +19,7 @@
 			else if(path == "/enlaces")
 				drop = ".enlaces";
 			$(drop).addClass("active");
-			$(drop.substr(1)).addClass("active");
+			$("."+path.substr(1)).addClass("active");
 			$(window).on("scroll", function() {
 				var fromTop = $(window).scrollTop();
 				$("body").toggleClass("down", (fromTop > 185));

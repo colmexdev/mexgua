@@ -338,6 +338,11 @@ class PanelController < ApplicationController
         fields: {categoria: "Categoría", pais: "País", nombre: "Nombre", semblanza: "Semblanza"},
         imgs: {imagen: "Imagen"},
         trix: [:semblanza]
+      }, "Contactos (footer)": {
+        model: Contact,
+        fields: {pais: "País", nombre: "Nombre", cargo: "Cargo", correo: "Correo electrónico"},
+        imgs: {},
+        trix: []
       }
     }
   end
@@ -390,6 +395,8 @@ class PanelController < ApplicationController
       params.require(:link).permit(:categoria, :subcategoria, :info, :link)
     elsif params[:set] == "Miembros del Consejo"
       params.require(:member).permit(:categoria, :pais, :nombre, :semblanza, :imagen)
+    elsif params[:set] == "Contactos (footer)"
+      params.require(:contact).permit(:pais, :nombre, :cargo, :correo)
     end
   end
 end

@@ -1,0 +1,33 @@
+<%= form_for(@obj, :remote => true, :url => {:controller => "panel", :action => (action_name == "editar" ? "editar" : "crear"), :params => {:set => params[:set], :id => (@obj.id if action_name == "editar")}}, :html => {:multipart => true}) do |f| %>
+  <% if @obj.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@obj.errors.count, "error") %> prohibited this frase from being saved:</h2>
+
+      <ul>
+      <% @obj.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<%= hidden_field_tag :authenticity_token, form_authenticity_token -%>
+  <div class="field">
+    <%= f.label :pais, "País" %><br>
+    <%= f.select(:pais, [["Guatemala","Guatemala"],["México","México"]], selected: (@obj.pais || "Guatemala")) %>
+  </div>
+  <div class="field">
+    <%= f.label :nombre, "Nombre" %><br>
+    <%= f.text_field :nombre %>
+  </div>
+  <div class="field">
+    <%= f.label :cargo, "Cargo" %><br>
+    <%= f.text_field :cargo %>
+  </div>
+  <div class="field">
+    <%= f.label :correo, "Correo" %><br>
+    <%= f.text_field :correo %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Guardar comunicado" %>
+  </div>
+<% end %>

@@ -19,7 +19,7 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
               <ul class="nav navbar-nav">
-                <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span>¿Quiénes somos?</span></a>
+                <li class="dropdown quienes"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span>¿Quiénes somos?</span></a>
                   <ul class="dropdown-menu">
                     <li><a href="<%= sobre_path %>">Información del grupo</a></li>
                     <li><a href="<%= antecedentes_path %>">Antecedentes</a></li>
@@ -27,13 +27,13 @@
                     <li><a href="<%= acciones_path %>">Acciones prioritarias</a></li>
                   </ul>
                 </li>
-                <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span>Sobre Migración</span></a>
+                <li class="dropdown sobre"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span>Sobre Migración</span></a>
                   <ul class="dropdown-menu">
                     <li><a href="<%= flujos_path %>">Los Flujos migratorios y sus implicaciones</a></li>
                     <li><a href="<%= principios_path %>">Principios que deben regir los procesos migratorios de la región</a></li>
                   </ul>
                 </li>
-                <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span>Referencias</span></a>
+                <li class="dropdown referencias"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span>Referencias</span></a>
                   <ul class="dropdown-menu">
                     <li><a href="<%= documentos_path %>">Documentos elaborados por el grupo</a></li>
                     <li><a href="<%= libros_path %>">Libros</a></li>
@@ -42,14 +42,14 @@
                     <li><a href="<%= tesis_path %>">Tesis</a></li>
                   </ul>
                 </li>
-                <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span>Publicaciones</span></a>
+                <li class="dropdown publicaciones"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span>Publicaciones</span></a>
                   <ul class="dropdown-menu">
                     <li><a href="<%= boletines_path %>">Boletines</a></li>
                     <li><a href="<%= comunicados_path %>">Comunicados</a></li>
                     <li><a href="<%= cuadernos_path %>">Cuadernos migratorios</a></li>
                   </ul>
                 </li>
-                <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span>Videoteca</span></a>
+                <li class="dropdown videoteca"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span>Videoteca</span></a>
                   <ul class="dropdown-menu">
                     <li><a href="<%= capsulas_path %>">Cápsulas informativas</a></li>
                     <li><a href="<%= documentales_path %>">Documentales</a></li>
@@ -57,7 +57,7 @@
                     <li><a href="<%= conferencias_path %>">Videos de foros y conferencias</a></li>
                   </ul>
                 </li>
-                <li><a href="enlaces.html"><span>Enlaces</span></a></li>
+                <li><a href="<%= enlaces_path %>"><span>Enlaces</span></a></li>
               </ul>
             </div>
             <!-- /.navbar-collapse --> 

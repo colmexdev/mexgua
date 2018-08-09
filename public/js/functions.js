@@ -1,6 +1,6 @@
 (function($){
 		"use strict";
-		$(document).on("ready page:change page:load",function() {    
+		$(document).on("ready",function() {    
 			//Js code for Header Top 
 			var $menu_fixed = $("#menu-fixed"),
 			$clone = $menu_fixed.after($menu_fixed.clone().addClass("clone"));

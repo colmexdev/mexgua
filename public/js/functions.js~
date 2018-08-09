@@ -4,7 +4,21 @@
 			//Js code for Header Top 
 			var $menu_fixed = $("#menu-fixed"),
 			$clone = $menu_fixed.after($menu_fixed.clone().addClass("clone"));
-			
+			var path = window.location.pathname;
+			var drop;
+			if(["/sobre","/antecedentes","/propuestas","/acciones"].indexOf(path) != -1)
+				drop = ".quienes";
+			else if(["/flujos","/principios"].indexOf(path) != -1)
+				drop = ".sobre";
+			else if(["/documentos","/libros","/articulos","/revistas","/tesis"].indexOf(path) != -1)
+				drop = ".referencias"
+			else if(["/boletines","/comunicados","/cuadernos"].indexOf(path) != -1)
+				drop = ".publicaciones";
+			else if(["/capsulas","/documentales","/programas","/conferencias"].indexOf(path) != -1)
+				drop = ".videoteca";
+			else if(path == "/enlaces")
+				drop = ".enlaces";
+			$(drop).addClass("active");
 			$(window).on("scroll", function() {
 				var fromTop = $(window).scrollTop();
 				$("body").toggleClass("down", (fromTop > 185));

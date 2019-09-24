@@ -146,6 +146,22 @@
     <div class="widget">
       <h3>Nota luctuosa</h3>
     </div>
+		<div class="row">
+			<div class="col-xs-12 col-sm-4" style="text-align: center;">
+				<img src="<%= image_url('isabel.jpg') %>">
+			</div>
+			<div class="col-xs-12 col-sm-4">
+				<h4>En memoria de Isabel Ruiz</h4>
+
+				<p>Nuestra amiga y compañera Isabel Ruiz, una de las figuras más consolidadas de la plástica guatemalteca actual, falleció el pasado viernes 20 de septiembre a la edad de 74 años. De origen humilde, desde muy joven desarrolló una enorme sensibilidad respecto de los problemas sociales y políticos que marcaron al país en las décadas de los años cincuenta y sesenta del pasado siglo. Dicha sensibilidad luego tomó forma, dirección y sentido a través del desarrollo y su dedicación a las artes visuales.</p>
+
+				<p>Pero esa sensibilidad también se materializó al responder positivamente a la invitación para formar parte del Grupo Guatemala-México Migración y Desarrollo. En ese ámbito se distinguió por su discreción y sensatez, así como la fortaleza crítica de sus propuestas, para abordar los distintos temas que se discutían en busca de propuestas colectivas con proyección y sentido social.</p>
+
+				<p>Los miembros del Grupo México-Guatemala nos unimos a la pena y desazón que embarga a sus familiares, el poeta Francisco Morales Santos y sus hijos, así como a la comunidad artística guatemalteca y latinoamericana, la cual sin duda pierde a un referente imprescindible de las artes visuales guatemaltecas de las últimas décadas. Consideramos que su legado permanecerá a través de su arte y de sus enseñanzas.</p>
+
+				<p>El recuerdo de Isabel permanecerá por siempre en nuestra memoria. Hasta siempre compañera.</p>
+			</div>
+		</div>
     <div class="widget">
       <h3>Eventos</h3>
     </div>

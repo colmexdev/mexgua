@@ -144,6 +144,9 @@
       </div>
     </div>
     <div class="widget">
+      <h3>Nota luctuosa</h3>
+    </div>
+    <div class="widget">
       <h3>Eventos</h3>
     </div>
 		<% @ads.each_with_index do |a,i| %>

@@ -146,8 +146,10 @@
     <div class="widget">
       <h3>Eventos</h3>
     </div>
-		<% @ads.each do |a| %>
+		<% @ads.each_with_index do |a,i| %>
+		<% if i % 2 == 0 %>
     <div class="row">
+		<% end %>
       <div class="col-sm-6 col-xs-12">
         <div class="single-blog">
           <div class="single-blog-img"> <a href="<%= a.link %>" target="_blank"><img src="<%= a.imagen.url %>" alt="Blog Image"></a> </div>
@@ -161,7 +163,9 @@
           </div>
         </div>
       </div>
+		<% if i % 2 == 1 || i == @ads.size - 1 %>
 		</div>
+		<% end %>
 		<% end %>
       <!--div class="col-sm-6 col-xs-12">
         <div class="single-blog">

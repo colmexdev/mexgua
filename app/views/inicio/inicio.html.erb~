@@ -145,7 +145,6 @@
     </div>
 		<% @ads.each do |a| %>
     <div class="row">
-      <div class="col-sm-3 col-xs-12"> </div>
       <div class="col-sm-6 col-xs-12">
         <div class="single-blog">
           <div class="single-blog-img"> <a href="<%= a.link %>" target="_blank"><img src="<%= a.imagen.url %>" alt="Blog Image"></a> </div>
@@ -154,11 +153,13 @@
             <div class="blog-content">
               <h4><a href="<% a.link %>" target="_blank"><%= a.titulo %></a></h4>
               <div class="exerpt"><%= a.texto %></div>
-              <a href="<%= a.link %>" class="btn-two" target="_blank">Leer más</a> </div>
+              <a href="<%= a.link %>" class="btn-two" target="_blank">Leer más</a> 
+						</div>
           </div>
         </div>
       </div>
-			<% end %>
+		</div>
+		<% end %>
       <!--div class="col-sm-6 col-xs-12">
         <div class="single-blog">
           <div class="single-blog-img"> <a href="blog_single.html"><img src="images/home-blog-02.jpg" alt="Image Name"></a> </div>

@@ -157,7 +157,7 @@
             <div class="blog-post-date"> <span><%= a.fecha_pub.mday %></span> <span><%= l a.fecha_pub, format: :mes_anio %></span> </div>
             <div class="blog-content">
               <h4><a href="<% a.link %>" target="_blank"><%= a.titulo %></a></h4>
-              <div class="exerpt"><%= a.texto[0..150] + (a.texto.size >= 150 ? "..." : "") %></div>
+              <div class="exerpt"><%= a.texto[0..350] + (a.texto.size >= 350 ? "..." : "") %></div>
               <a href="<%= a.link %>" class="btn-two" target="_blank">Leer más</a> 
 						</div>
           </div>

@@ -143,6 +143,9 @@
         <h3>Artículos y noticias</h3>
       </div>
     </div>
+    <div class="widget">
+      <h3>Eventos</h3>
+    </div>
 		<% @ads.each do |a| %>
     <div class="row">
       <div class="col-sm-6 col-xs-12">
